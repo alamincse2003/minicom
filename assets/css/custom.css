@@ -316,7 +316,7 @@ main > section { overflow-x: clip; }
 
 /* ---------- Footer ---------- */
 .site-footer {
-  background: #000 url("../images/misc/footer-bg.jpg") no-repeat top left;
+  background: #000 url("../images/misc/footer-bg.webp") no-repeat top left;
   background-size: 38%;
 }
 @media (max-width: 991px) { .site-footer { background-size: 100%; } }
@@ -574,7 +574,8 @@ body.has-sticky-atc #toast { bottom: 150px; }
 .active-chip:hover { background: var(--accent); }
 
 /* Category chips (phones/tablets) */
-.cat-chips { scrollbar-width: none; scroll-snap-type: x proximity; padding-bottom: 4px; }
+.cat-chips { scrollbar-width: none; scroll-snap-type: x proximity; padding-bottom: 4px; min-height: 110px; } /* space kept for the JS-drawn chips (no layout shift) */
+.shop-grid:empty { min-height: 150vh; } /* space kept until shop.js draws the cards (no layout shift) */
 .cat-chips::-webkit-scrollbar { display: none; }
 .cat-chip { flex: 0 0 auto; width: 76px; display: flex; flex-direction: column; align-items: center; gap: 8px; scroll-snap-align: start; }
 .cat-chip-img {

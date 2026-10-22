@@ -12,7 +12,7 @@ window.MC_PARTIALS.header = String.raw`
 
     <!-- Logo -->
     <a href="index.html" class="block w-[110px] xl:w-[130px] shrink-0" aria-label="Minicom home">
-      <img src="assets/images/misc/logo-light.png" alt="Minicom" width="262" height="70">
+      <img src="assets/images/misc/logo-light.webp" alt="Minicom" width="262" height="70">
     </a>
 
     <div class="flex flex-1 items-center lg:ml-[65px]">
@@ -91,7 +91,7 @@ window.MC_PARTIALS.header = String.raw`
                   <li><a href="shop.html?cat=living-room">Living Room</a></li>
                 </ul>
               </div>
-              <a href="shop.html" class="zoom-img block rounded-[5px]"><img src="assets/images/misc/menu-img.jpg" alt="New collection" class="w-full h-full max-h-[300px] object-cover" loading="lazy"></a>
+              <a href="shop.html" class="zoom-img block rounded-[5px]"><img src="assets/images/misc/menu-img.webp" alt="New collection" class="w-full h-full max-h-[300px] object-cover" loading="lazy"></a>
             </div>
           </div>
         </li>
@@ -138,9 +138,9 @@ window.MC_PARTIALS.header = String.raw`
               <div>
                 <h4 class="text-[13px] font-bold uppercase mb-5">Featured Product</h4>
                 <ul class="space-y-4">
-                  <li><a href="product.html?id=compact-pot" class="flex items-center gap-3"><img src="assets/images/products/compact-pot-1.jpg" alt="" class="w-14 h-[70px] object-cover rounded-[3px]" loading="lazy"><span class="text-[13px] leading-snug">Compact Mini Plant Pot for Desk<br><b class="text-ink">$37.00</b></span></a></li>
-                  <li><a href="product.html?id=beige-armchair" class="flex items-center gap-3"><img src="assets/images/products/beige-armchair-1.jpg" alt="" class="w-14 h-[70px] object-cover rounded-[3px]" loading="lazy"><span class="text-[13px] leading-snug">Modern Beige Armchair<br><b class="text-ink">$150.00</b></span></a></li>
-                  <li><a href="product.html?id=swivel-sofa" class="flex items-center gap-3"><img src="assets/images/products/swivel-sofa-1.jpg" alt="" class="w-14 h-[70px] object-cover rounded-[3px]" loading="lazy"><span class="text-[13px] leading-snug">Low Profile Swivel Sofa<br><b class="text-ink">$125.00</b></span></a></li>
+                  <li><a href="product.html?id=compact-pot" class="flex items-center gap-3"><img src="assets/images/products/compact-pot-1.webp" alt="" class="w-14 h-[70px] object-cover rounded-[3px]" loading="lazy"><span class="text-[13px] leading-snug">Compact Mini Plant Pot for Desk<br><b class="text-ink">$37.00</b></span></a></li>
+                  <li><a href="product.html?id=beige-armchair" class="flex items-center gap-3"><img src="assets/images/products/beige-armchair-1.webp" alt="" class="w-14 h-[70px] object-cover rounded-[3px]" loading="lazy"><span class="text-[13px] leading-snug">Modern Beige Armchair<br><b class="text-ink">$150.00</b></span></a></li>
+                  <li><a href="product.html?id=swivel-sofa" class="flex items-center gap-3"><img src="assets/images/products/swivel-sofa-1.webp" alt="" class="w-14 h-[70px] object-cover rounded-[3px]" loading="lazy"><span class="text-[13px] leading-snug">Low Profile Swivel Sofa<br><b class="text-ink">$125.00</b></span></a></li>
                 </ul>
               </div>
             </div>

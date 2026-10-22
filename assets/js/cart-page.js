@@ -22,7 +22,7 @@
           <button type="button" class="cart-remove" data-cart-remove="${l.id}" aria-label="Remove ${p.title}"><svg><use href="#i-trash"/></svg></button>
         </div>
         <div class="cart-c-product">
-          <a href="${url}" class="cart-img"><img src="assets/images/products/${l.id}-1.jpg" alt="${p.title}" loading="lazy"></a>
+          <a href="${url}" class="cart-img"><img src="assets/images/products/${l.id}-1.webp" alt="${p.title}" loading="lazy"></a>
           <a href="${url}" class="cart-name">${p.title}<span class="md:hidden"> (x${l.qty})</span></a>
         </div>
         <div class="cart-c-price"><span class="cart-m-label">Price</span>${money(p.price)}</div>
@@ -46,7 +46,7 @@
     return `
       <div class="rel-card">
         <div class="rel-img">
-          <a href="${url}"><img src="assets/images/products/${p.id}-1.jpg" alt="${p.title}" loading="lazy"></a>
+          <a href="${url}"><img src="assets/images/products/${p.id}-1.webp" alt="${p.title}" loading="lazy"></a>
           <button type="button" class="rel-add" data-add-cart data-product="${p.id}">Add to cart</button>
         </div>
         <a href="${url}" class="rel-title">${p.title}</a>

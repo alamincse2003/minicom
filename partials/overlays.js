@@ -8,7 +8,7 @@ window.MC_PARTIALS.overlays = String.raw`
 <!-- Mobile menu drawer -->
 <aside id="mobileMenu" class="drawer drawer-left fixed top-0 left-0 z-[70] h-full w-[320px] max-w-[85vw] bg-white overflow-y-auto" aria-label="Mobile menu">
   <div class="flex items-center justify-between p-5 border-b border-line">
-    <img src="assets/images/misc/logo-dark.png" alt="Minicom" class="w-[110px]">
+    <img src="assets/images/misc/logo-dark.webp" alt="Minicom" class="w-[110px]">
     <button data-drawer-close aria-label="Close menu" class="text-ink"><svg class="w-6 h-6"><use href="#i-close"/></svg></button>
   </div>
   <form class="p-5 border-b border-line" action="shop.html" role="search">
@@ -68,7 +68,7 @@ window.MC_PARTIALS.overlays = String.raw`
 <div id="newsletterPopup" class="popup fixed inset-0 z-[90] bg-black/60 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Newsletter">
   <div class="popup-box relative w-full max-w-[800px] bg-white rounded-[10px] overflow-hidden grid md:grid-cols-2">
     <button data-popup-close class="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-white flex items-center justify-center text-ink hover:bg-accent transition-colors" aria-label="Close"><svg class="w-5 h-5"><use href="#i-close"/></svg></button>
-    <img src="assets/images/misc/newsletter.jpg" alt="" class="hidden md:block w-full h-full object-cover" loading="lazy">
+    <img src="assets/images/misc/newsletter.webp" alt="" class="hidden md:block w-full h-full object-cover" loading="lazy">
     <div class="p-8 md:p-10 flex flex-col justify-center">
       <h3 class="text-[20px] md:text-[24px] font-extrabold uppercase text-ink leading-tight">Subscrible &amp; get <span class="text-accent">15% discount</span></h3>
       <p class="mt-3 mb-6">Sign up for newsletter to receive special offers and exclusive news about products</p>

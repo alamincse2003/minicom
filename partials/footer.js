@@ -8,7 +8,7 @@ window.MC_PARTIALS.footer = String.raw`
     <div class="ft-top">
       <!-- Brand -->
       <div class="ft-brand" data-anim="fade-up">
-        <a href="index.html" class="block w-[130px]"><img src="assets/images/misc/logo-light.png" alt="Minicom" width="262" height="70" loading="lazy"></a>
+        <a href="index.html" class="block w-[130px]"><img src="assets/images/misc/logo-light.webp" alt="Minicom" width="262" height="70" loading="lazy"></a>
         <p class="ft-about">At Minicom, we bring style, comfort, and quality to your home with carefully curated furniture collections. Designed for modern living, our pieces blend functionality with timeless aesthetics. Experience exceptional craftsmanship and elevate your space with us!</p>
         <ul class="ft-social">
           <li><a href="#" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a></li>
@@ -74,7 +74,7 @@ window.MC_PARTIALS.footer = String.raw`
   <div class="ft-bottom">
     <div class="wrap ft-bottom-row">
       <p>Copyright © 2025 Nova-Creative.<br>All rights reserved.</p>
-      <img src="assets/images/misc/payment-footer.png" alt="Accepted payments" width="277" height="30" loading="lazy">
+      <img src="assets/images/misc/payment-footer.webp" alt="Accepted payments" width="277" height="30" loading="lazy">
     </div>
   </div>
 </footer>

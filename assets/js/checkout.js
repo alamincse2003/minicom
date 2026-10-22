@@ -54,7 +54,7 @@
       .map(
         (l) => `
         <div class="co-line">
-          <span class="co-line-img"><img src="assets/images/products/${l.id}-1.jpg" alt="" loading="lazy"><b>${l.qty}</b></span>
+          <span class="co-line-img"><img src="assets/images/products/${l.id}-1.webp" alt="" loading="lazy"><b>${l.qty}</b></span>
           <span class="co-line-name">${l.product.title}</span>
           <span class="co-line-price">${money(l.total)}</span>
         </div>`

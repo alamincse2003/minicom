@@ -103,7 +103,7 @@
       <div class="p-card shop-item" style="--i:${i % PAGE}">
         <div class="p-thumb">
           ${badge}
-          <a href="${url}" aria-label="${p.title}"><img class="img-1" src="assets/images/products/${p.id}-1.jpg" alt="${p.title}" loading="lazy"><img class="img-2" src="assets/images/products/${p.id}-2.jpg" alt="" loading="lazy"></a>
+          <a href="${url}" aria-label="${p.title}"><img class="img-1" src="assets/images/products/${p.id}-1.webp" alt="${p.title}" loading="lazy"><img class="img-2" src="assets/images/products/${p.id}-2.webp" alt="" loading="lazy"></a>
           <div class="p-actions">
             <button class="p-act" data-wishlist aria-label="Add to wishlist"><svg class="w-4 h-4"><use href="#i-heart"/></svg><span class="tip">Add To Wishlist</span></button>
             <a class="p-act" href="${url}" aria-label="Quick view"><svg class="w-4 h-4"><use href="#i-eye"/></svg><span class="tip">Quick View</span></a>
@@ -178,7 +178,7 @@
   function renderChips() {
     const chip = (slug, name, thumb) => `
       <button class="cat-chip${state.cat === slug ? ' active' : ''}" data-set-cat="${slug}">
-        <span class="cat-chip-img">${thumb ? `<img src="assets/images/products/${thumb}-1.jpg" alt="" loading="lazy">` : '<svg class="w-6 h-6"><use href="#i-grid"/></svg>'}</span>
+        <span class="cat-chip-img">${thumb ? `<img src="assets/images/products/${thumb}-1.webp" alt="" loading="lazy">` : '<svg class="w-6 h-6"><use href="#i-grid"/></svg>'}</span>
         <span class="cat-chip-label">${name}</span>
       </button>`;
     $('#shopCatChips').innerHTML = chip('', 'All', '') + categories.map((c) => chip(c.slug, c.name, c.thumb)).join('');

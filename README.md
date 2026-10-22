@@ -5,16 +5,30 @@ A static HTML5 + Tailwind CSS + JavaScript version of the Minicom homepage. It i
 
 ## Run locally
 
-There is no build step. Serve the folder with any static server so every asset loads correctly:
+Serve the folder with any static server so every asset loads correctly:
 
 - **VS Code:** right-click `index.html`, then **Open with Live Server**
 - **Python:** `python -m http.server 5500`, then open http://localhost:5500
 
-## Stack (loaded from CDNs, pinned versions)
+## CSS build (Tailwind CLI)
+
+`assets/css/tailwind.css` is built from `src/tailwind.css` (theme tokens live in its `@theme` block).
+Rebuild after adding or changing Tailwind classes in any page, partial or script:
+
+```bash
+npm install          # first time only
+npm run build:css    # one-off minified build
+npm run watch:css    # rebuild on every save while editing
+```
+
+Commit the built `assets/css/tailwind.css`, because the site itself has no build step on the server.
+Class names must appear in full in the source (`text-sale`, not `'text-' + colour`), or the build will drop them.
+
+## Stack (pinned versions)
 
 | Library | Version | Used for |
 |---|---|---|
-| Tailwind CSS (browser build) | 4.1.11 | utility classes; theme tokens in the `@theme` block inside `index.html` |
+| Tailwind CSS (CLI build) | 4.1.11 | utility classes; built to `assets/css/tailwind.css` |
 | GSAP + ScrollTrigger | 3.12.5 | hero captions, scroll reveals, parallax, stacked banners |
 | Swiper | 11.1.14 | hero, products, step images, testimonials, blog |
 | DM Sans (Google Fonts) | – | all typography |
@@ -114,6 +128,9 @@ Every page loads `assets/data/products.js` and `assets/js/cart.js` first in `dat
 ## Settings
 
 - Free-shipping threshold: `FREE_SHIPPING` in `assets/js/cart.js` (currently $200). Cart, drawer and checkout use it.
+- Live domain: canonical links, Open Graph tags, `sitemap.xml` and `robots.txt` use `https://www.example.com`. Find and replace it with the real domain before launch.
+- Share image: `assets/images/og-image.jpg` (1200×630, cropped from the hero). Replace it along with the other demo images.
+- Not indexed: cart, checkout, account, wishlist and 404 carry `noindex` and are blocked in `robots.txt`.
 - Social links: footer (`partials/footer.js`) and `contact.html` still point to `#`. Add the real addresses there.
 
 ## ⚠️ Image licence
@@ -122,4 +139,3 @@ All images in `assets/images/` and the model in `assets/models/` were downloaded
 The 3D model must be served over HTTP (XAMPP / Live Server); it will not load from `file://`.
 They are licensed with the theme, so **replace them with the client's own images before going live**.
 
-Before going live, also swap the Tailwind browser build for the Tailwind CLI. That generates a small, purged CSS file.

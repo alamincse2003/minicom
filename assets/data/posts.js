@@ -1,6 +1,6 @@
 /* ==========================================================================
    Blog posts: single source for blog.html, blog-post.html and the sidebar.
-   Edit or add posts here. `image` → assets/images/blog/blog-{image}.jpg
+   Edit or add posts here. `image` → assets/images/blog/blog-{image}.webp
    Open a post with blog-post.html?post={id}
    ========================================================================== */
 window.MC_BLOG = {
@@ -40,8 +40,8 @@ window.MC_BLOG = {
     <blockquote><p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc gravida diam ac convallis rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at eros diam. Vivamus a pretium orci. Ut sollicitudin posuere libero vitae rhoncus.</p></blockquote>
     <p>Maecenas ultrices, purus ac fermentum tincidunt, nunc leo sagittis erat, vel volutpat dolor justo id lacus. Quisque feugiat imperdiet laoreet. Nunc eget dui ut metus rhoncus volutpat. Morbi luctus tristique lobortis. In mi erat, condimentum eu elementum sit amet, facilisis pellentesque velit. Aenean at est a mauris fermentum luctus. Aliquam erat volutpat. Aliquam eget vehicula purus. Integer pretium egestas metus sed rutrum.</p>
     <div class="post-gallery">
-      <img src="assets/images/blog/post-img-1.jpg" alt="" loading="lazy">
-      <img src="assets/images/blog/post-img-2.jpg" alt="" loading="lazy">
+      <img src="assets/images/blog/post-img-1.webp" alt="" loading="lazy">
+      <img src="assets/images/blog/post-img-2.webp" alt="" loading="lazy">
     </div>
     <p>Nullam quis felis ultricies, vehicula magna ac, sodales elit. Suspendisse mi massa, porttitor at pharetra sit amet, faucibus eget diam. Ut nec erat tellus. Vestibulum lobortis mi a dui maximus, et eleifend augue volutpat. In tincidunt nisl a interdum facilisis. Vivamus nec tempus turpis. Nullam volutpat massa sed neque cursus porta. Integer non metus consequat, dignissim justo iaculis, venenatis sem. Phasellus imperdiet facilisis felis a fermentum.</p>
     <p>Suspendisse sit amet ex eu dui pretium laoreet sit amet sit amet nulla. Morbi ut leo ac nibh cursus cursus. In in elit urna. Quisque commodo vestibulum purus sed volutpat. Praesent quis tellus ac nulla rutrum sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean eget volutpat justo. Quisque nec ex tortor. Integer a felis aliquet, mollis orci id, porttitor sapien. Nulla arcu ipsum, sollicitudin et faucibus eu, efficitur in metus. Nunc pharetra arcu arcu, et porttitor massa varius eget. Morbi nisi turpis, gravida a ligula id, volutpat placerat nulla. Sed ut mi at odio commodo rhoncus et id arcu. Ut ultrices lacinia neque ac feugiat. Suspendisse elementum non nibh in tempor. Vivamus convallis augue a malesuada ullamcorper.</p>`,

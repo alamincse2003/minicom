@@ -11,7 +11,7 @@
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 
   const postUrl = (p) => `blog-post.html?post=${p.id}`;
-  const img = (p) => `assets/images/blog/blog-${p.image}.jpg`;
+  const img = (p) => `assets/images/blog/blog-${p.image}.webp`;
   const d = (iso) => new Date(iso + 'T12:00:00');
   const longDate = (iso) => d(iso).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }).replace(',', '');
   const shortDate = (iso) => {
@@ -93,7 +93,7 @@
 
       <div class="sb-block sb-box">
         <p class="sb-title">Blog banner</p>
-        <a href="shop.html" class="sb-banner"><img src="assets/images/blog/sidebar-banner.jpg" alt="Shop the collection" loading="lazy"></a>
+        <a href="shop.html" class="sb-banner"><img src="assets/images/blog/sidebar-banner.webp" alt="Shop the collection" loading="lazy"></a>
       </div>`;
   }
 

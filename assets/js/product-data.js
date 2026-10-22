@@ -18,7 +18,7 @@
   const money = (n) => (window.MC && window.MC.cart ? window.MC.cart.money(n) : '$' + Number(n).toFixed(2));
   const cat = DATA.categories.find((c) => c.slug === p.cat);
   const sub = cat && cat.subs.find((s) => s.slug === p.sub);
-  const img = (n) => `assets/images/products/${p.id}-${n}.jpg`;
+  const img = (n) => `assets/images/products/${p.id}-${n}.webp`;
   const photos = Array.from({ length: p.photos || 2 }, (_, i) => img(i + 1));
 
   /* ---------- Page title, breadcrumb ---------- */

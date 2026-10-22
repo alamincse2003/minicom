@@ -10,7 +10,7 @@
      onChange(fn)  -> fn(cart) after every change (and once on load)
 
    Any [data-add-cart] button works: its product is read from data-product,
-   or from the nearest card's product image (assets/images/products/{id}-1.jpg).
+   or from the nearest card's product image (assets/images/products/{id}-1.webp).
    ========================================================================== */
 (function () {
   window.MC = window.MC || {};
@@ -100,7 +100,7 @@
     // Product cards: read the id from the card's product image
     const card = btn.closest('.p-card, .feat-row, .rel-card');
     const img = card && card.querySelector('img[src*="assets/images/products/"]');
-    const m = img && img.getAttribute('src').match(/products\/([a-z0-9-]+)-\d+\.jpg/);
+    const m = img && img.getAttribute('src').match(/products\/([a-z0-9-]+)-\d+\.webp/);
     if (m) return m[1];
     return btn.closest('[data-product]')?.dataset.product || null;
   }
@@ -144,7 +144,7 @@
       .map(
         (l) => `
         <div class="mini-line">
-          <a href="${l.product.url || 'product.html?id=' + l.id}" class="mini-img"><img src="assets/images/products/${l.id}-1.jpg" alt="" loading="lazy"></a>
+          <a href="${l.product.url || 'product.html?id=' + l.id}" class="mini-img"><img src="assets/images/products/${l.id}-1.webp" alt="" loading="lazy"></a>
           <div class="min-w-0 flex-1">
             <a href="${l.product.url || 'product.html?id=' + l.id}" class="mini-title">${l.product.title}</a>
             <p class="text-[12px] mt-1"><span class="text-body">${l.qty} ×</span> <b class="text-ink">${money(l.product.price)}</b></p>

@@ -66,7 +66,7 @@
       <div class="wl-item">
         <div class="wl-product">
           <button type="button" class="wl-remove" data-wishlist data-product="${p.id}" aria-label="Remove ${p.title} from wishlist"><svg><use href="#i-trash"/></svg></button>
-          <a href="${url}" class="wl-thumb"><img src="assets/images/products/${p.id}-1.jpg" alt="${p.title}" loading="lazy"></a>
+          <a href="${url}" class="wl-thumb"><img src="assets/images/products/${p.id}-1.webp" alt="${p.title}" loading="lazy"></a>
           <div class="min-w-0">
             <a href="${url}" class="wl-title">${p.title}</a>
             <div class="wl-prices">${price}</div>

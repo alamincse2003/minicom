@@ -4,7 +4,7 @@
    opened from file:// without a server.
 
    Product fields
-     id         image prefix: assets/images/products/{id}-1.jpg and -2.jpg
+     id         image prefix: assets/images/products/{id}-1.webp and -2.webp
      cat / sub  category and subcategory slugs (see `categories`)
      price      selling price; `compare` = original price when on sale
      colors     colour names used by the filter (see `colors`)
@@ -15,20 +15,20 @@
      added      higher = newer (used by "Newest" sort)
      order      position in the default "Featured" sort
      url        product page; default product.html?id={id}
-     photos     number of photos ({id}-1.jpg … ; default 2)
+     photos     number of photos ({id}-1.webp … ; default 2)
    ========================================================================== */
 window.MC_SHOP = {
   all: {
     name: 'Shop All',
     intro: 'Discover furniture and decor crafted for modern living: timeless pieces that bring style, comfort and quality to every room.',
-    image: 'assets/images/slider/slide-2.jpg',
+    image: 'assets/images/slider/slide-2.webp',
   },
 
   categories: [
     {
       slug: 'living-room', name: 'Living Room', thumb: 'swivel-sofa',
       intro: 'Sofas, armchairs and tables designed for long evenings and easy weekends.',
-      image: 'assets/images/banners/banner-2.jpg',
+      image: 'assets/images/banners/banner-2.webp',
       subs: [
         { slug: 'sofas', name: 'Sofas' },
         { slug: 'armchairs', name: 'Armchairs' },
@@ -39,7 +39,7 @@ window.MC_SHOP = {
     {
       slug: 'bedroom', name: 'Bedroom', thumb: 'bed-frame',
       intro: 'Solid wood beds and bedside storage for a calm, restful space.',
-      image: 'assets/images/category/cate-5.jpg',
+      image: 'assets/images/category/cate-5.webp',
       subs: [
         { slug: 'beds', name: 'Beds' },
         { slug: 'nightstands', name: 'Nightstands' },
@@ -48,7 +48,7 @@ window.MC_SHOP = {
     {
       slug: 'dining-office', name: 'Dining & Office', thumb: 'office-desk',
       intro: 'Chairs and desks that make work and mealtimes more comfortable.',
-      image: 'assets/images/banners/banner-1.jpg',
+      image: 'assets/images/banners/banner-1.webp',
       subs: [
         { slug: 'chairs', name: 'Chairs' },
         { slug: 'desks', name: 'Desks' },
@@ -57,13 +57,13 @@ window.MC_SHOP = {
     {
       slug: 'lighting', name: 'Lighting', thumb: 'table-lamp',
       intro: 'Warm, soft light to set the mood in every corner.',
-      image: 'assets/images/category/cate-6.jpg',
+      image: 'assets/images/category/cate-6.webp',
       subs: [{ slug: 'table-lamps', name: 'Table Lamps' }],
     },
     {
       slug: 'decor', name: 'Decor & Plants', thumb: 'small-pot',
       intro: 'Planters, stands and baskets: the finishing touches that make a house a home.',
-      image: 'assets/images/category/cate-4.jpg',
+      image: 'assets/images/category/cate-4.webp',
       subs: [
         { slug: 'plant-pots', name: 'Plant Pots' },
         { slug: 'plant-stands', name: 'Plant Stands' },
@@ -88,7 +88,7 @@ window.MC_SHOP = {
     eyebrow: 'New collection',
     title: 'Lounge in<br>Scandinavian style',
     button: 'Shop armchairs',
-    image: 'assets/images/banners/banner-3.jpg',
+    image: 'assets/images/banners/banner-3.webp',
     cat: 'living-room',
     sub: 'armchairs',
   },
