@@ -146,12 +146,12 @@
             <input type="number" value="1" min="1" class="w-10 text-center text-ink font-bold outline-none bg-transparent" aria-label="Quantity">
             <button type="button" data-qty="1" aria-label="Increase"><svg class="w-4 h-4"><use href="#i-plus"/></svg></button>
           </div>
-          <button class="btn btn-dark flex-1 !h-[52px]" data-add-cart>Add to cart</button>
-          <button class="w-[52px] h-[52px] rounded-[3px] border border-line flex items-center justify-center text-ink hover:bg-accent hover:border-accent transition-colors" aria-label="Add to wishlist" data-wishlist><svg class="w-5 h-5"><use href="#i-heart"/></svg></button>
+          <button class="btn btn-dark flex-1 !h-[52px]" data-add-cart data-product="sofa-chair">Add to cart</button>
+          <button class="w-[52px] h-[52px] rounded-[3px] border border-line flex items-center justify-center text-ink hover:bg-accent hover:border-accent transition-colors" aria-label="Add to wishlist" data-wishlist data-product="sofa-chair"><svg class="w-5 h-5"><use href="#i-heart"/></svg></button>
         </div>
 
         <label class="flex items-center gap-2 mt-4 text-[13px] cursor-pointer select-none"><input type="checkbox" id="pdTerms" class="w-4 h-4 accent-black"> I agree with the <a href="#" class="text-ink underline hover:text-accent">Terms &amp; Conditions</a></label>
-        <button id="pdBuyNow" class="btn btn-accent w-full !h-[52px] mt-3" disabled>Buy it now</button>
+        <button id="pdBuyNow" class="btn btn-accent w-full !h-[52px] mt-3" data-add-cart data-buy-now data-product="sofa-chair" disabled>Buy it now</button>
 
         <!-- Links -->
         <div class="flex flex-wrap gap-x-7 gap-y-2 mt-6 pb-6 border-b border-line text-[13px] font-bold uppercase text-ink">
@@ -617,7 +617,7 @@
         <input type="number" value="1" min="1" class="w-9 text-center text-ink font-bold outline-none bg-transparent" aria-label="Quantity">
         <button type="button" data-qty="1" aria-label="Increase"><svg class="w-4 h-4"><use href="#i-plus"/></svg></button>
       </div>
-      <button class="btn btn-dark !h-[46px] flex-1 md:flex-none md:min-w-[200px]" data-add-cart>Add to cart</button>
+      <button class="btn btn-dark !h-[46px] flex-1 md:flex-none md:min-w-[200px]" data-add-cart data-product="sofa-chair">Add to cart</button>
     </div>
   </div>
 </div>
@@ -629,6 +629,6 @@
 <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
 
 <!-- App: include.js loads the shared partials, then these scripts in order -->
-<script src="assets/js/include.js" data-scripts="assets/js/header.js assets/js/sliders.js assets/js/ui.js assets/js/product.js assets/js/animations.js"></script>
+<script src="assets/js/include.js" data-scripts="assets/data/products.js assets/js/cart.js assets/js/wishlist.js assets/js/header.js assets/js/sliders.js assets/js/ui.js assets/js/product.js assets/js/animations.js"></script>
 </body>
 </html>

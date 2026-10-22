@@ -111,7 +111,7 @@
   const terms = document.getElementById('pdTerms');
   const buyNow = document.getElementById('pdBuyNow');
   terms?.addEventListener('change', () => (buyNow.disabled = !terms.checked));
-  buyNow?.addEventListener('click', () => toast('Redirecting to checkout…'));
+  // Buy it now: cart.js adds the item and opens cart.html (data-buy-now)
 
   /* ---------- Compare ---------- */
   $$('[data-compare]').forEach((btn) =>

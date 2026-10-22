@@ -23,12 +23,31 @@ There is no build step. Serve the folder with any static server so every asset l
 ## Structure
 
 ```
-partials/header.html    shared header + desktop menu (one copy for every page)
-partials/footer.html    shared footer
-partials/overlays.html  shared mobile menu, cart drawer, search, login popup, toast,
+partials/header.js      shared header + desktop menu (HTML inside String.raw`...`)
+partials/footer.js      shared footer
+partials/overlays.js    shared mobile menu, cart drawer, search, login popup, toast,
                         mobile bottom bar, back-to-top
-partials/icons.svg      shared SVG icon sprite (every icon used on any page)
+partials/icons.js       shared SVG icon sprite (every icon used on any page)
 assets/js/include.js    loads the partials into each page, then the page scripts
+assets/js/cart.js       cart store (localStorage), add-to-cart buttons, header count,
+                        mini cart in the drawer, free-shipping bar
+assets/js/cart-page.js  cart page: lines, quantities, totals, related products
+cart.html               shopping cart page
+checkout.html           one-page checkout (Shopify layout; demo payment, no real charge)
+assets/js/checkout.js   checkout: summary, shipping methods, validation, thank-you screen
+blog.html               blog list: sidebar, posts, pagination, ?tag= / ?q= filters
+blog-post.html          article page (?post=id): share, print, prev/next, related, comments
+assets/data/posts.js    blog posts, categories and tags (edit posts here)
+assets/js/blog.js       renders the blog sidebar, list and article pages
+about.html              about page: intro, video slider + lightbox, how we work, why us, team, stores
+assets/js/about.js      about page sliders and YouTube lightbox
+contact.html            contact page: Google map, contact form (demo), address, hours, social
+faq.html                FAQ page: intro, 6-question accordion, contact popup
+wishlist.html           saved products (remove, add to cart, quick view)
+assets/js/wishlist.js   wishlist store (localStorage), every heart button, header count
+account.html            login / register / reset password, then dashboard (orders, details)
+assets/js/account.js    demo accounts in this browser (hashed passwords), order history from checkout
+404.html                page not found (link it in your server config, e.g. Apache: ErrorDocument 404)
 index.html              landing page (16 sections + page-only popups)
 product.html            product detail page (gallery + 3D, info, tabs, related,
                         recently viewed, sticky add-to-cart, lightbox/ask/share popups)
@@ -62,7 +81,7 @@ Everything respects `prefers-reduced-motion`. If the GSAP CDN fails to load, the
 
 ## Adding more pages
 
-The header, footer, overlays and icons live once in `partials/`. Edit them there and every page updates.
+The header, footer, overlays and icons live once in `partials/` (`.js` files that hold plain HTML). Edit them there and every page updates.
 
 To make a new page, copy `shop.html` (the smallest page) and change only the `<main>` content. Keep these parts:
 
@@ -71,10 +90,10 @@ To make a new page, copy `shop.html` (the smallest page) and change only the `<m
 - the include script at the bottom:
 
 ```html
-<script src="assets/js/include.js" data-scripts="assets/js/header.js assets/js/sliders.js assets/js/ui.js assets/js/animations.js"></script>
+<script src="assets/js/include.js" data-scripts="assets/data/products.js assets/js/cart.js assets/js/header.js assets/js/sliders.js assets/js/ui.js assets/js/animations.js"></script>
 ```
 
-  Add page scripts (for example `assets/js/cart.js`) to `data-scripts`, before `animations.js`.
+  Add page scripts (for example `assets/js/cart-page.js`) to `data-scripts`, before `animations.js`.
 
 Set the page state on `<body>`:
 
@@ -83,7 +102,8 @@ Set the page state on `<body>`:
 | `data-nav` | `home`, `collections`, `products`, `pages`, `blog` | highlights that menu link (desktop + mobile) |
 | `data-header` | `solid` | black header for inner pages (leave it off on the homepage) |
 
-The partials are loaded with `fetch()`, so always open the site through Live Server or XAMPP. Opened from `file://`, the page shows a notice instead of the header and footer.
+Partials are loaded as `<script>` files, so pages work both from a server and when opened by double-click.
+Every page loads `assets/data/products.js` and `assets/js/cart.js` first in `data-scripts`, so add-to-cart works everywhere.
 
 ## ⚠️ Image licence
 

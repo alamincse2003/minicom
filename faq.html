@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frequently Asked Questions – Minicom</title>
+  <meta name="description" content="Answers to common questions about Minicom orders, shipping, delivery times, billing and your account.">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 3 12v16a2 2 0 0 0 2 2h22a2 2 0 0 0 2-2V12Z' fill='%23fdc402'/%3E%3Cpath d='M16 9v5M10 20a6 6 0 0 1 12 0Z' stroke='%23000' stroke-width='2' fill='%23000'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css">
+
+  <!-- Tailwind CSS v4 (browser build) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --font-sans: "DM Sans", sans-serif;
+      --color-accent: #fdc402;
+      --color-ink: #181818;
+      --color-body: #535353;
+      --color-muted: #b7b7b7;
+      --color-soft: #f5f5f5;
+      --color-line: #eaeaea;
+      --color-sale: #e85b40;
+      --color-stock: #0f834d;
+      --breakpoint-3xl: 1500px;
+    }
+  </style>
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+
+  <!-- Hide reveal targets before first paint (animations.js takes over) -->
+  <script>
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('js-anim');
+  </script>
+</head>
+<body class="font-sans" data-nav="pages" data-header="solid">
+
+<!-- =====================================================================
+     SVG ICON SPRITE
+     ===================================================================== -->
+<div data-include="icons"></div>
+
+<!-- =====================================================================
+     HEADER
+     ===================================================================== -->
+<div data-include="header"></div>
+
+<main class="page-top">
+
+<!-- =====================================================================
+     1. PAGE BANNER
+     ===================================================================== -->
+<section class="page-banner" style="background-image:url('assets/images/banners/breadcrumb.jpg')">
+  <div class="wrap">
+    <h1 class="page-banner-title">Frequently Asked Questions</h1>
+    <ol class="page-crumbs">
+      <li><a href="index.html">Home</a></li>
+      <li aria-current="page">Frequently Asked Questions</li>
+    </ol>
+  </div>
+</section>
+
+<section class="faqp">
+  <div class="wrap">
+
+    <!-- 2. Intro -->
+    <div class="faqp-intro" data-anim="fade-up">
+      <p class="faqp-intro-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat ut ex vel finibus. Nunc eget molestie purus. Fusce imperdiet pulvinar est, eget fermentum nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae</p>
+      <p>Maecenas congue metus id turpis iaculis mattis. Sed pellentesque id arcu id scelerisque. Ut ullamcorper rutrum justo, at blandit eros maximus ut. Integer non tincidunt justo, rhoncus Aenean venenatis sed purus ac sollicitudin. Nulla mauris risus, commodo et luctus rutrum, lobortis sed mauris. Integer congue, sem elementum varius tristique, erat nulla rutrum risus, a imperdiet nulla lorem fermentum erat. Pellentesque elementum justo at velit fringilla, eu feugiat erat fermentum. Vivamus libero dolor, porta eget vehicula eu, iaculis id lacus. Sed interdum convallis sapien, eget faucibus sapien. Proin hendrerit lacus turpis.</p>
+    </div>
+
+    <!-- 3. Questions (one open at a time; ui.js handles .faq-item) -->
+    <div class="faqp-list" data-anim="fade-up">
+      <div class="faq-item open">
+        <button type="button" class="faq-head" aria-expanded="true">What shipping methods are available?<svg class="faq-icon"><use href="#i-down"/></svg></button>
+        <div class="faq-body"><div><p>Maecenas congue metus id turpis iaculis mattis. Sed pellentesque id arcu id scelerisque. Ut ullamcorper rutrum justo, at blandit eros maximus ut. Integer non tincidunt justo, rhoncus Aenean venenatis sed purus ac sollicitudin. Nulla mauris risus, commodo et luctus rutrum, lobortis sed mauris. Integer congue, sem elementum varius tristique, erat nulla rutrum risus, a imperdiet nulla lorem fermentum erat. Pellentesque elementum justo at velit fringilla, eu feugiat erat fermentum. Vivamus libero dolor, porta eget vehicula eu, iaculis id lacus. Sed interdum convallis sapien, eget faucibus sapien. Proin hendrerit lacus turpis.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-head" aria-expanded="false">How to order?<svg class="faq-icon"><use href="#i-down"/></svg></button>
+        <div class="faq-body"><div><p>Maecenas congue metus id turpis iaculis mattis. Sed pellentesque id arcu id scelerisque. Ut ullamcorper rutrum justo, at blandit eros maximus ut. Integer non tincidunt justo, rhoncus Aenean venenatis sed purus ac sollicitudin. Nulla mauris risus, commodo et luctus rutrum, lobortis sed mauris. Integer congue, sem elementum varius tristique, erat nulla rutrum risus, a imperdiet nulla lorem fermentum erat. Pellentesque elementum justo at velit fringilla, eu feugiat erat fermentum. Vivamus libero dolor, porta eget vehicula eu, iaculis id lacus. Sed interdum convallis sapien, eget faucibus sapien. Proin hendrerit lacus turpis.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-head" aria-expanded="false">How long will it take to get my package?<svg class="faq-icon"><use href="#i-down"/></svg></button>
+        <div class="faq-body"><div><p>Maecenas congue metus id turpis iaculis mattis. Sed pellentesque id arcu id scelerisque. Ut ullamcorper rutrum justo, at blandit eros maximus ut. Integer non tincidunt justo, rhoncus Aenean venenatis sed purus ac sollicitudin. Nulla mauris risus, commodo et luctus rutrum, lobortis sed mauris. Integer congue, sem elementum varius tristique, erat nulla rutrum risus, a imperdiet nulla lorem fermentum erat. Pellentesque elementum justo at velit fringilla, eu feugiat erat fermentum. Vivamus libero dolor, porta eget vehicula eu, iaculis id lacus. Sed interdum convallis sapien, eget faucibus sapien. Proin hendrerit lacus turpis.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-head" aria-expanded="false">Where are your products sent from?<svg class="faq-icon"><use href="#i-down"/></svg></button>
+        <div class="faq-body"><div><p>Maecenas congue metus id turpis iaculis mattis. Sed pellentesque id arcu id scelerisque. Ut ullamcorper rutrum justo, at blandit eros maximus ut. Integer non tincidunt justo, rhoncus Aenean venenatis sed purus ac sollicitudin. Nulla mauris risus, commodo et luctus rutrum, lobortis sed mauris. Integer congue, sem elementum varius tristique, erat nulla rutrum risus, a imperdiet nulla lorem fermentum erat. Pellentesque elementum justo at velit fringilla, eu feugiat erat fermentum. Vivamus libero dolor, porta eget vehicula eu, iaculis id lacus. Sed interdum convallis sapien, eget faucibus sapien. Proin hendrerit lacus turpis.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-head" aria-expanded="false">How to change or modify billing address?<svg class="faq-icon"><use href="#i-down"/></svg></button>
+        <div class="faq-body"><div><p>Maecenas congue metus id turpis iaculis mattis. Sed pellentesque id arcu id scelerisque. Ut ullamcorper rutrum justo, at blandit eros maximus ut. Integer non tincidunt justo, rhoncus Aenean venenatis sed purus ac sollicitudin. Nulla mauris risus, commodo et luctus rutrum, lobortis sed mauris. Integer congue, sem elementum varius tristique, erat nulla rutrum risus, a imperdiet nulla lorem fermentum erat. Pellentesque elementum justo at velit fringilla, eu feugiat erat fermentum. Vivamus libero dolor, porta eget vehicula eu, iaculis id lacus. Sed interdum convallis sapien, eget faucibus sapien. Proin hendrerit lacus turpis.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-head" aria-expanded="false">Why can’t I log into my account?<svg class="faq-icon"><use href="#i-down"/></svg></button>
+        <div class="faq-body"><div><p>Maecenas congue metus id turpis iaculis mattis. Sed pellentesque id arcu id scelerisque. Ut ullamcorper rutrum justo, at blandit eros maximus ut. Integer non tincidunt justo, rhoncus Aenean venenatis sed purus ac sollicitudin. Nulla mauris risus, commodo et luctus rutrum, lobortis sed mauris. Integer congue, sem elementum varius tristique, erat nulla rutrum risus, a imperdiet nulla lorem fermentum erat. Pellentesque elementum justo at velit fringilla, eu feugiat erat fermentum. Vivamus libero dolor, porta eget vehicula eu, iaculis id lacus. Sed interdum convallis sapien, eget faucibus sapien. Proin hendrerit lacus turpis.</p></div></div>
+      </div>
+    </div>
+
+    <!-- 4. Still need help -->
+    <div class="faqp-help" data-anim="fade-up">
+      <p class="faqp-help-sub">Can't find the answer you are looking for?</p>
+      <h2 class="faqp-help-title">We're Here to Help!</h2>
+      <button type="button" class="btn btn-accent min-w-[200px]" data-popup-open="faqContactPopup">Contact us now</button>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- Contact popup (FAQ) -->
+<div id="faqContactPopup" class="popup fixed inset-0 z-[90] bg-black/60 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="faqContactTitle">
+  <div class="popup-box relative w-full max-w-[500px] bg-white rounded-[20px] p-8 md:p-10 shadow-[0_0_10px_rgba(0,0,0,.25)]">
+    <button data-popup-close class="absolute top-3 right-3 w-9 h-9 rounded-full flex items-center justify-center text-ink hover:bg-accent transition-colors" aria-label="Close"><svg class="w-5 h-5"><use href="#i-close"/></svg></button>
+    <h3 id="faqContactTitle" class="text-[22px] font-bold text-ink mb-0.5">Contact us Now</h3>
+    <p class="text-[12px] mb-[31px]">Please enter the details of your request. A member of our support staff will respond as soon as possible.</p>
+    <form class="contact-form" action="#" data-home-form>
+      <input type="text" name="name" placeholder="Your Name" autocomplete="name" required aria-label="Your name">
+      <input type="email" name="email" placeholder="Your Email" autocomplete="email" required aria-label="Your email">
+      <input type="tel" name="phone" placeholder="Phone Number" autocomplete="tel" aria-label="Phone number">
+      <textarea name="message" rows="6" placeholder="Your message" required aria-label="Your message"></textarea>
+      <p class="form-msg hidden contact-sent">Thanks for contacting us. We'll get back to you as soon as possible.</p>
+      <button type="submit" class="btn btn-accent w-full">Submit now</button>
+    </form>
+  </div>
+</div>
+
+<!-- =====================================================================
+     FOOTER
+     ===================================================================== -->
+<div data-include="footer"></div>
+
+<!-- =====================================================================
+     OVERLAYS: drawers, search, popups
+     ===================================================================== -->
+<div data-include="overlays"></div>
+
+<!-- Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<!-- App: include.js loads the shared partials, then these scripts in order -->
+<script src="assets/js/include.js" data-scripts="assets/data/products.js assets/js/cart.js assets/js/wishlist.js assets/js/header.js assets/js/ui.js assets/js/animations.js"></script>
+</body>
+</html>

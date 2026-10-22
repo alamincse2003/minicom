@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout – Minicom</title>
+  <meta name="robots" content="noindex">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 3 12v16a2 2 0 0 0 2 2h22a2 2 0 0 0 2-2V12Z' fill='%23fdc402'/%3E%3Cpath d='M16 9v5M10 20a6 6 0 0 1 12 0Z' stroke='%23000' stroke-width='2' fill='%23000'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS v4 (browser build) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --font-sans: "DM Sans", sans-serif;
+      --color-accent: #fdc402;
+      --color-ink: #181818;
+      --color-body: #535353;
+      --color-muted: #b7b7b7;
+      --color-soft: #f5f5f5;
+      --color-line: #eaeaea;
+      --color-sale: #e85b40;
+      --color-stock: #0f834d;
+      --breakpoint-3xl: 1500px;
+    }
+  </style>
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<!-- Checkout is a standalone page (like Shopify checkout): own logo bar, no site header/footer -->
+<body class="font-sans co-body">
+
+<div data-include="icons"></div>
+
+<!-- =====================================================================
+     LOGO BAR
+     ===================================================================== -->
+<header class="co-header">
+  <div class="co-header-inner">
+    <a href="index.html" class="block w-[110px]"><img src="assets/images/misc/logo-dark.png" alt="Minicom" width="262" height="70"></a>
+    <a href="cart.html" class="co-cart-link" aria-label="Back to cart"><svg><use href="#i-bag"/></svg></a>
+  </div>
+</header>
+
+<!-- Phones: collapsible order summary -->
+<button type="button" id="coSummaryToggle" class="co-summary-toggle" aria-expanded="false" aria-controls="coSummary">
+  <span class="flex items-center gap-2"><span id="coToggleText">Show order summary</span><svg class="co-chevron"><use href="#i-down"/></svg></span>
+  <b class="co-toggle-total" data-co-total>$0.00</b>
+</button>
+
+<div id="coPage" class="co-layout">
+
+  <!-- =====================================================================
+       LEFT: FORM
+       ===================================================================== -->
+  <main class="co-main">
+    <form id="coForm" class="co-form" novalidate>
+
+      <!-- Express checkout -->
+      <section class="co-express">
+        <p class="co-express-title">Express checkout</p>
+        <div class="co-express-grid">
+          <button type="button" class="co-pay co-pay-shop" data-express="Shop Pay"><span class="font-black italic">shop</span><span class="co-pay-chip">Pay</span></button>
+          <button type="button" class="co-pay co-pay-paypal" data-express="PayPal"><b class="text-[#003087] italic">Pay</b><b class="text-[#0070e0] italic">Pal</b></button>
+          <button type="button" class="co-pay co-pay-gpay" data-express="Google Pay"><b>G</b>&nbsp;Pay</button>
+        </div>
+        <div class="co-or"><span>OR</span></div>
+      </section>
+
+      <!-- Contact -->
+      <section class="co-section">
+        <div class="co-section-head">
+          <h2 class="co-h2">Contact</h2>
+          <a href="#" class="co-link" data-co-login>Log in</a>
+        </div>
+        <div class="co-field">
+          <input id="coEmail" name="email" type="text" autocomplete="email" placeholder=" " required>
+          <label for="coEmail">Email or mobile phone number</label>
+          <p class="co-error" data-error-for="coEmail"></p>
+        </div>
+        <label class="co-check"><input type="checkbox" name="news" checked><span></span>Email me with news and offers</label>
+      </section>
+
+      <!-- Delivery -->
+      <section class="co-section">
+        <h2 class="co-h2">Delivery</h2>
+        <div class="co-grid">
+          <div class="co-field co-select co-span-2">
+            <select id="coCountry" name="country" autocomplete="country-name">
+              <option>United States</option>
+              <option>Canada</option>
+              <option>United Kingdom</option>
+              <option>Australia</option>
+              <option>Germany</option>
+              <option>France</option>
+              <option>Bangladesh</option>
+            </select>
+            <label for="coCountry" class="is-fixed">Country/Region</label>
+          </div>
+          <div class="co-field">
+            <input id="coFirst" name="first" type="text" autocomplete="given-name" placeholder=" ">
+            <label for="coFirst">First name (optional)</label>
+          </div>
+          <div class="co-field">
+            <input id="coLast" name="last" type="text" autocomplete="family-name" placeholder=" " required>
+            <label for="coLast">Last name</label>
+            <p class="co-error" data-error-for="coLast"></p>
+          </div>
+          <div class="co-field co-span-2">
+            <input id="coAddress" name="address" type="text" autocomplete="address-line1" placeholder=" " required>
+            <label for="coAddress">Address</label>
+            <svg class="co-field-icon"><use href="#i-search"/></svg>
+            <p class="co-error" data-error-for="coAddress"></p>
+          </div>
+          <div class="co-field co-span-2">
+            <input id="coApt" name="apartment" type="text" autocomplete="address-line2" placeholder=" ">
+            <label for="coApt">Apartment, suite, etc. (optional)</label>
+          </div>
+          <div class="co-grid-3 co-span-2">
+            <div class="co-field">
+              <input id="coCity" name="city" type="text" autocomplete="address-level2" placeholder=" " required>
+              <label for="coCity">City</label>
+              <p class="co-error" data-error-for="coCity"></p>
+            </div>
+            <div class="co-field">
+              <input id="coState" name="state" type="text" autocomplete="address-level1" placeholder=" ">
+              <label for="coState">State</label>
+            </div>
+            <div class="co-field">
+              <input id="coZip" name="zip" type="text" autocomplete="postal-code" placeholder=" " required>
+              <label for="coZip">ZIP code</label>
+              <p class="co-error" data-error-for="coZip"></p>
+            </div>
+          </div>
+          <div class="co-field co-span-2">
+            <input id="coPhone" name="phone" type="tel" autocomplete="tel" placeholder=" ">
+            <label for="coPhone">Phone (optional)</label>
+            <svg class="co-field-icon"><use href="#i-help"/></svg>
+          </div>
+        </div>
+        <label class="co-check"><input type="checkbox" name="save"><span></span>Save this information for next time</label>
+      </section>
+
+      <!-- Shipping method -->
+      <section class="co-section">
+        <h3 class="co-h3">Shipping method</h3>
+        <div id="coShipping" class="co-ship-empty">Enter your shipping address to view available shipping methods.</div>
+      </section>
+
+      <!-- Payment -->
+      <section class="co-section">
+        <h2 class="co-h2">Payment</h2>
+        <p class="co-note">All transactions are secure and encrypted.</p>
+
+        <div class="co-pay-box">
+          <label class="co-radio-row is-active">
+            <input type="radio" name="payment" value="card" checked>
+            <span class="co-radio"></span>
+            <span class="flex-1">Credit card</span>
+            <span class="co-cards" aria-hidden="true">
+              <span class="co-card co-card-visa">VISA</span>
+              <span class="co-card co-card-mc"><i></i><i></i></span>
+              <span class="co-card co-card-amex">AMEX</span>
+              <span class="co-card co-card-more">+4</span>
+            </span>
+          </label>
+          <div class="co-card-fields" data-pay-panel="card">
+            <div class="co-field">
+              <input id="coCard" name="card" type="text" inputmode="numeric" autocomplete="cc-number" placeholder=" " maxlength="23" required>
+              <label for="coCard">Card number</label>
+              <svg class="co-field-icon"><use href="#i-lock"/></svg>
+              <p class="co-error" data-error-for="coCard"></p>
+            </div>
+            <div class="co-grid">
+              <div class="co-field">
+                <input id="coExp" name="exp" type="text" inputmode="numeric" autocomplete="cc-exp" placeholder=" " maxlength="7" required>
+                <label for="coExp">Expiration date (MM / YY)</label>
+                <p class="co-error" data-error-for="coExp"></p>
+              </div>
+              <div class="co-field">
+                <input id="coCvc" name="cvc" type="text" inputmode="numeric" autocomplete="cc-csc" placeholder=" " maxlength="4" required>
+                <label for="coCvc">Security code</label>
+                <svg class="co-field-icon"><use href="#i-help"/></svg>
+                <p class="co-error" data-error-for="coCvc"></p>
+              </div>
+            </div>
+            <div class="co-field">
+              <input id="coName" name="cardname" type="text" autocomplete="cc-name" placeholder=" " required>
+              <label for="coName">Name on card</label>
+              <p class="co-error" data-error-for="coName"></p>
+            </div>
+            <label class="co-check !mt-0"><input type="checkbox" name="billing" checked><span></span>Use shipping address as billing address</label>
+          </div>
+
+          <label class="co-radio-row">
+            <input type="radio" name="payment" value="paypal">
+            <span class="co-radio"></span>
+            <span class="flex-1">PayPal</span>
+            <b class="text-[15px] italic"><span class="text-[#003087]">Pay</span><span class="text-[#0070e0]">Pal</span></b>
+          </label>
+          <div class="co-paypal-panel" data-pay-panel="paypal" hidden>
+            <svg class="w-12 h-12 mx-auto mb-3 text-muted"><use href="#i-arrow-r"/></svg>
+            After clicking “Pay now”, you will be redirected to PayPal to complete your purchase securely.
+          </div>
+        </div>
+      </section>
+
+      <button type="submit" class="co-submit">Pay now</button>
+
+      <!-- Policies -->
+      <nav class="co-policies" aria-label="Store policies">
+        <a href="#">Refund policy</a>
+        <a href="#">Shipping</a>
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms of service</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </form>
+
+    <!-- Thank-you screen (shown after a successful demo payment) -->
+    <section id="coThanks" class="co-thanks" hidden>
+      <div class="co-thanks-icon"><svg><use href="#i-check"/></svg></div>
+      <p class="text-[13px] text-body">Order <span id="coOrderNo">#MC0000</span></p>
+      <h1 class="co-thanks-title">Thank you<span id="coThanksName"></span>!</h1>
+      <div class="co-thanks-box">
+        <h3 class="font-bold text-ink mb-1">Your order is confirmed</h3>
+        <p>You'll receive a confirmation email with your order number shortly.</p>
+      </div>
+      <div class="co-thanks-box">
+        <h3 class="font-bold text-ink mb-2">Order details</h3>
+        <dl id="coThanksDetails" class="co-thanks-dl"></dl>
+      </div>
+      <div class="flex flex-wrap items-center justify-between gap-4 mt-6">
+        <p class="text-[13px]">Need help? <a href="contact.html" class="co-link">Contact us</a></p>
+        <a href="shop.html" class="co-submit !w-auto !px-8 !mt-0">Continue shopping</a>
+      </div>
+    </section>
+
+    <!-- Empty cart -->
+    <section id="coEmpty" class="co-thanks" hidden>
+      <h1 class="co-thanks-title">Your cart is empty</h1>
+      <p class="mb-6">Add some products to your cart before checking out.</p>
+      <a href="shop.html" class="co-submit !w-auto !px-8 !mt-0">Continue shopping</a>
+    </section>
+  </main>
+
+  <!-- =====================================================================
+       RIGHT: ORDER SUMMARY
+       ===================================================================== -->
+  <aside id="coSummary" class="co-summary">
+    <div class="co-summary-inner">
+      <div id="coLines" class="co-lines"></div>
+
+      <form id="coDiscount" class="co-discount" novalidate>
+        <div class="co-field flex-1">
+          <input id="coCode" type="text" placeholder=" " autocomplete="off">
+          <label for="coCode">Discount code or gift card</label>
+        </div>
+        <button type="submit" class="co-apply" disabled>Apply</button>
+      </form>
+      <p class="co-error -mt-3 mb-3" id="coCodeError"></p>
+
+      <dl class="co-totals">
+        <div><dt>Subtotal · <span data-co-count>0</span> items</dt><dd data-co-subtotal>$0.00</dd></div>
+        <div><dt>Shipping <svg class="w-3.5 h-3.5 inline -mt-0.5 text-muted"><use href="#i-help"/></svg></dt><dd data-co-shipping class="text-body">Enter shipping address</dd></div>
+        <div class="co-total-row"><dt>Total</dt><dd><small>USD</small><span data-co-total>$0.00</span></dd></div>
+      </dl>
+    </div>
+  </aside>
+</div>
+
+<!-- Toast (demo messages) -->
+<div id="coToast" class="co-toast" role="status" aria-live="polite"></div>
+
+<!-- App: icons partial, catalogue + cart store, then checkout logic -->
+<script src="assets/js/include.js" data-scripts="assets/data/products.js assets/js/cart.js assets/js/wishlist.js assets/js/checkout.js"></script>
+</body>
+</html>

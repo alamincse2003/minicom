@@ -1,3 +1,8 @@
+/* Shared partial: Site footer.
+   Plain HTML inside String.raw`...` — edit it like an .html file.
+   (Loaded as a script so pages also work when opened by double-click.) */
+window.MC_PARTIALS = window.MC_PARTIALS || {};
+window.MC_PARTIALS.footer = String.raw`
 <footer class="site-footer text-white">
   <div class="wrap">
     <div class="ft-top">
@@ -34,10 +39,10 @@
           <div class="ft-menu">
             <button type="button" class="ft-menu-title" data-ft-toggle>Customer care<svg><use href="#i-plus"/></svg></button>
             <ul class="ft-links">
-              <li><a href="#">FAQs</a></li>
+              <li><a href="faq.html">FAQs</a></li>
               <li><a href="#">Terms of Service</a></li>
               <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
               <li><a href="#">Gift Card</a></li>
             </ul>
           </div>
@@ -54,8 +59,8 @@
           <div class="ft-menu">
             <button type="button" class="ft-menu-title" data-ft-toggle>Company info<svg><use href="#i-plus"/></svg></button>
             <ul class="ft-links">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Our Blog</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="blog.html">Our Blog</a></li>
               <li><a href="#">Careers</a></li>
               <li><a href="#">Store Locations</a></li>
               <li><a href="#">Testimonial</a></li>
@@ -73,3 +78,4 @@
     </div>
   </div>
 </footer>
+`;

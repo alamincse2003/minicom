@@ -1,3 +1,8 @@
+/* Shared partial: Mobile menu, cart drawer, search, login popup, toast, bottom bar, back-to-top.
+   Plain HTML inside String.raw`...` — edit it like an .html file.
+   (Loaded as a script so pages also work when opened by double-click.) */
+window.MC_PARTIALS = window.MC_PARTIALS || {};
+window.MC_PARTIALS.overlays = String.raw`
 <div class="overlay fixed inset-0 z-[60] bg-black/50" data-overlay></div>
 
 <!-- Mobile menu drawer -->
@@ -16,8 +21,8 @@
     <details class="border-b border-line group"><summary class="flex justify-between items-center py-3 cursor-pointer list-none" data-nav="products">Products<svg class="w-4 h-4 transition-transform group-open:rotate-180"><use href="#i-down"/></svg></summary>
       <ul class="pb-3 pl-3 space-y-2 font-normal normal-case text-[14px] text-body"><li><a href="product.html">Product detail default</a></li><li><a href="#">Product thumb left</a></li><li><a href="#">Product image grid</a></li><li><a href="#">Product video</a></li></ul></details>
     <details class="border-b border-line group"><summary class="flex justify-between items-center py-3 cursor-pointer list-none" data-nav="pages">Pages<svg class="w-4 h-4 transition-transform group-open:rotate-180"><use href="#i-down"/></svg></summary>
-      <ul class="pb-3 pl-3 space-y-2 font-normal normal-case text-[14px] text-body"><li><a href="#">About Us</a></li><li><a href="#">Contact Us</a></li><li><a href="#">FAQs Page</a></li><li><a href="#">Store Locations</a></li></ul></details>
-    <a href="#" data-nav="blog" class="block py-3 border-b border-line">Blog</a>
+      <ul class="pb-3 pl-3 space-y-2 font-normal normal-case text-[14px] text-body"><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="faq.html">FAQs Page</a></li><li><a href="#">Store Locations</a></li></ul></details>
+    <a href="blog.html" data-nav="blog" class="block py-3 border-b border-line">Blog</a>
   </nav>
   <div class="px-5 py-5 text-[14px] space-y-2">
     <p><b class="text-ink">Call Us:</b> +(123)-456-7890</p>
@@ -31,11 +36,18 @@
     <h3 class="text-[16px] font-bold uppercase text-ink">My Cart <span class="text-muted">(<span data-cart-count>0</span> items)</span></h3>
     <button data-drawer-close aria-label="Close cart" class="text-ink"><svg class="w-6 h-6"><use href="#i-close"/></svg></button>
   </div>
-  <div class="flex-1 flex flex-col items-center justify-center text-center p-8">
-    <svg class="w-16 h-16 text-line mb-4"><use href="#i-bag"/></svg>
-    <p class="text-ink font-bold mb-1" data-cart-empty>Your cart is currently empty.</p>
-    <p class="text-[13px] mb-6">Free shipping on all orders over $200.00</p>
-    <a href="#" class="btn btn-dark" data-drawer-close>Continue shopping</a>
+  <!-- Lines are rendered by assets/js/cart.js -->
+  <div class="flex-1 overflow-y-auto" data-mini-cart></div>
+  <div class="border-t border-line p-6 bg-soft" data-mini-cart-foot hidden>
+    <div class="flex items-center justify-between mb-4">
+      <span class="text-[14px] font-bold uppercase text-ink">Subtotal:</span>
+      <span class="text-[20px] font-extrabold text-ink" data-mini-subtotal>$0.00</span>
+    </div>
+    <div class="mb-5" data-mini-shipping></div>
+    <div class="grid grid-cols-2 gap-2.5">
+      <a href="cart.html" class="btn btn-light !border-ink w-full">View cart</a>
+      <a href="checkout.html" class="btn btn-accent w-full">Check out</a>
+    </div>
   </div>
 </aside>
 
@@ -94,9 +106,10 @@
 <nav class="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-white border-t border-line grid grid-cols-4 h-[60px] text-[11px] font-medium text-ink" aria-label="Quick links">
   <a href="index.html" class="flex flex-col items-center justify-center gap-1"><svg class="w-5 h-5"><use href="#i-home"/></svg>Home</a>
   <a href="shop.html" class="flex flex-col items-center justify-center gap-1"><svg class="w-5 h-5"><use href="#i-grid"/></svg>Shopping</a>
-  <a href="#" class="relative flex flex-col items-center justify-center gap-1"><svg class="w-5 h-5"><use href="#i-heart"/></svg>Wishlist<span class="absolute top-1.5 left-1/2 ml-1.5 min-w-4 h-4 px-1 rounded-full bg-accent text-[9px] font-bold leading-4 text-center" data-wishlist-count>0</span></a>
-  <a href="#" class="flex flex-col items-center justify-center gap-1" data-popup-open="loginPopup"><svg class="w-5 h-5"><use href="#i-user"/></svg>Account</a>
+  <a href="wishlist.html" class="relative flex flex-col items-center justify-center gap-1"><svg class="w-5 h-5"><use href="#i-heart"/></svg>Wishlist<span class="absolute top-1.5 left-1/2 ml-1.5 min-w-4 h-4 px-1 rounded-full bg-accent text-[9px] font-bold leading-4 text-center" data-wishlist-count>0</span></a>
+  <a href="account.html" class="flex flex-col items-center justify-center gap-1"><svg class="w-5 h-5"><use href="#i-user"/></svg>Account</a>
 </nav>
 
 <!-- Back to top -->
 <button id="toTop" class="to-top fixed right-5 bottom-20 lg:bottom-8 z-40 w-11 h-11 rounded-full bg-accent text-ink flex items-center justify-center shadow-lg hover:bg-black hover:text-white transition-colors" aria-label="Back to top"><svg class="w-5 h-5"><use href="#i-up"/></svg></button>
+`;

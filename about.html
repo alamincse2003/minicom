@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us – Minicom</title>
+  <meta name="description" content="About Minicom: our story, how we work, why customers choose us, our team and our store locations.">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 3 12v16a2 2 0 0 0 2 2h22a2 2 0 0 0 2-2V12Z' fill='%23fdc402'/%3E%3Cpath d='M16 9v5M10 20a6 6 0 0 1 12 0Z' stroke='%23000' stroke-width='2' fill='%23000'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css">
+
+  <!-- Tailwind CSS v4 (browser build) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --font-sans: "DM Sans", sans-serif;
+      --color-accent: #fdc402;
+      --color-ink: #181818;
+      --color-body: #535353;
+      --color-muted: #b7b7b7;
+      --color-soft: #f5f5f5;
+      --color-line: #eaeaea;
+      --color-sale: #e85b40;
+      --color-stock: #0f834d;
+      --breakpoint-3xl: 1500px;
+    }
+  </style>
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+
+  <!-- Hide reveal targets before first paint (animations.js takes over) -->
+  <script>
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('js-anim');
+  </script>
+</head>
+<body class="font-sans" data-nav="pages" data-header="solid">
+
+<!-- =====================================================================
+     SVG ICON SPRITE
+     ===================================================================== -->
+<div data-include="icons"></div>
+
+<!-- =====================================================================
+     HEADER
+     ===================================================================== -->
+<div data-include="header"></div>
+
+<main class="page-top">
+
+<!-- =====================================================================
+     1. PAGE BANNER
+     ===================================================================== -->
+<section class="page-banner" style="background-image:url('assets/images/banners/breadcrumb.jpg')">
+  <div class="wrap">
+    <h1 class="page-banner-title">About Us</h1>
+    <ol class="page-crumbs">
+      <li><a href="index.html">Home</a></li>
+      <li aria-current="page">About Us</li>
+    </ol>
+  </div>
+</section>
+
+<!-- =====================================================================
+     2. INTRO IMAGES (66 / 34) + TEXT
+     ===================================================================== -->
+<section class="about-intro">
+  <div class="wrap">
+    <div class="about-pics" data-anim="fade-up">
+      <img src="assets/images/about/about-us-1.jpg" alt="Minicom living room" class="about-pic-a">
+      <img src="assets/images/about/about-us-2.jpg" alt="Minicom furniture detail" class="about-pic-b">
+    </div>
+    <div class="about-text" data-anim="fade-up">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat ut ex vel finibus. Nunc eget molestie purus. Fusce imperdiet pulvinar est, eget fermentum nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae</p>
+      <p>Maecenas congue metus id turpis iaculis mattis. Sed pellentesque id arcu id scelerisque. Ut ullamcorper rutrum justo, at blandit eros maximus ut. Integer non tincidunt justo, rhoncus Aenean venenatis sed purus ac sollicitudin. Nulla mauris risus, commodo et luctus rutrum, lobortis sed mauris. Integer congue, sem elementum varius tristique, erat nulla rutrum risus, a imperdiet nulla lorem fermentum erat. Pellentesque elementum justo at velit fringilla, eu feugiat erat fermentum. Vivamus libero dolor, porta eget vehicula eu, iaculis id lacus. Sed interdum convallis sapien, eget faucibus sapien. Proin hendrerit lacus turpis.</p>
+      <p>Maecenas congue metus id turpis iaculis mattis. Sed pellentesque id arcu id scelerisque. Ut ullamcorper rutrum justo, at blandit eros maximus ut. Integer non tincidunt justo, rhoncus Aenean venenatis sed purus ac sollicitudin. Nulla mauris risus, commodo et luctus rutrum, lobortis sed mauris.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     3. CUSTOMER VIDEOS (centred slide, neighbours peek in)
+     ===================================================================== -->
+<section class="sec-pb overflow-hidden">
+  <div class="wrap text-center mb-10 lg:mb-[55px]" data-anim="fade-up">
+    <p class="sec-sub">Real Customer Experience</p>
+    <h2 class="sec-title">Videos From Our Clients</h2>
+  </div>
+  <div class="swiper video-swiper" data-anim="fade-up">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="video-card">
+          <img src="assets/images/about/about-us-video-1.jpg" alt="Customer video 1" loading="lazy">
+          <button type="button" class="video-play" data-video="https://www.youtube.com/embed/XHOmBV4js_E?rel=0&amp;autoplay=1" aria-label="Play video 1"><svg><use href="#i-play"/></svg></button>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="video-card">
+          <img src="assets/images/about/about-us-video-2.jpg" alt="Customer video 2" loading="lazy">
+          <button type="button" class="video-play" data-video="https://www.youtube.com/embed/XHOmBV4js_E?rel=0&amp;autoplay=1" aria-label="Play video 2"><svg><use href="#i-play"/></svg></button>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="video-card">
+          <img src="assets/images/about/about-us-video-3.jpg" alt="Customer video 3" loading="lazy">
+          <button type="button" class="video-play" data-video="https://www.youtube.com/embed/XHOmBV4js_E?rel=0&amp;autoplay=1" aria-label="Play video 3"><svg><use href="#i-play"/></svg></button>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="video-card">
+          <img src="assets/images/about/about-us-video-4.jpg" alt="Customer video 4" loading="lazy">
+          <button type="button" class="video-play" data-video="https://www.youtube.com/embed/XHOmBV4js_E?rel=0&amp;autoplay=1" aria-label="Play video 4"><svg><use href="#i-play"/></svg></button>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="video-card">
+          <img src="assets/images/about/about-us-video-5.jpg" alt="Customer video 5" loading="lazy">
+          <button type="button" class="video-play" data-video="https://www.youtube.com/embed/XHOmBV4js_E?rel=0&amp;autoplay=1" aria-label="Play video 5"><svg><use href="#i-play"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     4. HOW WE WORK
+     ===================================================================== -->
+<section class="how-sec">
+  <div class="wrap">
+    <div class="text-center mb-10 lg:mb-[55px]" data-anim="fade-up">
+      <p class="sec-sub !text-[14px]">How We Work</p>
+      <h2 class="sec-title max-w-[680px] mx-auto">We Give You The Power To Create Spaces That Are Just Right For You</h2>
+    </div>
+    <div class="how-grid">
+      <div class="how-item" data-anim="fade-up">
+        <span class="how-icon"><img src="assets/images/about/about-us-icon-1.svg" alt=""></span>
+        <div><h3 class="how-title">Choose A Theme</h3><p class="how-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat ut ex vel finibus. Nunc eget molestie purus.</p></div>
+      </div>
+      <div class="how-item" data-anim="fade-up">
+        <span class="how-icon"><img src="assets/images/about/about-us-icon-2.svg" alt=""></span>
+        <div><h3 class="how-title">Add Products</h3><p class="how-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat ut ex vel finibus. Nunc eget molestie purus.</p></div>
+      </div>
+      <div class="how-item" data-anim="fade-up">
+        <span class="how-icon"><img src="assets/images/about/about-us-icon-3.svg" alt=""></span>
+        <div><h3 class="how-title">Start Selling</h3><p class="how-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat ut ex vel finibus. Nunc eget molestie purus.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     5. WHY CHOOSE US (text left, image right)
+     ===================================================================== -->
+<section class="about-split">
+  <div class="wrap about-split-row is-reverse">
+    <div class="about-split-img" data-anim="fade-left"><img src="assets/images/about/about-us-why-choose-us.jpg" alt="Why choose Minicom" loading="lazy"></div>
+    <div data-anim="fade-right">
+      <h2 class="about-split-title">Why choose us ?</h2>
+      <p class="about-split-text">Maecenas congue metus id turpis iaculis mattis. Sed pellentesque id arcu id scelerisque. Ut ullamcorper rutrum justo, at blandit eros maximus ut. Integer non tincidunt justo, rhoncus Aenean venenatis sed purus ac sollicitudin. Nulla mauris risus, commodo et luctus rutrum, lobortis sed mauris. Integer congue, sem elementum varius tristique.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     6. TRUSTED ONLINE SHOPPING (image left, text right)
+     ===================================================================== -->
+<section class="about-split about-split-last">
+  <div class="wrap about-split-row">
+    <div class="about-split-img" data-anim="fade-right"><img src="assets/images/about/about-us-trusted-online.jpg" alt="Trusted online shopping" loading="lazy"></div>
+    <div data-anim="fade-left">
+      <h2 class="about-split-title">Trusted Online Shopping</h2>
+      <p class="about-split-text">Maecenas congue metus id turpis iaculis mattis. Sed pellentesque id arcu id scelerisque. Ut ullamcorper rutrum justo, at blandit eros maximus ut. Integer non tincidunt justo, rhoncus Aenean venenatis sed purus ac sollicitudin. Nulla mauris risus, commodo et luctus rutrum, lobortis sed mauris. Integer congue, sem elementum varius tristique.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     7. OUR TEAMS (name shows on hover)
+     ===================================================================== -->
+<section class="sec-pb overflow-hidden">
+  <div class="wrap">
+    <div class="text-center mb-10 lg:mb-[55px]" data-anim="fade-up">
+      <p class="sec-sub !text-[14px]">Our Teams</p>
+      <h2 class="sec-title">The Passionate Team Bringing Our Designs to Life</h2>
+    </div>
+    <div class="swiper team-swiper bleed-swiper" data-anim="fade-up">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="#" class="team-card">
+            <img src="assets/images/about/about-tes-1.jpg" alt="Team member 1" loading="lazy">
+            <span class="team-info"><b>Customer</b><span>Verified Purchase</span></span>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#" class="team-card">
+            <img src="assets/images/about/about-tes-2.jpg" alt="Team member 2" loading="lazy">
+            <span class="team-info"><b>Customer</b><span>Verified Purchase</span></span>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#" class="team-card">
+            <img src="assets/images/about/about-tes-3.jpg" alt="Team member 3" loading="lazy">
+            <span class="team-info"><b>Customer</b><span>Verified Purchase</span></span>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#" class="team-card">
+            <img src="assets/images/about/about-tes-4.jpg" alt="Team member 4" loading="lazy">
+            <span class="team-info"><b>Customer</b><span>Verified Purchase</span></span>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#" class="team-card">
+            <img src="assets/images/about/about-tes-5.jpg" alt="Team member 5" loading="lazy">
+            <span class="team-info"><b>Customer</b><span>Verified Purchase</span></span>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#" class="team-card">
+            <img src="assets/images/about/about-tes-6.jpg" alt="Team member 6" loading="lazy">
+            <span class="team-info"><b>Customer</b><span>Verified Purchase</span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     8. OUR LOCATIONS
+     ===================================================================== -->
+<section class="loc-sec overflow-hidden">
+  <div class="wrap">
+    <div class="text-center mb-10 lg:mb-[55px]" data-anim="fade-up">
+      <p class="sec-sub !text-[14px]">Our Locations</p>
+      <h2 class="sec-title">Stores System</h2>
+    </div>
+    <div class="swiper loc-swiper bleed-swiper" data-anim="fade-up">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="loc-card">
+            <div class="loc-img"><img src="assets/images/about/about-local-1.jpg" alt="Los Angeles store" loading="lazy"></div>
+            <h3 class="loc-name">Los Angeles</h3>
+            <p class="loc-addr">3123 Canis Heights Drive, Marina, CA 90071</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="loc-card">
+            <div class="loc-img"><img src="assets/images/about/about-local-2.jpg" alt="New York store" loading="lazy"></div>
+            <h3 class="loc-name">New York</h3>
+            <p class="loc-addr">1904 James Street, Rochester, NY 14604</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="loc-card">
+            <div class="loc-img"><img src="assets/images/about/about-local-3.jpg" alt="California store" loading="lazy"></div>
+            <h3 class="loc-name">California</h3>
+            <p class="loc-addr">3605 Martha Street, Phoenix, AZ 86040</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Video lightbox -->
+<div id="videoPopup" class="popup fixed inset-0 z-[90] bg-black/80 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Customer video">
+  <div class="popup-box relative w-full max-w-[960px]">
+    <button data-popup-close class="absolute -top-12 right-0 w-10 h-10 rounded-full bg-white flex items-center justify-center text-ink hover:bg-accent transition-colors" aria-label="Close video"><svg class="w-5 h-5"><use href="#i-close"/></svg></button>
+    <div class="aspect-video bg-black rounded-[5px] overflow-hidden"><iframe id="videoFrame" title="Customer video" class="w-full h-full" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+  </div>
+</div>
+
+<!-- =====================================================================
+     FOOTER
+     ===================================================================== -->
+<div data-include="footer"></div>
+
+<!-- =====================================================================
+     OVERLAYS: drawers, search, popups
+     ===================================================================== -->
+<div data-include="overlays"></div>
+
+<!-- Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<!-- App: include.js loads the shared partials, then these scripts in order -->
+<script src="assets/js/include.js" data-scripts="assets/data/products.js assets/js/cart.js assets/js/wishlist.js assets/js/header.js assets/js/ui.js assets/js/about.js assets/js/animations.js"></script>
+</body>
+</html>

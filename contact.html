@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact – Minicom</title>
+  <meta name="description" content="Contact Minicom: send us a message, find our store on the map, or call us. Open every day 11am to 7pm.">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 3 12v16a2 2 0 0 0 2 2h22a2 2 0 0 0 2-2V12Z' fill='%23fdc402'/%3E%3Cpath d='M16 9v5M10 20a6 6 0 0 1 12 0Z' stroke='%23000' stroke-width='2' fill='%23000'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css">
+
+  <!-- Tailwind CSS v4 (browser build) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --font-sans: "DM Sans", sans-serif;
+      --color-accent: #fdc402;
+      --color-ink: #181818;
+      --color-body: #535353;
+      --color-muted: #b7b7b7;
+      --color-soft: #f5f5f5;
+      --color-line: #eaeaea;
+      --color-sale: #e85b40;
+      --color-stock: #0f834d;
+      --breakpoint-3xl: 1500px;
+    }
+  </style>
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+
+  <!-- Hide reveal targets before first paint (animations.js takes over) -->
+  <script>
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('js-anim');
+  </script>
+</head>
+<body class="font-sans" data-nav="pages" data-header="solid">
+
+<!-- =====================================================================
+     SVG ICON SPRITE
+     ===================================================================== -->
+<div data-include="icons"></div>
+
+<!-- =====================================================================
+     HEADER
+     ===================================================================== -->
+<div data-include="header"></div>
+
+<main class="page-top">
+
+<!-- =====================================================================
+     1. PAGE BANNER
+     ===================================================================== -->
+<section class="page-banner" style="background-image:url('assets/images/banners/breadcrumb.jpg')">
+  <div class="wrap">
+    <h1 class="page-banner-title">Contact</h1>
+    <ol class="page-crumbs">
+      <li><a href="index.html">Home</a></li>
+      <li aria-current="page">Contact</li>
+    </ol>
+  </div>
+</section>
+
+<section class="contact-page">
+  <div class="wrap">
+
+    <!-- =====================================================================
+         2. MAP
+         ===================================================================== -->
+    <div class="contact-map" data-anim="fade-up">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d23095.519254450588!2d-79.38263233337402!3d43.64941859273796!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x935ab2eb9fd5fb31!2sFirst%20Canadian%20Place!5e0!3m2!1sen!2s!4v1659598435154!5m2!1sen!2s" title="Minicom store location" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+
+    <!-- =====================================================================
+         3. FORM + STORE INFO
+         ===================================================================== -->
+    <div class="contact-title" data-anim="fade-up">
+      <h2>Get in touch</h2>
+      <p>Please enter the details of your request. A member of our support staff will respond as soon as possible.</p>
+    </div>
+
+    <div class="contact-row">
+      <form class="contact-form" action="#" data-home-form data-anim="fade-up">
+        <div class="contact-grid">
+          <input type="text" name="name" placeholder="Your Name" autocomplete="name" required aria-label="Your name">
+          <input type="email" name="email" placeholder="Your Email" autocomplete="email" required aria-label="Your email">
+        </div>
+        <input type="tel" name="phone" placeholder="Phone Number" autocomplete="tel" pattern="[0-9+()\-\s]*" aria-label="Phone number">
+        <textarea name="message" rows="12" placeholder="Your message" required aria-label="Your message"></textarea>
+        <p class="form-msg hidden contact-sent">Thanks for contacting us. We'll get back to you as soon as possible.</p>
+        <button type="submit" class="btn btn-accent contact-submit">Submit now</button>
+      </form>
+
+      <div class="contact-info" data-anim="fade-up">
+        <p class="contact-line"><label>Address:</label> 123 Suspendis matti, Visaosang Building VST District, NY Accums, North American</p>
+        <p class="contact-line"><label>Email:</label> <a href="mailto:support@domain.com">support@domain.com</a></p>
+        <p class="contact-line"><label>Call Us:</label> <a href="tel:+01234567890">(012)-345-67890</a></p>
+        <p class="contact-line contact-line-last"><label>Opening time:</label> Our store has re-opened for shopping, exchanges every day <strong>11am to 7pm</strong></p>
+        <ul class="contact-social">
+          <li><a href="#" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a></li>
+          <li><a href="#" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a></li>
+          <li><a href="#" aria-label="X"><svg><use href="#i-x"/></svg></a></li>
+          <li><a href="#" aria-label="TikTok"><svg><use href="#i-tiktok"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- =====================================================================
+     FOOTER
+     ===================================================================== -->
+<div data-include="footer"></div>
+
+<!-- =====================================================================
+     OVERLAYS: drawers, search, popups
+     ===================================================================== -->
+<div data-include="overlays"></div>
+
+<!-- Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<!-- App: include.js loads the shared partials, then these scripts in order -->
+<script src="assets/js/include.js" data-scripts="assets/data/products.js assets/js/cart.js assets/js/wishlist.js assets/js/header.js assets/js/ui.js assets/js/animations.js"></script>
+</body>
+</html>

@@ -1,11 +1,13 @@
 /* ==========================================================================
    Shared partials loader
    Every page has slots like <div data-include="header"></div>. This file
-   fetches partials/<name>.html (icons → partials/icons.svg), swaps them in,
-   applies page state from <body data-nav="..." data-header="solid">, then
-   loads the page scripts listed in data-scripts, in order.
+   loads partials/<name>.js (each sets window.MC_PARTIALS.<name> to an HTML
+   string), swaps the slots, applies page state from
+   <body data-nav="..." data-header="solid">, then loads the page scripts
+   listed in data-scripts, in order.
 
-   Needs a web server (Live Server / XAMPP): browsers block fetch() on file://.
+   Script tags (not fetch) are used on purpose: pages keep working when they
+   are opened straight from disk (file://) as well as from a server.
    ========================================================================== */
 (function () {
   const me = document.currentScript;
@@ -13,17 +15,20 @@
   const scripts = (me.dataset.scripts || '').split(/\s+/).filter(Boolean);
   const body = document.body;
 
-  const fileFor = (name) => `${base}partials/${name}.${name === 'icons' ? 'svg' : 'html'}`;
-
-  function loadPartial(slot) {
-    return fetch(fileFor(slot.dataset.include))
-      .then((res) => {
-        if (!res.ok) throw new Error(`${res.status} ${res.url}`);
-        return res.text();
-      })
-      .then((html) => {
-        slot.outerHTML = html;
+  // async=false: files load in parallel but run in list order
+  function loadScripts(list) {
+    return new Promise((resolve, reject) => {
+      if (!list.length) return resolve();
+      let left = list.length;
+      list.forEach((src) => {
+        const s = document.createElement('script');
+        s.src = base + src;
+        s.async = false;
+        s.onload = () => --left === 0 && resolve();
+        s.onerror = () => reject(new Error('Could not load ' + src));
+        document.body.appendChild(s);
       });
+    });
   }
 
   function applyPageState() {
@@ -36,38 +41,19 @@
     }
   }
 
-  // async=false keeps execution in list order while still loading in parallel
-  function loadScripts(list) {
-    return new Promise((resolve) => {
-      if (!list.length) return resolve();
-      list.forEach((src, i) => {
-        const s = document.createElement('script');
-        s.src = base + src;
-        s.async = false;
-        if (i === list.length - 1) s.onload = s.onerror = resolve;
-        document.body.appendChild(s);
-      });
-    });
-  }
-
-  function showServerNotice(err) {
-    console.error('[include.js] Could not load shared partials:', err);
-    const note = document.createElement('div');
-    note.setAttribute('role', 'alert');
-    note.style.cssText =
-      'position:fixed;inset:auto 16px 16px 16px;z-index:9999;padding:14px 18px;border-radius:6px;' +
-      'background:#181818;color:#fff;font:14px/1.5 sans-serif;box-shadow:0 8px 30px rgba(0,0,0,.3)';
-    note.textContent =
-      'Header/footer could not load. Open this site through a local server (VS Code Live Server or XAMPP), not by double-clicking the file.';
-    body.appendChild(note);
-  }
-
   const slots = [...document.querySelectorAll('[data-include]')];
-  Promise.all(slots.map(loadPartial))
+  const names = [...new Set(slots.map((s) => s.dataset.include))];
+
+  loadScripts(names.map((n) => `partials/${n}.js`))
     .then(() => {
+      slots.forEach((slot) => {
+        const html = window.MC_PARTIALS && window.MC_PARTIALS[slot.dataset.include];
+        if (html == null) throw new Error('Missing partial: ' + slot.dataset.include);
+        slot.outerHTML = html;
+      });
       applyPageState();
       document.dispatchEvent(new CustomEvent('partials:loaded'));
       return loadScripts(scripts);
     })
-    .catch(showServerNotice);
+    .catch((err) => console.error('[include.js]', err));
 })();

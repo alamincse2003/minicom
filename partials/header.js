@@ -1,3 +1,8 @@
+/* Shared partial: Site header + desktop menu.
+   Plain HTML inside String.raw`...` — edit it like an .html file.
+   (Loaded as a script so pages also work when opened by double-click.) */
+window.MC_PARTIALS = window.MC_PARTIALS || {};
+window.MC_PARTIALS.header = String.raw`
 <header id="siteHeader" class="site-header">
   <div class="wrap-fluid relative z-10 flex items-center h-[64px] lg:h-[80px]">
     <!-- Mobile menu toggle -->
@@ -30,8 +35,8 @@
       <!-- Icons -->
       <div class="ml-auto flex items-center gap-6 lg:gap-7 text-white">
         <button class="lg:hidden hover:text-accent transition-colors" data-search-open aria-label="Search"><svg class="w-[22px] h-[22px]"><use href="#i-search"/></svg></button>
-        <a href="#" class="hidden sm:block hover:text-accent transition-colors" data-popup-open="loginPopup" aria-label="Account"><svg class="w-[22px] h-[22px]"><use href="#i-user"/></svg></a>
-        <a href="#" class="relative hover:text-accent transition-colors" aria-label="Wishlist">
+        <a href="account.html" class="hidden sm:block hover:text-accent transition-colors" aria-label="Account"><svg class="w-[22px] h-[22px]"><use href="#i-user"/></svg></a>
+        <a href="wishlist.html" class="relative hover:text-accent transition-colors" aria-label="Wishlist">
           <svg class="w-[22px] h-[22px]"><use href="#i-heart"/></svg>
           <span class="count-badge bg-white/20 text-white" data-wishlist-count>0</span>
         </a>
@@ -145,29 +150,30 @@
         <li class="nav-item relative h-full flex items-center group">
           <a data-nav="pages" href="#" class="flex items-center gap-1">Pages <svg class="w-3 h-3"><use href="#i-down"/></svg></a>
           <ul class="mega !left-0 !right-auto w-[230px] mt-2 bg-white text-body rounded-[5px] shadow-xl py-5 px-6 space-y-3 text-[14px] font-normal normal-case tracking-normal">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">FAQs Page</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="faq.html">FAQs Page</a></li>
             <li><a href="#">Store Direction Page</a></li>
             <li><a href="#">Store Locations Page</a></li>
             <li><a href="#">Testimonials Page</a></li>
-            <li><a href="#">404 Error</a></li>
+            <li><a href="404.html">404 Error</a></li>
           </ul>
         </li>
 
         <li class="nav-item relative h-full flex items-center">
-          <a data-nav="blog" href="#" class="flex items-center gap-1">Blog <svg class="w-3 h-3"><use href="#i-down"/></svg></a>
+          <a data-nav="blog" href="blog.html" class="flex items-center gap-1">Blog <svg class="w-3 h-3"><use href="#i-down"/></svg></a>
           <ul class="mega !left-0 !right-auto w-[230px] mt-2 bg-white text-body rounded-[5px] shadow-xl py-5 px-6 space-y-3 text-[14px] font-normal normal-case tracking-normal">
-            <li><a href="#">Blog Left Sidebar</a></li>
-            <li><a href="#">Blog Right Sidebar</a></li>
-            <li><a href="#">Blog Without Sidebar</a></li>
-            <li><a href="#">Blog List View</a></li>
-            <li><a href="#">Blog Column View</a></li>
-            <li><a href="#">Blog Post Video</a></li>
-            <li><a href="#">Blog Post Audio</a></li>
+            <li><a href="blog.html">Blog Left Sidebar</a></li>
+            <li><a href="blog.html">Blog Right Sidebar</a></li>
+            <li><a href="blog.html">Blog Without Sidebar</a></li>
+            <li><a href="blog.html">Blog List View</a></li>
+            <li><a href="blog.html">Blog Column View</a></li>
+            <li><a href="blog-post.html">Blog Post Video</a></li>
+            <li><a href="blog-post.html">Blog Post Audio</a></li>
           </ul>
         </li>
       </ul>
     </div>
   </nav>
 </header>
+`;

@@ -142,10 +142,9 @@
   }
   window.MC.toast = showToast;
 
-  /* ---------- Swatches, wishlist, cart counters (demo only) ----------
-     Delegated so cards rendered later (shop grid) work too. */
-  let wishlist = 0,
-    cart = 0;
+  /* ---------- Swatches (demo only) ----------
+     Delegated so cards rendered later (shop grid) work too.
+     [data-wishlist] → assets/js/wishlist.js, [data-add-cart] → assets/js/cart.js */
   document.addEventListener("click", (e) => {
     const sw = e.target.closest(".swatch");
     if (sw) {
@@ -155,36 +154,7 @@
       sw.classList.add("active");
       return;
     }
-
-    const wish = e.target.closest("[data-wishlist]");
-    if (wish) {
-      e.preventDefault();
-      const added = wish.classList.toggle("!bg-accent");
-      wishlist += added ? 1 : -1;
-      document
-        .querySelectorAll("[data-wishlist-count]")
-        .forEach((el) => (el.textContent = wishlist));
-      showToast(
-        added
-          ? "This item has been added to your Wishlist"
-          : "Removed from Wishlist",
-      );
-      return;
-    }
-
-    const add = e.target.closest("[data-add-cart]");
-    if (add) {
-      e.preventDefault();
-      const qtyInput = add.closest("div")?.querySelector(".qty input");
-      cart += qtyInput ? parseInt(qtyInput.value, 10) || 1 : 1;
-      document
-        .querySelectorAll("[data-cart-count]")
-        .forEach((el) => (el.textContent = cart));
-      const empty = document.querySelector("[data-cart-empty]");
-      if (empty)
-        empty.textContent = `You have ${cart} item${cart > 1 ? "s" : ""} in your cart.`;
-      showToast("Added to cart");
-    }
+    // [data-add-cart] is handled by assets/js/cart.js (real cart store)
   });
 
   /* ---------- Popups ---------- */
