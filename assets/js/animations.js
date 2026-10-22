@@ -102,5 +102,7 @@
   });
 
   // Recalculate once images have loaded (heights change)
-  window.addEventListener('load', () => ScrollTrigger.refresh());
+  // Scripts start after the partials load, so the page may already be complete
+  if (document.readyState === 'complete') ScrollTrigger.refresh();
+  else window.addEventListener('load', () => ScrollTrigger.refresh());
 })();

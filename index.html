@@ -11,7 +11,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..900;1,9..40,300..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 
   <!-- Swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css">
@@ -41,220 +41,17 @@
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('js-anim');
   </script>
 </head>
-<body class="font-sans">
+<body class="font-sans" data-nav="home">
 
 <!-- =====================================================================
      SVG ICON SPRITE
      ===================================================================== -->
-<svg xmlns="http://www.w3.org/2000/svg" class="hidden">
-  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M15 6l6 6-6 6"/></symbol>
-  <symbol id="i-arrow-l" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12H2M8 6l-6 6 6 6"/></symbol>
-  <symbol id="i-arrow-r" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M16 6l6 6-6 6"/></symbol>
-  <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
-  <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
-  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
-  <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></symbol>
-  <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 20.5s-8-4.6-8-11A4.5 4.5 0 0 1 12 6.7 4.5 4.5 0 0 1 20 9.5c0 6.4-8 11-8 11Z"/></symbol>
-  <symbol id="i-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M5 8h14l-1 13H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
-  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h12M3 18h18"/></symbol>
-  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
-  <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
-  <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
-  <symbol id="i-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 12h14"/></symbol>
-  <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1L12 2Z"/></symbol>
-  <symbol id="i-share" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></symbol>
-  <symbol id="i-help" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14M12 17.5h.01"/></symbol>
-  <symbol id="i-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M2 6h12v10H2zM14 10h4l3 3v3h-7"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
-  <symbol id="i-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5v-9Z"/><path d="m3 7.5 9 4.5 9-4.5M12 12v9"/></symbol>
-  <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3 11 12 4l9 7v9h-6v-6H9v6H3z"/></symbol>
-  <symbol id="i-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
-  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2Z"/></symbol>
-  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
-  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
-  <symbol id="i-fb" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5V6.8c0-.8.5-1 .9-1H17V2.1L14 2c-3.3 0-4 2.4-4 4v2.5H8V12h2v10h4V12h2.8l.4-3.5H14Z"/></symbol>
-  <symbol id="i-x" viewBox="0 0 24 24" fill="currentColor"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.2-8.3L1.8 3h6.4l4.4 5.8L17.8 3Zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5Z"/></symbol>
-  <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></symbol>
-  <symbol id="i-pinterest" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2 0-2.9l1.2-5s-.3-.6-.3-1.5c0-1.4.8-2.4 1.8-2.4.9 0 1.3.6 1.3 1.4 0 .9-.6 2.2-.9 3.4-.2 1 .5 1.9 1.6 1.9 1.9 0 3.3-2 3.3-4.8 0-2.5-1.8-4.3-4.4-4.3-3 0-4.8 2.3-4.8 4.6 0 .9.4 1.9.8 2.4l.1.4-.3 1.1c0 .2-.2.3-.4.2-1.3-.6-2.2-2.6-2.2-4.2 0-3.4 2.5-6.6 7.2-6.6 3.8 0 6.7 2.7 6.7 6.3 0 3.7-2.4 6.8-5.6 6.8-1.1 0-2.2-.6-2.5-1.3l-.7 2.6c-.3 1-1 2.2-1.4 3A10 10 0 1 0 12 2Z"/></symbol>
-  <symbol id="i-yt" viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.6 12c0 1.3.1 2.6.4 3.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1c.3-1.2.4-2.5.4-3.8s-.1-2.6-.4-3.8ZM10 15.1V8.9l5.2 3.1-5.2 3.1Z"/></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></symbol>
-</svg>
+<div data-include="icons"></div>
 
 <!-- =====================================================================
      HEADER
      ===================================================================== -->
-<header id="siteHeader" class="site-header">
-  <div class="wrap-fluid relative z-10 flex items-center h-[64px] lg:h-[80px]">
-    <!-- Mobile menu toggle -->
-    <button class="lg:hidden mr-4 text-white" data-drawer-open="mobileMenu" aria-label="Open menu">
-      <svg class="w-6 h-6"><use href="#i-menu"/></svg>
-    </button>
-
-    <!-- Logo -->
-    <a href="index.html" class="block w-[110px] xl:w-[130px] shrink-0" aria-label="Minicom home">
-      <img src="assets/images/misc/logo-light.png" alt="Minicom" width="262" height="70">
-    </a>
-
-    <div class="flex flex-1 items-center lg:ml-[65px]">
-      <!-- Desktop menu toggle -->
-      <button id="menuToggle" class="hidden lg:inline-flex items-center gap-2.5 mr-10 text-[12px] font-bold uppercase tracking-wide text-white hover:text-accent transition-colors" aria-expanded="false" aria-controls="headerNav">
-        <svg class="w-6 h-6"><use href="#i-menu"/></svg>
-        <span>Menu</span>
-      </button>
-
-      <!-- Search -->
-      <form class="search-box hidden lg:flex flex-1 max-w-[760px] mr-[45px]" action="#" role="search">
-        <div class="relative flex-1">
-          <input type="search" placeholder="Search" class="peer w-full h-[50px] rounded-[3px] bg-white pl-12 pr-4 text-[14px] text-body outline-none focus:ring-2 focus:ring-accent">
-          <span class="search-placeholder absolute left-12 top-1/2 -translate-y-1/2 text-[14px] text-[#a1a1a1]">Search for <span id="searchWord" class="text-ink">Plant</span></span>
-          <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-ink"><use href="#i-search"/></svg>
-        </div>
-        <button type="submit" class="btn btn-accent ml-[5px] !h-[50px] min-w-[90px]">Search</button>
-      </form>
-
-      <!-- Icons -->
-      <div class="ml-auto flex items-center gap-6 lg:gap-7 text-white">
-        <button class="lg:hidden hover:text-accent transition-colors" data-search-open aria-label="Search"><svg class="w-[22px] h-[22px]"><use href="#i-search"/></svg></button>
-        <a href="#" class="hidden sm:block hover:text-accent transition-colors" data-popup-open="loginPopup" aria-label="Account"><svg class="w-[22px] h-[22px]"><use href="#i-user"/></svg></a>
-        <a href="#" class="relative hover:text-accent transition-colors" aria-label="Wishlist">
-          <svg class="w-[22px] h-[22px]"><use href="#i-heart"/></svg>
-          <span class="count-badge bg-white/20 text-white" data-wishlist-count>0</span>
-        </a>
-        <button class="relative hover:text-accent transition-colors" data-drawer-open="cartDrawer" aria-label="Cart">
-          <svg class="w-[22px] h-[22px]"><use href="#i-bag"/></svg>
-          <span class="count-badge bg-accent text-black" data-cart-count>0</span>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Desktop navigation (revealed by the Menu toggle) -->
-  <nav id="headerNav" class="header-nav hidden lg:block" aria-label="Main">
-    <div class="wrap-fluid relative">
-      <ul class="flex items-center gap-11 pl-[175px] xl:pl-[195px] h-[60px] text-[13px] font-bold uppercase tracking-wide text-white">
-        <li class="nav-item h-full flex items-center"><a href="index.html" class="text-accent">Home</a></li>
-
-        <li class="nav-item h-full flex items-center">
-          <a href="shop.html" class="flex items-center gap-1">Collections <svg class="w-3 h-3"><use href="#i-down"/></svg></a>
-          <div class="mega pt-2">
-            <div class="bg-white text-ink rounded-[5px] shadow-xl p-10 grid grid-cols-4 gap-10 normal-case font-normal tracking-normal">
-              <div>
-                <h4 class="text-[13px] font-bold uppercase mb-5">Collection page</h4>
-                <ul class="space-y-3 text-[14px] text-body">
-                  <li><a href="shop.html">Collection left sidebar</a></li>
-                  <li><a href="#">Collection right sidebar</a></li>
-                  <li><a href="#">Collection top sidebar</a></li>
-                  <li><a href="#">Collection without sidebar</a></li>
-                  <li><a href="#">Collection deals</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4 class="text-[13px] font-bold uppercase mb-5">Collection page</h4>
-                <ul class="space-y-3 text-[14px] text-body">
-                  <li><a href="#">Collection canvas on left</a></li>
-                  <li><a href="#">Collection canvas on top</a></li>
-                  <li><a href="#">Collection canvas on bottom</a></li>
-                  <li><a href="#">Collection full width</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4 class="text-[13px] font-bold uppercase mb-5">Collection page</h4>
-                <ul class="space-y-3 text-[14px] text-body">
-                  <li><a href="#">Numbered Pagination</a></li>
-                  <li><a href="#">Load More Button</a></li>
-                  <li><a href="#">Infinity Scroll Load More</a></li>
-                </ul>
-                <h4 class="text-[13px] font-bold uppercase mt-8 mb-5">Shop by room</h4>
-                <ul class="space-y-3 text-[14px] text-body">
-                  <li><a href="shop.html?cat=bedroom">Bedroom</a></li>
-                  <li><a href="shop.html?cat=dining-office">Dining Room</a></li>
-                  <li><a href="shop.html?cat=living-room">Living Room</a></li>
-                </ul>
-              </div>
-              <a href="#" class="zoom-img block rounded-[5px]"><img src="assets/images/misc/menu-img.jpg" alt="New collection" class="w-full h-full max-h-[300px] object-cover" loading="lazy"></a>
-            </div>
-          </div>
-        </li>
-
-        <li class="nav-item h-full flex items-center">
-          <a href="#" class="flex items-center gap-1">Products <svg class="w-3 h-3"><use href="#i-down"/></svg></a>
-          <div class="mega pt-2">
-            <div class="bg-white text-ink rounded-[5px] shadow-xl p-10 grid grid-cols-4 gap-10 normal-case font-normal tracking-normal">
-              <div>
-                <h4 class="text-[13px] font-bold uppercase mb-5">Product detail</h4>
-                <ul class="space-y-3 text-[14px] text-body">
-                  <li><a href="product.html">Product detail default</a></li>
-                  <li><a href="#">Product detail thumb left 1</a></li>
-                  <li><a href="#">Product detail thumb left 2</a></li>
-                  <li><a href="#">Product detail thumb right</a></li>
-                  <li><a href="#">Product deals countdown</a></li>
-                  <li><a href="#">Product Detail Tab Accordion v1</a></li>
-                  <li><a href="#">Product Detail Tab Accordion v2</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4 class="text-[13px] font-bold uppercase mb-5">Product detail</h4>
-                <ul class="space-y-3 text-[14px] text-body">
-                  <li><a href="#">Product detail thumb grid 1</a></li>
-                  <li><a href="#">Product detail thumb grid 2</a></li>
-                  <li><a href="#">Product detail image grid</a></li>
-                  <li><a href="#">Product detail image scroll</a></li>
-                  <li><a href="#">Product detail image slider 1</a></li>
-                  <li><a href="#">Product detail image slider 2</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4 class="text-[13px] font-bold uppercase mb-5">Product features</h4>
-                <ul class="space-y-3 text-[14px] text-body">
-                  <li><a href="product.html">Product 3D, AR models</a></li>
-                  <li><a href="#">Product Video</a></li>
-                  <li><a href="#">Product Pre-Order</a></li>
-                  <li><a href="#">Product Variant Dropbox Style</a></li>
-                  <li><a href="#">Product Variant Image Swatch</a></li>
-                  <li><a href="#">Product Variant Pattern</a></li>
-                  <li><a href="#">Product Sticky Add To Cart</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4 class="text-[13px] font-bold uppercase mb-5">Featured Product</h4>
-                <ul class="space-y-4">
-                  <li><a href="#" class="flex items-center gap-3"><img src="assets/images/products/compact-pot-1.jpg" alt="" class="w-14 h-[70px] object-cover rounded-[3px]" loading="lazy"><span class="text-[13px] leading-snug">Compact Mini Plant Pot for Desk<br><b class="text-ink">$37.00</b></span></a></li>
-                  <li><a href="#" class="flex items-center gap-3"><img src="assets/images/products/beige-armchair-1.jpg" alt="" class="w-14 h-[70px] object-cover rounded-[3px]" loading="lazy"><span class="text-[13px] leading-snug">Modern Beige Armchair<br><b class="text-ink">$150.00</b></span></a></li>
-                  <li><a href="#" class="flex items-center gap-3"><img src="assets/images/products/swivel-sofa-1.jpg" alt="" class="w-14 h-[70px] object-cover rounded-[3px]" loading="lazy"><span class="text-[13px] leading-snug">Low Profile Swivel Sofa<br><b class="text-ink">$125.00</b></span></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </li>
-
-        <li class="nav-item relative h-full flex items-center group">
-          <a href="#" class="flex items-center gap-1">Pages <svg class="w-3 h-3"><use href="#i-down"/></svg></a>
-          <ul class="mega !left-0 !right-auto w-[230px] mt-2 bg-white text-body rounded-[5px] shadow-xl py-5 px-6 space-y-3 text-[14px] font-normal normal-case tracking-normal">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">FAQs Page</a></li>
-            <li><a href="#">Store Direction Page</a></li>
-            <li><a href="#">Store Locations Page</a></li>
-            <li><a href="#">Testimonials Page</a></li>
-            <li><a href="#">404 Error</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item relative h-full flex items-center">
-          <a href="#" class="flex items-center gap-1">Blog <svg class="w-3 h-3"><use href="#i-down"/></svg></a>
-          <ul class="mega !left-0 !right-auto w-[230px] mt-2 bg-white text-body rounded-[5px] shadow-xl py-5 px-6 space-y-3 text-[14px] font-normal normal-case tracking-normal">
-            <li><a href="#">Blog Left Sidebar</a></li>
-            <li><a href="#">Blog Right Sidebar</a></li>
-            <li><a href="#">Blog Without Sidebar</a></li>
-            <li><a href="#">Blog List View</a></li>
-            <li><a href="#">Blog Column View</a></li>
-            <li><a href="#">Blog Post Video</a></li>
-            <li><a href="#">Blog Post Audio</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</header>
+<div data-include="header"></div>
 
 <main>
 
@@ -317,53 +114,53 @@
 </section>
 
 <!-- =====================================================================
-     2. SERVICE MARQUEE
+     2. SERVICE MARQUEE (thin italic / bold items, like the reference)
      ===================================================================== -->
 <section class="py-10 md:py-[50px] lg:py-[60px] bg-white" data-anim="fade-up">
   <div class="marquee" style="--duration:30s">
-    <div class="marquee-track gap-[30px] md:gap-[60px] pr-[30px] md:pr-[60px]">
-      <div class="flex items-center gap-4 shrink-0"><img src="assets/images/icons/install.svg" alt="" class="w-[30px] h-[30px]"><span class="text-[14px] md:text-[16px] font-bold uppercase text-ink">Free installation</span></div>
-      <div class="flex items-center gap-4 shrink-0"><img src="assets/images/icons/truck.svg" alt="" class="w-[30px] h-[30px]"><span class="text-[14px] md:text-[16px] font-bold uppercase text-ink">Free delivery on orders over $200</span></div>
-      <div class="flex items-center gap-4 shrink-0"><img src="assets/images/icons/money-back.svg" alt="" class="w-[30px] h-[30px]"><span class="text-[14px] md:text-[16px] font-bold uppercase text-ink">30 day money back guarantee</span></div>
-      <div class="flex items-center gap-4 shrink-0"><img src="assets/images/icons/cod.svg" alt="" class="w-[30px] h-[30px]"><span class="text-[14px] md:text-[16px] font-bold uppercase text-ink">Cash on delivery</span></div>
-      <div class="flex items-center gap-4 shrink-0"><img src="assets/images/icons/security.svg" alt="" class="w-[30px] h-[30px]"><span class="text-[14px] md:text-[16px] font-bold uppercase text-ink">Secure payment systems</span></div>
+    <div class="marquee-track svc-track">
+      <div class="svc-item"><img src="assets/images/icons/install.svg" alt="" class="svc-icon"><p class="svc-text is-thin">Free installation</p></div>
+      <div class="svc-item"><img src="assets/images/icons/truck.svg" alt="" class="svc-icon"><p class="svc-text is-bold">Free delivery on orders over $200</p></div>
+      <div class="svc-item"><img src="assets/images/icons/money-back.svg" alt="" class="svc-icon"><p class="svc-text is-thin">30 day money back guarantee</p></div>
+      <div class="svc-item"><img src="assets/images/icons/cod.svg" alt="" class="svc-icon"><p class="svc-text is-bold">Cash on delivery</p></div>
+      <div class="svc-item"><img src="assets/images/icons/security.svg" alt="" class="svc-icon"><p class="svc-text is-thin">Secure payment systems</p></div>
     </div>
   </div>
 </section>
 
 <!-- =====================================================================
-     3. CATEGORY MARQUEE (reverse)
+     3. CATEGORY MARQUEE (reverse) — grey cards, black sweep on hover
      ===================================================================== -->
 <section class="sec-pb bg-white">
-  <div class="marquee marquee-reverse" style="--duration:40s">
-    <div class="marquee-track gap-4 md:gap-[30px] pr-4 md:pr-[30px]">
-      <a href="shop.html?cat=living-room&amp;sub=sofas" class="group block w-[240px] md:w-[300px] xl:w-[340px] shrink-0">
-        <div class="relative zoom-img rounded-[10px]"><img src="assets/images/category/cate-1.jpg" alt="Sofas & Seating" class="w-full aspect-[600/574] object-cover" loading="lazy"><span class="notch"><span class="btn-round"><svg class="arrow"><use href="#i-arrow"/></svg></span></span></div>
-        <h3 class="mt-4 text-[15px] md:text-[16px] font-bold uppercase text-ink group-hover:text-accent transition-colors">Sofas &amp; Seating</h3>
+  <div class="marquee marquee-reverse" style="--duration:30s">
+    <div class="marquee-track cat-track">
+      <a href="shop.html?cat=living-room&amp;sub=sofas" class="cat-card">
+        <div class="cat-img"><img src="assets/images/category/cate-1.jpg" alt="Sofas & Seating" loading="lazy"></div>
+        <div class="cat-content"><span class="cat-title">Sofas &amp; Seating</span><span class="notch"><span class="btn-round"><svg class="arrow"><use href="#i-arrow"/></svg></span></span></div>
       </a>
-      <a href="shop.html" class="group block w-[240px] md:w-[300px] xl:w-[340px] shrink-0">
-        <div class="relative zoom-img rounded-[10px]"><img src="assets/images/category/cate-2.jpg" alt="Kids & Nursery Furniture" class="w-full aspect-[600/574] object-cover" loading="lazy"><span class="notch"><span class="btn-round"><svg class="arrow"><use href="#i-arrow"/></svg></span></span></div>
-        <h3 class="mt-4 text-[15px] md:text-[16px] font-bold uppercase text-ink group-hover:text-accent transition-colors">Kids &amp; Nursery Furniture</h3>
+      <a href="shop.html" class="cat-card">
+        <div class="cat-img"><img src="assets/images/category/cate-2.jpg" alt="Kids & Nursery Furniture" loading="lazy"></div>
+        <div class="cat-content"><span class="cat-title">Kids &amp; Nursery Furniture</span><span class="notch"><span class="btn-round"><svg class="arrow"><use href="#i-arrow"/></svg></span></span></div>
       </a>
-      <a href="shop.html?cat=dining-office&amp;sub=chairs" class="group block w-[240px] md:w-[300px] xl:w-[340px] shrink-0">
-        <div class="relative zoom-img rounded-[10px]"><img src="assets/images/category/cate-3.jpg" alt="Bar Stools & Chairs" class="w-full aspect-[600/574] object-cover" loading="lazy"><span class="notch"><span class="btn-round"><svg class="arrow"><use href="#i-arrow"/></svg></span></span></div>
-        <h3 class="mt-4 text-[15px] md:text-[16px] font-bold uppercase text-ink group-hover:text-accent transition-colors">Bar Stools &amp; Chairs</h3>
+      <a href="shop.html?cat=dining-office&amp;sub=chairs" class="cat-card">
+        <div class="cat-img"><img src="assets/images/category/cate-3.jpg" alt="Bar Stools & Chairs" loading="lazy"></div>
+        <div class="cat-content"><span class="cat-title">Bar Stools &amp; Chairs</span><span class="notch"><span class="btn-round"><svg class="arrow"><use href="#i-arrow"/></svg></span></span></div>
       </a>
-      <a href="shop.html?cat=decor" class="group block w-[240px] md:w-[300px] xl:w-[340px] shrink-0">
-        <div class="relative zoom-img rounded-[10px]"><img src="assets/images/category/cate-4.jpg" alt="Decor & Accessories" class="w-full aspect-[600/574] object-cover" loading="lazy"><span class="notch"><span class="btn-round"><svg class="arrow"><use href="#i-arrow"/></svg></span></span></div>
-        <h3 class="mt-4 text-[15px] md:text-[16px] font-bold uppercase text-ink group-hover:text-accent transition-colors">Decor &amp; Accessories</h3>
+      <a href="shop.html?cat=decor" class="cat-card">
+        <div class="cat-img"><img src="assets/images/category/cate-4.jpg" alt="Decor & Accessories" loading="lazy"></div>
+        <div class="cat-content"><span class="cat-title">Decor &amp; Accessories</span><span class="notch"><span class="btn-round"><svg class="arrow"><use href="#i-arrow"/></svg></span></span></div>
       </a>
-      <a href="shop.html?cat=bedroom" class="group block w-[240px] md:w-[300px] xl:w-[340px] shrink-0">
-        <div class="relative zoom-img rounded-[10px]"><img src="assets/images/category/cate-5.jpg" alt="Bedroom Furniture" class="w-full aspect-[600/574] object-cover" loading="lazy"><span class="notch"><span class="btn-round"><svg class="arrow"><use href="#i-arrow"/></svg></span></span></div>
-        <h3 class="mt-4 text-[15px] md:text-[16px] font-bold uppercase text-ink group-hover:text-accent transition-colors">Bedroom Furniture</h3>
+      <a href="shop.html?cat=bedroom" class="cat-card">
+        <div class="cat-img"><img src="assets/images/category/cate-5.jpg" alt="Bedroom Furniture" loading="lazy"></div>
+        <div class="cat-content"><span class="cat-title">Bedroom Furniture</span><span class="notch"><span class="btn-round"><svg class="arrow"><use href="#i-arrow"/></svg></span></span></div>
       </a>
-      <a href="shop.html?cat=lighting" class="group block w-[240px] md:w-[300px] xl:w-[340px] shrink-0">
-        <div class="relative zoom-img rounded-[10px]"><img src="assets/images/category/cate-6.jpg" alt="Lighting & Lamps" class="w-full aspect-[600/574] object-cover" loading="lazy"><span class="notch"><span class="btn-round"><svg class="arrow"><use href="#i-arrow"/></svg></span></span></div>
-        <h3 class="mt-4 text-[15px] md:text-[16px] font-bold uppercase text-ink group-hover:text-accent transition-colors">Lighting &amp; Lamps</h3>
+      <a href="shop.html?cat=lighting" class="cat-card">
+        <div class="cat-img"><img src="assets/images/category/cate-6.jpg" alt="Lighting & Lamps" loading="lazy"></div>
+        <div class="cat-content"><span class="cat-title">Lighting &amp; Lamps</span><span class="notch"><span class="btn-round"><svg class="arrow"><use href="#i-arrow"/></svg></span></span></div>
       </a>
-      <a href="shop.html?cat=living-room&amp;sub=armchairs" class="group block w-[240px] md:w-[300px] xl:w-[340px] shrink-0">
-        <div class="relative zoom-img rounded-[10px]"><img src="assets/images/category/cate-7.jpg" alt="Lounge In Style" class="w-full aspect-[600/574] object-cover" loading="lazy"><span class="notch"><span class="btn-round"><svg class="arrow"><use href="#i-arrow"/></svg></span></span></div>
-        <h3 class="mt-4 text-[15px] md:text-[16px] font-bold uppercase text-ink group-hover:text-accent transition-colors">Lounge In Style</h3>
+      <a href="shop.html?cat=living-room&amp;sub=armchairs" class="cat-card">
+        <div class="cat-img"><img src="assets/images/category/cate-7.jpg" alt="Lounge In Style" loading="lazy"></div>
+        <div class="cat-content"><span class="cat-title">Lounge In Style</span><span class="notch"><span class="btn-round"><svg class="arrow"><use href="#i-arrow"/></svg></span></span></div>
       </a>
     </div>
   </div>
@@ -398,9 +195,10 @@
               </div>
               <div class="p-add"><button data-add-cart aria-label="Add to cart"><svg class="w-[18px] h-[18px]"><use href="#i-bag"/></svg></button></div>
             </div>
-            <div class="pt-[15px]">
+            <div class="p-info">
+              <div class="p-stars" aria-label="No reviews yet"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
               <a href="product.html" class="p-title">Modern Single Sofa Chair for Stylish Living Room</a>
-              <p class="mt-1.5 text-[14px] font-bold text-ink">$200.00</p>
+              <p class="p-price">$200.00</p>
             </div>
           </div>
         </div>
@@ -414,10 +212,10 @@
               </div>
               <div class="p-add"><button data-add-cart aria-label="Add to cart"><svg class="w-[18px] h-[18px]"><use href="#i-bag"/></svg></button></div>
             </div>
-            <div class="pt-[15px]">
+            <div class="p-info">
+              <div class="p-stars" aria-label="No reviews yet"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
               <a href="#" class="p-title">Decorative Cactus Plant Pot for Indoor Display</a>
-              <p class="mt-1.5 text-[14px] font-bold text-ink">$37.00</p>
-              <div class="flex gap-1.5 mt-3"><button class="swatch active" style="background:#ffffff" title="White" aria-label="White"></button><button class="swatch" style="background:#ff7f50" title="Coral" aria-label="Coral"></button><button class="swatch" style="background:#5f9ea0" title="CadetBlue" aria-label="CadetBlue"></button></div>
+              <p class="p-price">$37.00</p>
             </div>
           </div>
         </div>
@@ -431,9 +229,10 @@
               </div>
               <div class="p-add"><button data-add-cart aria-label="Add to cart"><svg class="w-[18px] h-[18px]"><use href="#i-bag"/></svg></button></div>
             </div>
-            <div class="pt-[15px]">
+            <div class="p-info">
+              <div class="p-stars" aria-label="No reviews yet"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
               <a href="#" class="p-title">Solid Wood TV Stand with Storage Drawers Design</a>
-              <p class="mt-1.5 text-[14px] font-bold text-ink">$135.00</p>
+              <p class="p-price">$135.00</p>
             </div>
           </div>
         </div>
@@ -447,9 +246,10 @@
               </div>
               <div class="p-add"><button data-add-cart aria-label="Add to cart"><svg class="w-[18px] h-[18px]"><use href="#i-bag"/></svg></button></div>
             </div>
-            <div class="pt-[15px]">
+            <div class="p-info">
+              <div class="p-stars" aria-label="No reviews yet"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
               <a href="#" class="p-title">Modern Wooden Lounge Chair with Wide Fabric Arms</a>
-              <p class="mt-1.5 text-[14px] font-bold text-ink">$155.00</p>
+              <p class="p-price">$155.00</p>
             </div>
           </div>
         </div>
@@ -463,9 +263,10 @@
               </div>
               <div class="p-add"><button data-add-cart aria-label="Add to cart"><svg class="w-[18px] h-[18px]"><use href="#i-bag"/></svg></button></div>
             </div>
-            <div class="pt-[15px]">
+            <div class="p-info">
+              <div class="p-stars" aria-label="No reviews yet"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
               <a href="#" class="p-title">Modern Low Profile Swivel Sofa with Soft Seat</a>
-              <p class="mt-1.5 text-[14px] font-bold text-ink">$125.00</p>
+              <p class="p-price">$125.00</p>
             </div>
           </div>
         </div>
@@ -479,9 +280,10 @@
               </div>
               <div class="p-add"><button data-add-cart aria-label="Add to cart"><svg class="w-[18px] h-[18px]"><use href="#i-bag"/></svg></button></div>
             </div>
-            <div class="pt-[15px]">
+            <div class="p-info">
+              <div class="p-stars" aria-label="No reviews yet"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
               <a href="#" class="p-title">Compact Mini Plant Pot for Desk or Shelf Display</a>
-              <p class="mt-1.5 text-[14px] font-bold text-ink">$37.00</p>
+              <p class="p-price">$37.00</p>
             </div>
           </div>
         </div>
@@ -495,9 +297,10 @@
               </div>
               <div class="p-add"><button data-add-cart aria-label="Add to cart"><svg class="w-[18px] h-[18px]"><use href="#i-bag"/></svg></button></div>
             </div>
-            <div class="pt-[15px]">
+            <div class="p-info">
+              <div class="p-stars" aria-label="No reviews yet"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
               <a href="#" class="p-title">Round Wooden Coffee Table with Marble Top Design</a>
-              <p class="mt-1.5 text-[14px] font-bold text-ink">$40.00</p>
+              <p class="p-price">$40.00</p>
             </div>
           </div>
         </div>
@@ -512,9 +315,10 @@
               </div>
               <div class="p-add"><button data-add-cart aria-label="Add to cart"><svg class="w-[18px] h-[18px]"><use href="#i-bag"/></svg></button></div>
             </div>
-            <div class="pt-[15px]">
+            <div class="p-info">
+              <div class="p-stars" aria-label="No reviews yet"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
               <a href="#" class="p-title">Wooden Basket with Clean Towels for Home Decor</a>
-              <p class="mt-1.5 text-[14px] font-bold text-ink"><span class="text-sale">$25.00</span> <del class="ml-1.5 text-muted font-normal">$30.00</del></p>
+              <p class="p-price"><span class="text-sale">$25.00</span> <del class="ml-1.5 text-muted font-normal">$30.00</del></p>
             </div>
           </div>
         </div>
@@ -528,10 +332,10 @@
               </div>
               <div class="p-add"><button data-add-cart aria-label="Add to cart"><svg class="w-[18px] h-[18px]"><use href="#i-bag"/></svg></button></div>
             </div>
-            <div class="pt-[15px]">
+            <div class="p-info">
+              <div class="p-stars" aria-label="No reviews yet"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
               <a href="#" class="p-title">Small Decorative Mini Plant Pot for Home Decor</a>
-              <p class="mt-1.5 text-[14px] font-bold text-ink">$37.00</p>
-              <div class="flex gap-1.5 mt-3"><button class="swatch active" style="background:#8b5a2b" title="Brown" aria-label="Brown"></button><button class="swatch" style="background:#5f9ea0" title="CadetBlue" aria-label="CadetBlue"></button><button class="swatch" style="background:#ffffff" title="White" aria-label="White"></button></div>
+              <p class="p-price">$37.00</p>
             </div>
           </div>
         </div>
@@ -545,9 +349,10 @@
               </div>
               <div class="p-add"><button data-add-cart aria-label="Add to cart"><svg class="w-[18px] h-[18px]"><use href="#i-bag"/></svg></button></div>
             </div>
-            <div class="pt-[15px]">
+            <div class="p-info">
+              <div class="p-stars" aria-label="No reviews yet"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
               <a href="#" class="p-title">Miniature Plant Pot for Stylish Indoor Decoration</a>
-              <p class="mt-1.5 text-[14px] font-bold text-ink">$34.00</p>
+              <p class="p-price">$34.00</p>
             </div>
           </div>
         </div>
@@ -561,9 +366,10 @@
               </div>
               <div class="p-add"><button data-add-cart aria-label="Add to cart"><svg class="w-[18px] h-[18px]"><use href="#i-bag"/></svg></button></div>
             </div>
-            <div class="pt-[15px]">
+            <div class="p-info">
+              <div class="p-stars" aria-label="No reviews yet"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
               <a href="#" class="p-title">Solid Wood Plant Stand for Indoor Pot Display</a>
-              <p class="mt-1.5 text-[14px] font-bold text-ink">$12.00</p>
+              <p class="p-price">$12.00</p>
             </div>
           </div>
         </div>
@@ -577,9 +383,10 @@
               </div>
               <div class="p-add"><button data-add-cart aria-label="Add to cart"><svg class="w-[18px] h-[18px]"><use href="#i-bag"/></svg></button></div>
             </div>
-            <div class="pt-[15px]">
+            <div class="p-info">
+              <div class="p-stars" aria-label="No reviews yet"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
               <a href="#" class="p-title">Durable Plastic Fiber Plant Pot for Indoor Decor</a>
-              <p class="mt-1.5 text-[14px] font-bold text-ink">$78.00</p>
+              <p class="p-price">$78.00</p>
             </div>
           </div>
         </div>
@@ -593,10 +400,10 @@
      ===================================================================== -->
 <section class="overflow-hidden">
   <div class="wrap">
-    <div class="step-panel isolate sec-py lg:pl-[5%] grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[60px] items-center">
-      <div class="max-lg:bg-soft max-lg:rounded-[10px] max-lg:p-6 max-lg:-mx-0" data-anim="fade-up">
+    <div class="step-panel isolate sec-py lg:pl-[5%] flex flex-col lg:flex-row items-center gap-10 lg:gap-0">
+      <div class="steps-text w-full max-lg:bg-soft max-lg:rounded-[10px] max-lg:p-6" data-anim="fade-up">
         <p class="sec-sub">Step to buy – simple &amp; hassle-free</p>
-        <h2 class="sec-title max-w-[440px]">Your guide to a seamless shopping experience</h2>
+        <h2 class="sec-title">Your guide to a seamless shopping experience</h2>
 
         <div class="steps mt-10 lg:mt-[50px] max-w-[418px] space-y-5">
           <div class="step active" data-step="0">
@@ -630,13 +437,13 @@
         </div>
       </div>
 
-      <div class="min-w-0 lg:-mr-[10%] 3xl:-mr-[20%]" data-anim="fade-left">
-        <div class="swiper steps-swiper rounded-[10px]">
+      <div class="steps-media w-full min-w-0" data-anim="fade-left">
+        <div class="swiper steps-swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="assets/images/steps/step-1.jpg" alt="Choose your furniture" class="w-full aspect-[1200/690] object-cover rounded-[10px]" loading="lazy"></div>
-            <div class="swiper-slide"><img src="assets/images/steps/step-2.jpg" alt="Secure checkout" class="w-full aspect-[1200/690] object-cover rounded-[10px]" loading="lazy"></div>
-            <div class="swiper-slide"><img src="assets/images/steps/step-3.jpg" alt="Fast and safe delivery" class="w-full aspect-[1200/690] object-cover rounded-[10px]" loading="lazy"></div>
-            <div class="swiper-slide"><img src="assets/images/steps/step-4.jpg" alt="Installation" class="w-full aspect-[1200/690] object-cover rounded-[10px]" loading="lazy"></div>
+            <div class="swiper-slide"><img src="assets/images/steps/step-1.jpg" alt="Choose your furniture" class="steps-img" loading="lazy"></div>
+            <div class="swiper-slide"><img src="assets/images/steps/step-2.jpg" alt="Secure checkout" class="steps-img" loading="lazy"></div>
+            <div class="swiper-slide"><img src="assets/images/steps/step-3.jpg" alt="Fast and safe delivery" class="steps-img" loading="lazy"></div>
+            <div class="swiper-slide"><img src="assets/images/steps/step-4.jpg" alt="Installation" class="steps-img" loading="lazy"></div>
           </div>
         </div>
       </div>
@@ -650,99 +457,121 @@
 <section class="sec-py bg-white" data-anim="fade-up">
   <div class="marquee" style="--duration:30s">
     <div class="marquee-track">
-      <a href="#" class="brand shrink-0 w-[140px] md:w-[170px] px-5 md:px-6"><img src="assets/images/brands/brand-1.png" alt="Brand 1" width="196" height="120" loading="lazy"></a>
-      <a href="#" class="brand shrink-0 w-[140px] md:w-[170px] px-5 md:px-6"><img src="assets/images/brands/brand-2.png" alt="Brand 2" width="196" height="120" loading="lazy"></a>
-      <a href="#" class="brand shrink-0 w-[140px] md:w-[170px] px-5 md:px-6"><img src="assets/images/brands/brand-3.png" alt="Brand 3" width="196" height="120" loading="lazy"></a>
-      <a href="#" class="brand shrink-0 w-[140px] md:w-[170px] px-5 md:px-6"><img src="assets/images/brands/brand-4.png" alt="Brand 4" width="196" height="120" loading="lazy"></a>
-      <a href="#" class="brand shrink-0 w-[140px] md:w-[170px] px-5 md:px-6"><img src="assets/images/brands/brand-5.png" alt="Brand 5" width="196" height="120" loading="lazy"></a>
-      <a href="#" class="brand shrink-0 w-[140px] md:w-[170px] px-5 md:px-6"><img src="assets/images/brands/brand-6.png" alt="Brand 6" width="196" height="120" loading="lazy"></a>
-      <a href="#" class="brand shrink-0 w-[140px] md:w-[170px] px-5 md:px-6"><img src="assets/images/brands/brand-7.png" alt="Brand 7" width="196" height="120" loading="lazy"></a>
-      <a href="#" class="brand shrink-0 w-[140px] md:w-[170px] px-5 md:px-6"><img src="assets/images/brands/brand-8.png" alt="Brand 8" width="196" height="120" loading="lazy"></a>
-      <a href="#" class="brand shrink-0 w-[140px] md:w-[170px] px-5 md:px-6"><img src="assets/images/brands/brand-9.png" alt="Brand 9" width="196" height="120" loading="lazy"></a>
-      <a href="#" class="brand shrink-0 w-[140px] md:w-[170px] px-5 md:px-6"><img src="assets/images/brands/brand-10.png" alt="Brand 10" width="196" height="120" loading="lazy"></a>
-      <a href="#" class="brand shrink-0 w-[140px] md:w-[170px] px-5 md:px-6"><img src="assets/images/brands/brand-11.png" alt="Brand 11" width="196" height="120" loading="lazy"></a>
-      <a href="#" class="brand shrink-0 w-[140px] md:w-[170px] px-5 md:px-6"><img src="assets/images/brands/brand-12.png" alt="Brand 12" width="196" height="120" loading="lazy"></a>
+      <a href="#" class="brand"><img src="assets/images/brands/brand-1.png" alt="Brand 1" width="196" height="120" loading="lazy"></a>
+      <a href="#" class="brand"><img src="assets/images/brands/brand-2.png" alt="Brand 2" width="196" height="120" loading="lazy"></a>
+      <a href="#" class="brand"><img src="assets/images/brands/brand-3.png" alt="Brand 3" width="196" height="120" loading="lazy"></a>
+      <a href="#" class="brand"><img src="assets/images/brands/brand-4.png" alt="Brand 4" width="196" height="120" loading="lazy"></a>
+      <a href="#" class="brand"><img src="assets/images/brands/brand-5.png" alt="Brand 5" width="196" height="120" loading="lazy"></a>
+      <a href="#" class="brand"><img src="assets/images/brands/brand-6.png" alt="Brand 6" width="196" height="120" loading="lazy"></a>
+      <a href="#" class="brand"><img src="assets/images/brands/brand-7.png" alt="Brand 7" width="196" height="120" loading="lazy"></a>
+      <a href="#" class="brand"><img src="assets/images/brands/brand-8.png" alt="Brand 8" width="196" height="120" loading="lazy"></a>
+      <a href="#" class="brand"><img src="assets/images/brands/brand-9.png" alt="Brand 9" width="196" height="120" loading="lazy"></a>
+      <a href="#" class="brand"><img src="assets/images/brands/brand-10.png" alt="Brand 10" width="196" height="120" loading="lazy"></a>
+      <a href="#" class="brand"><img src="assets/images/brands/brand-11.png" alt="Brand 11" width="196" height="120" loading="lazy"></a>
+      <a href="#" class="brand"><img src="assets/images/brands/brand-12.png" alt="Brand 12" width="196" height="120" loading="lazy"></a>
     </div>
   </div>
 </section>
 
 <!-- =====================================================================
      7. FEATURED PRODUCT
+     Lifestyle photo bleeds off the left edge (slides right on hover),
+     product slider floats over the middle, info column on the right.
      ===================================================================== -->
-<section class="bg-white">
+<section id="featured" class="feat bg-white" data-anim="fade-up">
   <div class="wrap">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[30px] items-center">
-      <!-- Left: lifestyle image + gallery -->
-      <div class="relative" data-anim="fade-up">
-        <div class="grid grid-cols-1 md:grid-cols-[60px_minmax(0,1fr)] gap-5 items-stretch">
-          <div class="hidden md:flex items-center justify-center">
-            <p class="vertical-label flex items-center gap-4 whitespace-nowrap">
-              <span class="text-[16px] font-bold uppercase text-ink">Featured Product</span>
-              <span class="w-10 h-px bg-ink"></span>
-              <span class="text-[12px] font-medium uppercase tracking-[2px] text-muted">Crafted for your home</span>
-            </p>
+    <div class="feat-row">
+      <!-- Lifestyle image -->
+      <div class="feat-col-img">
+        <div class="feat-bg">
+          <img src="assets/images/banners/featured.jpg" alt="Wicker armchair with a green throw" width="1960" height="1516" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Product slider + vertical label -->
+      <div class="feat-thumb">
+        <div class="feat-photos" data-anim="fade-up">
+          <div class="feat-vertical">
+            <h3 class="feat-v-title">Featured Product</h3>
+            <p class="feat-v-sub">Crafted for your home</p>
           </div>
-          <div class="relative rounded-[10px] overflow-hidden" data-parallax>
-            <img src="assets/images/banners/featured.jpg" alt="Wicker armchair with green throw" class="w-full aspect-[1200/928] object-cover scale-110" loading="lazy">
-            <!-- Product image card floating on the dark photo -->
-            <div class="absolute right-4 bottom-4 md:right-8 md:bottom-8 w-[42%] max-w-[260px] bg-white rounded-[5px] p-2 shadow-2xl">
-              <img id="featuredMain" src="assets/images/products/beige-armchair-1.jpg" alt="Modern Beige Armchair" class="w-full aspect-[700/868] object-cover rounded-[3px] transition-opacity duration-300">
+          <div class="swiper feat-swiper">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="feat-zoom" data-zoom>
+                <img src="assets/images/products/beige-armchair-1.jpg" alt="Modern Beige Armchair with Wooden Legs, view 1" width="700" height="868" loading="lazy">
+              </div>
             </div>
+            <div class="swiper-slide">
+              <div class="feat-zoom" data-zoom>
+                <img src="assets/images/products/beige-armchair-2.jpg" alt="Modern Beige Armchair with Wooden Legs, view 2" width="700" height="868" loading="lazy">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="feat-zoom" data-zoom>
+                <img src="assets/images/products/beige-armchair-3.jpg" alt="Modern Beige Armchair with Wooden Legs, view 3" width="700" height="868" loading="lazy">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="feat-zoom" data-zoom>
+                <img src="assets/images/products/beige-armchair-4.jpg" alt="Modern Beige Armchair with Wooden Legs, view 4" width="700" height="868" loading="lazy">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="feat-zoom" data-zoom>
+                <img src="assets/images/products/beige-armchair-5.jpg" alt="Modern Beige Armchair with Wooden Legs, view 5" width="700" height="868" loading="lazy">
+              </div>
+            </div>
+            </div>
+            <button class="feat-arrow feat-prev" aria-label="Previous image"><svg><use href="#i-arrow-l"/></svg></button>
+            <button class="feat-arrow feat-next" aria-label="Next image"><svg><use href="#i-arrow-r"/></svg></button>
           </div>
         </div>
       </div>
 
-      <!-- Right: product info -->
-      <div class="lg:pl-[60px] xl:pl-[90px]" data-anim="fade-right">
-        <p class="md:hidden sec-sub mb-2">Featured Product – Crafted for your home</p>
-        <h2 class="text-[22px] md:text-[26px] xl:text-[30px] font-bold leading-[1.3] text-ink mb-5 lg:mb-[25px]">Modern Beige Armchair with Wooden Legs</h2>
-        <p class="text-[20px] md:text-[24px] font-bold text-ink mb-5 lg:mb-[25px]">$150.00</p>
-        <p class="mb-6 max-w-[560px]">Donec dapibus tellus sem, quis aliquam libero pharetra non. Nam vitae fermentum leo. Pellentesque bibendum dui eu mi tempor sodales. Integer gravida odio in sem laoreet tempus. Nunc vehicula nibh mauris, id bibendum metus facilisis iaculis. Phasellus suscipit dictum ...</p>
+      <!-- Product info -->
+      <div class="feat-col-info">
+        <div class="feat-info" data-anim="fade-right">
+          <a href="#" class="feat-title">Modern Beige Armchair with Wooden Legs</a>
+          <p class="feat-price">$150.00</p>
+          <p class="feat-desc">Donec dapibus tellus sem, quis aliquam libero pharetra non. Nam vitae fermentum leo. Pellentesque bibendum dui eu mi tempor sodales. Integer gravida odio in sem laoreet tempus. Nunc vehicula nibh mauris, id bibendum metus facilisis iaculis. Phasellus suscipit dictum ...</p>
 
-        <!-- Thumbnails -->
-        <div class="flex gap-2.5 mb-6" id="featuredThumbs">
-          <button class="thumb-btn active w-[62px]" data-src="assets/images/products/beige-armchair-1.jpg"><img src="assets/images/products/beige-armchair-1.jpg" alt="View 1" class="aspect-[700/868] object-cover" loading="lazy"></button>
-          <button class="thumb-btn w-[62px]" data-src="assets/images/products/beige-armchair-2.jpg"><img src="assets/images/products/beige-armchair-2.jpg" alt="View 2" class="aspect-[700/868] object-cover" loading="lazy"></button>
-          <button class="thumb-btn w-[62px]" data-src="assets/images/products/beige-armchair-3.jpg"><img src="assets/images/products/beige-armchair-3.jpg" alt="View 3" class="aspect-[700/868] object-cover" loading="lazy"></button>
-          <button class="thumb-btn w-[62px]" data-src="assets/images/products/beige-armchair-4.jpg"><img src="assets/images/products/beige-armchair-4.jpg" alt="View 4" class="aspect-[700/868] object-cover" loading="lazy"></button>
-          <button class="thumb-btn w-[62px]" data-src="assets/images/products/beige-armchair-5.jpg"><img src="assets/images/products/beige-armchair-5.jpg" alt="View 5" class="aspect-[700/868] object-cover" loading="lazy"></button>
-        </div>
-
-        <!-- Stock -->
-        <div class="mb-6 max-w-[420px]">
-          <p class="flex items-center gap-2 text-stock font-medium text-[14px] mb-2"><span class="w-2 h-2 rounded-full bg-stock animate-pulse"></span> 50 Products in stock</p>
-          <div class="h-[5px] rounded-full bg-line overflow-hidden"><div class="h-full w-[60%] bg-stock rounded-full"></div></div>
-        </div>
-
-        <!-- Qty + add to cart -->
-        <div class="flex flex-wrap items-stretch gap-2.5 mb-6">
-          <div class="qty flex items-center h-[52px] border border-line rounded-[3px]">
-            <button type="button" data-qty="-1" aria-label="Decrease"><svg class="w-4 h-4"><use href="#i-minus"/></svg></button>
-            <input type="number" value="1" min="1" class="w-10 text-center text-ink font-bold outline-none bg-transparent" aria-label="Quantity">
-            <button type="button" data-qty="1" aria-label="Increase"><svg class="w-4 h-4"><use href="#i-plus"/></svg></button>
+          <div class="feat-stock">
+            <span class="feat-stock-icon"><svg><use href="#i-check"/></svg></span>
+            <span>50 Products in stock</span>
           </div>
-          <button class="btn btn-dark flex-1 max-w-[340px] !h-[52px]" data-add-cart>Add to cart</button>
-          <button class="w-[52px] h-[52px] rounded-[3px] border border-line flex items-center justify-center text-ink hover:bg-accent hover:border-accent transition-colors" aria-label="Add to wishlist" data-wishlist><svg class="w-5 h-5"><use href="#i-heart"/></svg></button>
-        </div>
 
-        <!-- Links -->
-        <div class="flex flex-wrap gap-x-7 gap-y-2 text-[13px] font-bold uppercase text-ink mb-6 pb-6 border-b border-line">
-          <a href="#" class="flex items-center gap-2 hover:text-accent transition-colors"><svg class="w-4 h-4"><use href="#i-share"/></svg>Share</a>
-          <a href="#" class="flex items-center gap-2 hover:text-accent transition-colors"><svg class="w-4 h-4"><use href="#i-help"/></svg>Ask a Question</a>
-          <a href="#" class="flex items-center gap-2 hover:text-accent transition-colors"><svg class="w-4 h-4"><use href="#i-help"/></svg>FAQ</a>
-        </div>
+          <form class="feat-form" action="#">
+            <div class="feat-qty-row">
+              <div class="feat-qty qty">
+                <button type="button" data-qty="-1" aria-label="Decrease quantity">-</button>
+                <input type="number" value="1" min="1" max="50" aria-label="Quantity">
+                <button type="button" data-qty="1" aria-label="Increase quantity">+</button>
+              </div>
+              <button type="button" class="feat-btn feat-btn-cart" data-add-cart>Add To Cart</button>
+              <button type="button" class="feat-wish" data-wishlist aria-label="Add to wishlist"><svg><use href="#i-star-o"/></svg></button>
+            </div>
+            <button type="button" class="feat-btn feat-btn-buy" data-add-cart>Buy It Now <svg><use href="#i-arrow"/></svg></button>
+          </form>
 
-        <ul class="space-y-3 text-[14px]">
-          <li class="flex items-center gap-3"><svg class="w-5 h-5 text-ink"><use href="#i-truck"/></svg><span><b class="text-ink">Estimated Delivery:</b> <span id="deliveryDate">22 – 23 Jun, 2025</span></span></li>
-          <li class="flex items-center gap-3"><svg class="w-5 h-5 text-ink"><use href="#i-box"/></svg><span><b class="text-ink">Free Shipping &amp; Returns:</b> On all order over $200.00</span></li>
-        </ul>
+          <div class="feat-links">
+            <button type="button" data-popup-open="sharePopup"><svg><use href="#i-share-f"/></svg><span>Share</span></button>
+            <button type="button" data-popup-open="askPopup"><svg><use href="#i-help"/></svg><span>Ask A Question</span></button>
+            <a href="#"><svg><use href="#i-comment"/></svg><span>FAQ</span></a>
+          </div>
+
+          <div class="feat-ship">
+            <p><svg><use href="#i-truck"/></svg><span><strong>Estimated Delivery </strong>: <span id="deliveryDate">22 - 23 Jun, 2025</span></span></p>
+            <p><svg><use href="#i-box"/></svg><span><strong>Free Shipping &amp; Returns :</strong> On all order over $200.00</span></p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- =====================================================================
-     8. SCROLL VIEW — stacked sticky banners
+     8. SCROLL VIEW — stacked sticky split cards (text left, image right)
      ===================================================================== -->
 <section class="sec-py bg-white">
   <div class="wrap">
@@ -753,28 +582,28 @@
     </div>
 
     <div class="stack space-y-8">
-      <article class="stack-card relative rounded-[10px] overflow-hidden bg-soft">
-        <img src="assets/images/banners/banner-1.jpg" alt="Office furniture" class="w-full h-[480px] md:h-auto md:aspect-[1582/700] object-cover" loading="lazy">
-        <div class="absolute left-0 top-0 p-6 md:p-10 xl:p-[60px] max-w-[520px]">
-          <h3 class="text-[22px] md:text-[28px] xl:text-[32px] font-extrabold uppercase text-ink leading-tight">Office Furniture</h3>
-          <p class="mt-3 mb-6 text-ink/80">Upgrade your workspace with ergonomic and stylish office furniture. From sleek desks to comfortable chairs, find everything you need for a productive and modern office!</p>
-          <a href="#" class="btn btn-dark">Shop Now <svg class="arrow"><use href="#i-arrow"/></svg></a>
+      <article class="stack-card sv-card" style="background-color:#f5f5f5">
+        <div class="sv-media"><img src="assets/images/banners/banner-1.jpg" alt="Office furniture" loading="lazy"></div>
+        <div class="sv-body">
+          <h3 class="sv-title">Office Furniture</h3>
+          <p class="sv-text">Upgrade your workspace with ergonomic and stylish office furniture. From sleek desks to comfortable chairs, find everything you need for a productive and modern office!</p>
+          <a href="shop.html?cat=dining-office" class="btn btn-dark">Shop Now <svg class="arrow"><use href="#i-arrow"/></svg></a>
         </div>
       </article>
-      <article class="stack-card relative rounded-[10px] overflow-hidden bg-soft">
-        <img src="assets/images/banners/banner-2.jpg" alt="Cozy fabric sofas" class="w-full h-[480px] md:h-auto md:aspect-[1582/700] object-cover" loading="lazy">
-        <div class="absolute left-0 top-0 p-6 md:p-10 xl:p-[60px] max-w-[520px]">
-          <h3 class="text-[22px] md:text-[28px] xl:text-[32px] font-extrabold uppercase text-ink leading-tight">Cozy Fabric Sofas</h3>
-          <p class="mt-3 mb-6 text-ink/80">Sink into ultimate comfort with our stylish fabric sofas. Designed for durability and elegance, these sofas bring warmth and relaxation to any living space.</p>
-          <a href="#" class="btn btn-dark">Shop Now <svg class="arrow"><use href="#i-arrow"/></svg></a>
+      <article class="stack-card sv-card" style="background-color:#e2e2e2">
+        <div class="sv-media"><img src="assets/images/banners/banner-2.jpg" alt="Cozy fabric sofas" loading="lazy"></div>
+        <div class="sv-body">
+          <h3 class="sv-title">Cozy Fabric Sofas</h3>
+          <p class="sv-text">Sink into ultimate comfort with our stylish fabric sofas. Designed for durability and elegance, these sofas bring warmth and relaxation to any living space.</p>
+          <a href="shop.html?cat=living-room&amp;sub=sofas" class="btn btn-dark">Shop Now <svg class="arrow"><use href="#i-arrow"/></svg></a>
         </div>
       </article>
-      <article class="stack-card relative rounded-[10px] overflow-hidden bg-soft">
-        <img src="assets/images/banners/banner-3.jpg" alt="Elegant living room lamps" class="w-full h-[480px] md:h-auto md:aspect-[1582/700] object-cover" loading="lazy">
-        <div class="absolute left-0 top-0 p-6 md:p-10 xl:p-[60px] max-w-[520px]">
-          <h3 class="text-[22px] md:text-[28px] xl:text-[32px] font-extrabold uppercase text-white leading-tight">Elegant Living Room Lamps</h3>
-          <p class="mt-3 mb-6 text-white/80">Enhance your living room ambiance with our stylish decorative lamps. From modern floor lamps to chic table lamps, find the perfect lighting to create a warm and inviting atmosphere.</p>
-          <a href="#" class="btn btn-light">Shop Now <svg class="arrow"><use href="#i-arrow"/></svg></a>
+      <article class="stack-card sv-card" style="background-color:#f5f5f5">
+        <div class="sv-media"><img src="assets/images/banners/banner-3.jpg" alt="Elegant living room lamps" loading="lazy"></div>
+        <div class="sv-body">
+          <h3 class="sv-title">Elegant Living Room Lamps</h3>
+          <p class="sv-text">Enhance your living room ambiance with our stylish decorative lamps. From modern floor lamps to chic table lamps, find the perfect lighting to create a warm and inviting atmosphere.</p>
+          <a href="shop.html?cat=lighting" class="btn btn-dark">Shop Now <svg class="arrow"><use href="#i-arrow"/></svg></a>
         </div>
       </article>
     </div>
@@ -782,58 +611,58 @@
 </section>
 
 <!-- =====================================================================
-     9. TESTIMONIALS
+     9. TESTIMONIALS — inactive slide fades to 30%
      ===================================================================== -->
 <section class="sec-pb bg-white overflow-hidden">
   <div class="wrap">
     <div class="text-center mb-10 lg:mb-[55px]" data-anim="fade-up">
-      <p class="sec-sub inline-flex items-center gap-2"><span class="flex text-accent"><svg class="w-3 h-3"><use href="#i-star"/></svg><svg class="w-3 h-3"><use href="#i-star"/></svg><svg class="w-3 h-3"><use href="#i-star"/></svg><svg class="w-3 h-3"><use href="#i-star"/></svg><svg class="w-3 h-3"><use href="#i-star"/></svg></span>5.00 from 1230+ reviews</p>
+      <p class="sec-sub">5.00 from 1230+ reviews</p>
       <h2 class="sec-title">What customers say</h2>
     </div>
 
-    <div class="swiper testimonials-swiper" data-anim="fade-left">
+    <div class="swiper testimonials-swiper" data-anim="fade-right">
       <div class="swiper-wrapper">
-        <div class="swiper-slide !h-auto">
-          <figure class="group h-full bg-soft rounded-[10px] p-7 md:p-10 xl:p-[50px] flex flex-col">
-            <div class="flex gap-1 text-accent mb-[15px]"><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg></div>
-            <h3 class="text-[16px] md:text-[18px] font-bold text-ink mb-[15px]">Perfect Quality and Customer Service!</h3>
-            <blockquote class="max-w-[680px] flex-1">“Minicom truly exceeded my expectations in every way! I was looking for a modern yet cozy sofa for my living room, and I found the perfect one here. The fabric is soft, the cushioning is just right, and the quality is excellent. Plus, the delivery was super fast, and the assembly was effortless. I’ve received so many compliments from friends and family. Highly recommended!”</blockquote>
-            <figcaption class="flex items-center gap-4 mt-[35px]">
-              <span class="w-[60px] h-[60px] rounded-full overflow-hidden shrink-0"><img src="assets/images/testimonials/avatar-1.jpg" alt="Elizabeth" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy"></span>
-              <span><b class="block text-[15px] text-ink">Elizabeth</b><span class="text-[11px] font-medium uppercase tracking-[1px] text-muted">From Canada</span></span>
+        <div class="swiper-slide">
+          <figure class="t-item">
+            <div class="t-rating"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+            <h3 class="t-title">Perfect Quality and Customer Service!</h3>
+            <blockquote class="t-quote">Minicom truly exceeded my expectations in every way! I was looking for a modern yet cozy sofa for my living room, and I found the perfect one here. The fabric is soft, the cushioning is just right, and the quality is excellent. Plus, the delivery was super fast, and the assembly was effortless. I’ve received so many compliments from friends and family. Highly recommended!</blockquote>
+            <figcaption class="t-bottom">
+              <span class="t-avatar"><img src="assets/images/testimonials/avatar-1.jpg" alt="Elizabeth" loading="lazy"></span>
+              <span class="t-name">Elizabeth -</span><span class="t-info">&nbsp;FROM CANADA</span>
             </figcaption>
           </figure>
         </div>
-        <div class="swiper-slide !h-auto">
-          <figure class="group h-full bg-soft rounded-[10px] p-7 md:p-10 xl:p-[50px] flex flex-col">
-            <div class="flex gap-1 text-accent mb-[15px]"><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg></div>
-            <h3 class="text-[16px] md:text-[18px] font-bold text-ink mb-[15px]">Elegant Designs and Cozy Living Spaces</h3>
-            <blockquote class="max-w-[680px] flex-1">“I recently purchased a dining table set from Minicom, and I couldn’t be happier with my choice. The craftsmanship is impeccable, and the design adds a touch of elegance to my space. The customer service team was incredibly helpful in assisting me with my order, and the delivery was smooth. I will definitely be coming back for more!”</blockquote>
-            <figcaption class="flex items-center gap-4 mt-[35px]">
-              <span class="w-[60px] h-[60px] rounded-full overflow-hidden shrink-0"><img src="assets/images/testimonials/avatar-2.jpg" alt="David T. Brown" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy"></span>
-              <span><b class="block text-[15px] text-ink">David T. Brown</b><span class="text-[11px] font-medium uppercase tracking-[1px] text-muted">From USA</span></span>
+        <div class="swiper-slide">
+          <figure class="t-item">
+            <div class="t-rating"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+            <h3 class="t-title">Elegant Designs and Cozy Living Spaces</h3>
+            <blockquote class="t-quote">I recently purchased a dining table set from Minicom, and I couldn’t be happier with my choice. The craftsmanship is impeccable, and the design adds a touch of elegance to my space. The customer service team was incredibly helpful in assisting me with my order, and the delivery was smooth. I will definitely be coming back for more!</blockquote>
+            <figcaption class="t-bottom">
+              <span class="t-avatar"><img src="assets/images/testimonials/avatar-2.jpg" alt="David T. Brown" loading="lazy"></span>
+              <span class="t-name">David T. Brown -</span><span class="t-info">&nbsp;FROM USA</span>
             </figcaption>
           </figure>
         </div>
-        <div class="swiper-slide !h-auto">
-          <figure class="group h-full bg-soft rounded-[10px] p-7 md:p-10 xl:p-[50px] flex flex-col">
-            <div class="flex gap-1 text-accent mb-[15px]"><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg></div>
-            <h3 class="text-[16px] md:text-[18px] font-bold text-ink mb-[15px]">Timeless Furniture Built to Impress!</h3>
-            <blockquote class="max-w-[680px] flex-1">“I’m absolutely thrilled with my purchase from Minicom! I ordered a dining set and was blown away by the craftsmanship and style. It fits perfectly in my space and adds such a warm, inviting feel. The wood finish is beautiful, and everything feels sturdy and well-made. Shipping was quicker than expected, and the packaging was secure. I’ll definitely be coming back for more!”</blockquote>
-            <figcaption class="flex items-center gap-4 mt-[35px]">
-              <span class="w-[60px] h-[60px] rounded-full overflow-hidden shrink-0"><img src="assets/images/testimonials/avatar-3.jpg" alt="Jennifer" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy"></span>
-              <span><b class="block text-[15px] text-ink">Jennifer</b><span class="text-[11px] font-medium uppercase tracking-[1px] text-muted">From Chicago</span></span>
+        <div class="swiper-slide">
+          <figure class="t-item">
+            <div class="t-rating"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+            <h3 class="t-title">Timeless Furniture Built to Impress!</h3>
+            <blockquote class="t-quote">I’m absolutely thrilled with my purchase from Minicom! I ordered a dining set and was blown away by the craftsmanship and style. It fits perfectly in my space and adds such a warm, inviting feel. The wood finish is beautiful, and everything feels sturdy and well-made. Shipping was quicker than expected, and the packaging was secure. I’ll definitely be coming back for more!</blockquote>
+            <figcaption class="t-bottom">
+              <span class="t-avatar"><img src="assets/images/testimonials/avatar-3.jpg" alt="Jennifer" loading="lazy"></span>
+              <span class="t-name">Jennifer -</span><span class="t-info">&nbsp;FROM CHICAGO</span>
             </figcaption>
           </figure>
         </div>
-        <div class="swiper-slide !h-auto">
-          <figure class="group h-full bg-soft rounded-[10px] p-7 md:p-10 xl:p-[50px] flex flex-col">
-            <div class="flex gap-1 text-accent mb-[15px]"><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg></div>
-            <h3 class="text-[16px] md:text-[18px] font-bold text-ink mb-[15px]">Comfort, Style, and Lasting Quality!</h3>
-            <blockquote class="max-w-[680px] flex-1">“From the moment I saw the coffee table online, I knew it would be perfect—and it really is! It’s sleek, modern, and exactly what my living room needed. The materials feel premium, and the attention to detail is impressive. The whole buying experience was smooth, from placing the order to the seamless delivery. I couldn’t be happier with how it turned out!”</blockquote>
-            <figcaption class="flex items-center gap-4 mt-[35px]">
-              <span class="w-[60px] h-[60px] rounded-full overflow-hidden shrink-0"><img src="assets/images/testimonials/avatar-4.jpg" alt="William" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy"></span>
-              <span><b class="block text-[15px] text-ink">William</b><span class="text-[11px] font-medium uppercase tracking-[1px] text-muted">From Florida</span></span>
+        <div class="swiper-slide">
+          <figure class="t-item">
+            <div class="t-rating"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+            <h3 class="t-title">Comfort, Style, and Lasting Quality!</h3>
+            <blockquote class="t-quote">From the moment I saw the coffee table online, I knew it would be perfect—and it really is! It’s sleek, modern, and exactly what my living room needed. The materials feel premium, and the attention to detail is impressive. The whole buying experience was smooth, from placing the order to the seamless delivery. I couldn’t be happier with how it turned out!</blockquote>
+            <figcaption class="t-bottom">
+              <span class="t-avatar"><img src="assets/images/testimonials/avatar-4.jpg" alt="William" loading="lazy"></span>
+              <span class="t-name">William -</span><span class="t-info">&nbsp;FROM FLORIDA</span>
             </figcaption>
           </figure>
         </div>
@@ -849,28 +678,28 @@
 </section>
 
 <!-- =====================================================================
-     10. INSTAGRAM
+     10. INSTAGRAM — profile + vertical image marquee
      ===================================================================== -->
 <section class="bg-soft py-5 overflow-hidden">
   <div class="wrap">
-    <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] gap-[30px] items-center" data-anim="fade-up">
-      <div class="py-10 lg:py-0 max-w-[520px]">
-        <div class="flex items-center gap-4 mb-8">
-          <img src="assets/images/insta/profile.png" alt="" class="w-[60px] h-[60px] rounded-full bg-white p-1" loading="lazy">
+    <div class="insta-row" data-anim="fade-up">
+      <div class="insta-info">
+        <div class="flex items-center gap-5">
+          <img src="assets/images/insta/profile.png" alt="" class="w-[70px] h-[70px] rounded-[5px] object-cover" loading="lazy">
           <div>
-            <p class="font-bold text-ink text-[16px]">@Risingbamboo</p>
-            <p class="text-[12px] font-medium uppercase tracking-[1px] text-muted">13K followers</p>
+            <p class="insta-handle">@Risingbamboo</p>
+            <p class="insta-followers">13K followers</p>
           </div>
         </div>
-        <h2 class="sec-title !text-[24px] md:!text-[30px] xl:!text-[36px] !leading-tight !font-extrabold">Follow us<br>on Instagram</h2>
-        <p class="mt-4 mb-8">Stay inspired with our latest furniture trends, design ideas, and exclusive offers! Follow @Minicom on Instagram for daily home inspiration and special deals.</p>
-        <a href="#" class="btn btn-dark"><svg class="w-4 h-4"><use href="#i-ig"/></svg> Follow us <svg class="arrow"><use href="#i-arrow"/></svg></a>
+        <h2 class="insta-title">Follow us on Instagram</h2>
+        <p class="insta-text">Stay inspired with our latest furniture trends, design ideas, and exclusive offers! Follow @Minicom on Instagram for daily home inspiration and special deals.</p>
+        <a href="#" class="btn btn-light">Follow us <svg class="arrow"><use href="#i-arrow"/></svg></a>
       </div>
 
-      <div class="fade-y h-[520px] md:h-[640px] grid grid-cols-3 gap-2.5 overflow-hidden">
-        <a href="#" class="block overflow-hidden" aria-label="Instagram"><div class="marquee-up" style="--duration:34s"><img src="assets/images/insta/insta-1.jpg" alt="Instagram post" class="w-full aspect-square object-cover rounded-[5px] mb-2.5" loading="lazy"><img src="assets/images/insta/insta-2.jpg" alt="Instagram post" class="w-full aspect-square object-cover rounded-[5px] mb-2.5" loading="lazy"><img src="assets/images/insta/insta-3.jpg" alt="Instagram post" class="w-full aspect-square object-cover rounded-[5px] mb-2.5" loading="lazy"><img src="assets/images/insta/insta-4.jpg" alt="Instagram post" class="w-full aspect-square object-cover rounded-[5px] mb-2.5" loading="lazy"><img src="assets/images/insta/insta-1.jpg" alt="Instagram post" class="w-full aspect-square object-cover rounded-[5px] mb-2.5" loading="lazy"><img src="assets/images/insta/insta-2.jpg" alt="Instagram post" class="w-full aspect-square object-cover rounded-[5px] mb-2.5" loading="lazy"><img src="assets/images/insta/insta-3.jpg" alt="Instagram post" class="w-full aspect-square object-cover rounded-[5px] mb-2.5" loading="lazy"><img src="assets/images/insta/insta-4.jpg" alt="Instagram post" class="w-full aspect-square object-cover rounded-[5px] mb-2.5" loading="lazy"></div></a>
-        <a href="#" class="block overflow-hidden" aria-label="Instagram"><div class="marquee-up reverse" style="--duration:28s"><img src="assets/images/insta/insta-5.jpg" alt="Instagram post" class="w-full aspect-square object-cover rounded-[5px] mb-2.5" loading="lazy"><img src="assets/images/insta/insta-6.jpg" alt="Instagram post" class="w-full aspect-square object-cover rounded-[5px] mb-2.5" loading="lazy"><img src="assets/images/insta/insta-7.jpg" alt="Instagram post" class="w-full aspect-square object-cover rounded-[5px] mb-2.5" loading="lazy"><img src="assets/images/insta/insta-8.jpg" alt="Instagram post" class="w-full aspect-square object-cover rounded-[5px] mb-2.5" loading="lazy"><img src="assets/images/insta/insta-5.jpg" alt="Instagram post" class="w-full aspect-square object-cover rounded-[5px] mb-2.5" loading="lazy"><img src="assets/images/insta/insta-6.jpg" alt="Instagram post" class="w-full aspect-square object-cover rounded-[5px] mb-2.5" loading="lazy"><img src="assets/images/insta/insta-7.jpg" alt="Instagram post" class="w-full aspect-square object-cover rounded-[5px] mb-2.5" loading="lazy"><img src="assets/images/insta/insta-8.jpg" alt="Instagram post" class="w-full aspect-square object-cover rounded-[5px] mb-2.5" loading="lazy"></div></a>
-        <a href="#" class="block overflow-hidden" aria-label="Instagram"><div class="marquee-up" style="--duration:38s"><img src="assets/images/insta/insta-9.jpg" alt="Instagram post" class="w-full aspect-square object-cover rounded-[5px] mb-2.5" loading="lazy"><img src="assets/images/insta/insta-10.jpg" alt="Instagram post" class="w-full aspect-square object-cover rounded-[5px] mb-2.5" loading="lazy"><img src="assets/images/insta/insta-11.jpg" alt="Instagram post" class="w-full aspect-square object-cover rounded-[5px] mb-2.5" loading="lazy"><img src="assets/images/insta/insta-12.jpg" alt="Instagram post" class="w-full aspect-square object-cover rounded-[5px] mb-2.5" loading="lazy"><img src="assets/images/insta/insta-9.jpg" alt="Instagram post" class="w-full aspect-square object-cover rounded-[5px] mb-2.5" loading="lazy"><img src="assets/images/insta/insta-10.jpg" alt="Instagram post" class="w-full aspect-square object-cover rounded-[5px] mb-2.5" loading="lazy"><img src="assets/images/insta/insta-11.jpg" alt="Instagram post" class="w-full aspect-square object-cover rounded-[5px] mb-2.5" loading="lazy"><img src="assets/images/insta/insta-12.jpg" alt="Instagram post" class="w-full aspect-square object-cover rounded-[5px] mb-2.5" loading="lazy"></div></a>
+      <div class="insta-wall">
+        <div class="insta-col"><div class="marquee-up" style="--duration:34s"><a href="#" class="insta-img" aria-label="Instagram post"><img src="assets/images/insta/insta-1.jpg" alt="" loading="lazy"></a><a href="#" class="insta-img" aria-label="Instagram post"><img src="assets/images/insta/insta-2.jpg" alt="" loading="lazy"></a><a href="#" class="insta-img" aria-label="Instagram post"><img src="assets/images/insta/insta-3.jpg" alt="" loading="lazy"></a><a href="#" class="insta-img" aria-label="Instagram post"><img src="assets/images/insta/insta-4.jpg" alt="" loading="lazy"></a><a href="#" class="insta-img" aria-label="Instagram post"><img src="assets/images/insta/insta-1.jpg" alt="" loading="lazy"></a><a href="#" class="insta-img" aria-label="Instagram post"><img src="assets/images/insta/insta-2.jpg" alt="" loading="lazy"></a><a href="#" class="insta-img" aria-label="Instagram post"><img src="assets/images/insta/insta-3.jpg" alt="" loading="lazy"></a><a href="#" class="insta-img" aria-label="Instagram post"><img src="assets/images/insta/insta-4.jpg" alt="" loading="lazy"></a></div></div>
+        <div class="insta-col"><div class="marquee-up reverse" style="--duration:28s"><a href="#" class="insta-img" aria-label="Instagram post"><img src="assets/images/insta/insta-5.jpg" alt="" loading="lazy"></a><a href="#" class="insta-img" aria-label="Instagram post"><img src="assets/images/insta/insta-6.jpg" alt="" loading="lazy"></a><a href="#" class="insta-img" aria-label="Instagram post"><img src="assets/images/insta/insta-7.jpg" alt="" loading="lazy"></a><a href="#" class="insta-img" aria-label="Instagram post"><img src="assets/images/insta/insta-8.jpg" alt="" loading="lazy"></a><a href="#" class="insta-img" aria-label="Instagram post"><img src="assets/images/insta/insta-5.jpg" alt="" loading="lazy"></a><a href="#" class="insta-img" aria-label="Instagram post"><img src="assets/images/insta/insta-6.jpg" alt="" loading="lazy"></a><a href="#" class="insta-img" aria-label="Instagram post"><img src="assets/images/insta/insta-7.jpg" alt="" loading="lazy"></a><a href="#" class="insta-img" aria-label="Instagram post"><img src="assets/images/insta/insta-8.jpg" alt="" loading="lazy"></a></div></div>
+        <div class="insta-col"><div class="marquee-up" style="--duration:38s"><a href="#" class="insta-img" aria-label="Instagram post"><img src="assets/images/insta/insta-9.jpg" alt="" loading="lazy"></a><a href="#" class="insta-img" aria-label="Instagram post"><img src="assets/images/insta/insta-10.jpg" alt="" loading="lazy"></a><a href="#" class="insta-img" aria-label="Instagram post"><img src="assets/images/insta/insta-11.jpg" alt="" loading="lazy"></a><a href="#" class="insta-img" aria-label="Instagram post"><img src="assets/images/insta/insta-12.jpg" alt="" loading="lazy"></a><a href="#" class="insta-img" aria-label="Instagram post"><img src="assets/images/insta/insta-9.jpg" alt="" loading="lazy"></a><a href="#" class="insta-img" aria-label="Instagram post"><img src="assets/images/insta/insta-10.jpg" alt="" loading="lazy"></a><a href="#" class="insta-img" aria-label="Instagram post"><img src="assets/images/insta/insta-11.jpg" alt="" loading="lazy"></a><a href="#" class="insta-img" aria-label="Instagram post"><img src="assets/images/insta/insta-12.jpg" alt="" loading="lazy"></a></div></div>
       </div>
     </div>
   </div>
@@ -883,86 +712,86 @@
   <div class="wrap">
     <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-x-[30px] xl:gap-x-[60px] gap-y-[50px]" data-anim="fade-up">
       <div>
-        <h2 class="text-[18px] font-bold uppercase text-ink pb-[15px] mb-[30px] border-b border-line">Living Room</h2>
-        <ul class="space-y-[30px]">
-          <li class="p-card flex items-center gap-5">
-            <a href="#" class="p-thumb !w-[90px] shrink-0" aria-label="Modern Beige Armchair with Wooden Legs"><img class="img-1" src="assets/images/products/beige-armchair-1.jpg" alt="Modern Beige Armchair with Wooden Legs" loading="lazy"><img class="img-2" src="assets/images/products/beige-armchair-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title !text-[13px]">Modern Beige Armchair with Wooden Legs</a><p class="mt-1.5 text-[13px] font-bold text-ink">$150.00</p></div>
+        <h2 class="pg-title">Living Room</h2>
+        <ul class="pg-list">
+          <li class="p-card pg-item">
+            <a href="#" class="p-thumb pg-thumb" aria-label="Modern Beige Armchair with Wooden Legs"><img class="img-1" src="assets/images/products/beige-armchair-1.jpg" alt="Modern Beige Armchair with Wooden Legs" loading="lazy"><img class="img-2" src="assets/images/products/beige-armchair-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="#" class="p-title pg-name">Modern Beige Armchair with Wooden Legs</a><p class="pg-price">$150.00</p></div>
           </li>
-          <li class="p-card flex items-center gap-5">
-            <a href="#" class="p-thumb !w-[90px] shrink-0" aria-label="Solid Wood TV Stand with Storage Drawers Design"><img class="img-1" src="assets/images/products/tv-stand-1.jpg" alt="Solid Wood TV Stand with Storage Drawers Design" loading="lazy"><img class="img-2" src="assets/images/products/tv-stand-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title !text-[13px]">Solid Wood TV Stand with Storage Drawers Design</a><p class="mt-1.5 text-[13px] font-bold text-ink">$135.00</p></div>
+          <li class="p-card pg-item">
+            <a href="#" class="p-thumb pg-thumb" aria-label="Solid Wood TV Stand with Storage Drawers Design"><img class="img-1" src="assets/images/products/tv-stand-1.jpg" alt="Solid Wood TV Stand with Storage Drawers Design" loading="lazy"><img class="img-2" src="assets/images/products/tv-stand-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="#" class="p-title pg-name">Solid Wood TV Stand with Storage Drawers Design</a><p class="pg-price">$135.00</p></div>
           </li>
-          <li class="p-card flex items-center gap-5">
-            <a href="#" class="p-thumb !w-[90px] shrink-0" aria-label="Wooden Frame Sofa Chair with Plush Cushion Seat"><span class="p-badge !text-[10px] !px-1.5 !top-1.5 !left-1.5">-3%</span><img class="img-1" src="assets/images/products/frame-sofa-1.jpg" alt="Wooden Frame Sofa Chair with Plush Cushion Seat" loading="lazy"><img class="img-2" src="assets/images/products/frame-sofa-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title !text-[13px]">Wooden Frame Sofa Chair with Plush Cushion Seat</a><p class="mt-1.5 text-[13px] font-bold text-ink"><span class="text-sale">$270.00</span> <del class="ml-1.5 text-muted font-normal">$280.00</del></p></div>
+          <li class="p-card pg-item">
+            <a href="#" class="p-thumb pg-thumb" aria-label="Wooden Frame Sofa Chair with Plush Cushion Seat"><span class="p-badge !text-[10px] !px-1.5 !top-1.5 !left-1.5">-3%</span><img class="img-1" src="assets/images/products/frame-sofa-1.jpg" alt="Wooden Frame Sofa Chair with Plush Cushion Seat" loading="lazy"><img class="img-2" src="assets/images/products/frame-sofa-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="#" class="p-title pg-name">Wooden Frame Sofa Chair with Plush Cushion Seat</a><p class="pg-price"><span class="text-sale">$270.00</span> <del class="ml-1.5 text-muted font-normal">$280.00</del></p></div>
           </li>
-          <li class="p-card flex items-center gap-5">
-            <a href="#" class="p-thumb !w-[90px] shrink-0" aria-label="Premium Solid Wood Chair with Comfortable Design"><img class="img-1" src="assets/images/products/wood-chair-1.jpg" alt="Premium Solid Wood Chair with Comfortable Design" loading="lazy"><img class="img-2" src="assets/images/products/wood-chair-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title !text-[13px]">Premium Solid Wood Chair with Comfortable Design</a><p class="mt-1.5 text-[13px] font-bold text-ink">$79.00</p></div>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h2 class="text-[18px] font-bold uppercase text-ink pb-[15px] mb-[30px] border-b border-line">Plant Pots</h2>
-        <ul class="space-y-[30px]">
-          <li class="p-card flex items-center gap-5">
-            <a href="#" class="p-thumb !w-[90px] shrink-0" aria-label="Compact Mini Plant Pot for Desk or Shelf Display"><img class="img-1" src="assets/images/products/compact-pot-1.jpg" alt="Compact Mini Plant Pot for Desk or Shelf Display" loading="lazy"><img class="img-2" src="assets/images/products/compact-pot-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title !text-[13px]">Compact Mini Plant Pot for Desk or Shelf Display</a><p class="mt-1.5 text-[13px] font-bold text-ink">$37.00</p></div>
-          </li>
-          <li class="p-card flex items-center gap-5">
-            <a href="#" class="p-thumb !w-[90px] shrink-0" aria-label="Decorative Cactus Plant Pot for Indoor Display"><img class="img-1" src="assets/images/products/cactus-pot-1.jpg" alt="Decorative Cactus Plant Pot for Indoor Display" loading="lazy"><img class="img-2" src="assets/images/products/cactus-pot-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title !text-[13px]">Decorative Cactus Plant Pot for Indoor Display</a><p class="mt-1.5 text-[13px] font-bold text-ink">$37.00</p></div>
-          </li>
-          <li class="p-card flex items-center gap-5">
-            <a href="#" class="p-thumb !w-[90px] shrink-0" aria-label="Durable Plastic Fiber Plant Pot for Indoor Decor"><img class="img-1" src="assets/images/products/fiber-pot-1.jpg" alt="Durable Plastic Fiber Plant Pot for Indoor Decor" loading="lazy"><img class="img-2" src="assets/images/products/fiber-pot-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title !text-[13px]">Durable Plastic Fiber Plant Pot for Indoor Decor</a><p class="mt-1.5 text-[13px] font-bold text-ink">$78.00</p></div>
-          </li>
-          <li class="p-card flex items-center gap-5">
-            <a href="#" class="p-thumb !w-[90px] shrink-0" aria-label="Mini Ceramic Flower Pot for Desk and Home Decor"><img class="img-1" src="assets/images/products/ceramic-pot-1.jpg" alt="Mini Ceramic Flower Pot for Desk and Home Decor" loading="lazy"><img class="img-2" src="assets/images/products/ceramic-pot-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title !text-[13px]">Mini Ceramic Flower Pot for Desk and Home Decor</a><p class="mt-1.5 text-[13px] font-bold text-ink">$15.00</p></div>
+          <li class="p-card pg-item">
+            <a href="#" class="p-thumb pg-thumb" aria-label="Premium Solid Wood Chair with Comfortable Design"><img class="img-1" src="assets/images/products/wood-chair-1.jpg" alt="Premium Solid Wood Chair with Comfortable Design" loading="lazy"><img class="img-2" src="assets/images/products/wood-chair-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="#" class="p-title pg-name">Premium Solid Wood Chair with Comfortable Design</a><p class="pg-price">$79.00</p></div>
           </li>
         </ul>
       </div>
       <div>
-        <h2 class="text-[18px] font-bold uppercase text-ink pb-[15px] mb-[30px] border-b border-line">Tables &amp; Desks</h2>
-        <ul class="space-y-[30px]">
-          <li class="p-card flex items-center gap-5">
-            <a href="#" class="p-thumb !w-[90px] shrink-0" aria-label="Wooden Office Desk with Drawers Open Storage"><span class="p-badge !text-[10px] !px-1.5 !top-1.5 !left-1.5">-3%</span><img class="img-1" src="assets/images/products/office-desk-1.jpg" alt="Wooden Office Desk with Drawers Open Storage" loading="lazy"><img class="img-2" src="assets/images/products/office-desk-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title !text-[13px]">Wooden Office Desk with Drawers Open Storage</a><p class="mt-1.5 text-[13px] font-bold text-ink"><span class="text-sale">$140.00</span> <del class="ml-1.5 text-muted font-normal">$145.00</del></p></div>
+        <h2 class="pg-title">Plant Pots</h2>
+        <ul class="pg-list">
+          <li class="p-card pg-item">
+            <a href="#" class="p-thumb pg-thumb" aria-label="Compact Mini Plant Pot for Desk or Shelf Display"><img class="img-1" src="assets/images/products/compact-pot-1.jpg" alt="Compact Mini Plant Pot for Desk or Shelf Display" loading="lazy"><img class="img-2" src="assets/images/products/compact-pot-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="#" class="p-title pg-name">Compact Mini Plant Pot for Desk or Shelf Display</a><p class="pg-price">$37.00</p></div>
           </li>
-          <li class="p-card flex items-center gap-5">
-            <a href="#" class="p-thumb !w-[90px] shrink-0" aria-label="Premium Solid Wood Chair with Comfortable Design"><img class="img-1" src="assets/images/products/wood-chair-1.jpg" alt="Premium Solid Wood Chair with Comfortable Design" loading="lazy"><img class="img-2" src="assets/images/products/wood-chair-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title !text-[13px]">Premium Solid Wood Chair with Comfortable Design</a><p class="mt-1.5 text-[13px] font-bold text-ink">$79.00</p></div>
+          <li class="p-card pg-item">
+            <a href="#" class="p-thumb pg-thumb" aria-label="Decorative Cactus Plant Pot for Indoor Display"><img class="img-1" src="assets/images/products/cactus-pot-1.jpg" alt="Decorative Cactus Plant Pot for Indoor Display" loading="lazy"><img class="img-2" src="assets/images/products/cactus-pot-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="#" class="p-title pg-name">Decorative Cactus Plant Pot for Indoor Display</a><p class="pg-price">$37.00</p></div>
           </li>
-          <li class="p-card flex items-center gap-5">
-            <a href="#" class="p-thumb !w-[90px] shrink-0" aria-label="Classic Wooden Nightstand with Dual Storage Drawers"><img class="img-1" src="assets/images/products/nightstand-1.jpg" alt="Classic Wooden Nightstand with Dual Storage Drawers" loading="lazy"><img class="img-2" src="assets/images/products/nightstand-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title !text-[13px]">Classic Wooden Nightstand with Dual Storage Drawers</a><p class="mt-1.5 text-[13px] font-bold text-ink">$99.00</p></div>
+          <li class="p-card pg-item">
+            <a href="#" class="p-thumb pg-thumb" aria-label="Durable Plastic Fiber Plant Pot for Indoor Decor"><img class="img-1" src="assets/images/products/fiber-pot-1.jpg" alt="Durable Plastic Fiber Plant Pot for Indoor Decor" loading="lazy"><img class="img-2" src="assets/images/products/fiber-pot-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="#" class="p-title pg-name">Durable Plastic Fiber Plant Pot for Indoor Decor</a><p class="pg-price">$78.00</p></div>
           </li>
-          <li class="p-card flex items-center gap-5">
-            <a href="#" class="p-thumb !w-[90px] shrink-0" aria-label="Modern Beige Armchair with Wooden Legs"><img class="img-1" src="assets/images/products/beige-armchair-1.jpg" alt="Modern Beige Armchair with Wooden Legs" loading="lazy"><img class="img-2" src="assets/images/products/beige-armchair-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title !text-[13px]">Modern Beige Armchair with Wooden Legs</a><p class="mt-1.5 text-[13px] font-bold text-ink">$150.00</p></div>
+          <li class="p-card pg-item">
+            <a href="#" class="p-thumb pg-thumb" aria-label="Mini Ceramic Flower Pot for Desk and Home Decor"><img class="img-1" src="assets/images/products/ceramic-pot-1.jpg" alt="Mini Ceramic Flower Pot for Desk and Home Decor" loading="lazy"><img class="img-2" src="assets/images/products/ceramic-pot-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="#" class="p-title pg-name">Mini Ceramic Flower Pot for Desk and Home Decor</a><p class="pg-price">$15.00</p></div>
           </li>
         </ul>
       </div>
       <div>
-        <h2 class="text-[18px] font-bold uppercase text-ink pb-[15px] mb-[30px] border-b border-line">Bedroom</h2>
-        <ul class="space-y-[30px]">
-          <li class="p-card flex items-center gap-5">
-            <a href="#" class="p-thumb !w-[90px] shrink-0" aria-label="Solid Wood Bed Frame with Classic Vintage Design"><img class="img-1" src="assets/images/products/bed-frame-1.jpg" alt="Solid Wood Bed Frame with Classic Vintage Design" loading="lazy"><img class="img-2" src="assets/images/products/bed-frame-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title !text-[13px]">Solid Wood Bed Frame with Classic Vintage Design</a><p class="mt-1.5 text-[13px] font-bold text-ink">$300.00</p></div>
+        <h2 class="pg-title">Tables &amp; Desks</h2>
+        <ul class="pg-list">
+          <li class="p-card pg-item">
+            <a href="#" class="p-thumb pg-thumb" aria-label="Wooden Office Desk with Drawers Open Storage"><span class="p-badge !text-[10px] !px-1.5 !top-1.5 !left-1.5">-3%</span><img class="img-1" src="assets/images/products/office-desk-1.jpg" alt="Wooden Office Desk with Drawers Open Storage" loading="lazy"><img class="img-2" src="assets/images/products/office-desk-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="#" class="p-title pg-name">Wooden Office Desk with Drawers Open Storage</a><p class="pg-price"><span class="text-sale">$140.00</span> <del class="ml-1.5 text-muted font-normal">$145.00</del></p></div>
           </li>
-          <li class="p-card flex items-center gap-5">
-            <a href="#" class="p-thumb !w-[90px] shrink-0" aria-label="Wooden Base Table Lamp with Fabric Shade Design"><img class="img-1" src="assets/images/products/table-lamp-1.jpg" alt="Wooden Base Table Lamp with Fabric Shade Design" loading="lazy"><img class="img-2" src="assets/images/products/table-lamp-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title !text-[13px]">Wooden Base Table Lamp with Fabric Shade Design</a><p class="mt-1.5 text-[13px] font-bold text-ink">$35.00</p></div>
+          <li class="p-card pg-item">
+            <a href="#" class="p-thumb pg-thumb" aria-label="Premium Solid Wood Chair with Comfortable Design"><img class="img-1" src="assets/images/products/wood-chair-1.jpg" alt="Premium Solid Wood Chair with Comfortable Design" loading="lazy"><img class="img-2" src="assets/images/products/wood-chair-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="#" class="p-title pg-name">Premium Solid Wood Chair with Comfortable Design</a><p class="pg-price">$79.00</p></div>
           </li>
-          <li class="p-card flex items-center gap-5">
-            <a href="#" class="p-thumb !w-[90px] shrink-0" aria-label="Solid Wood Bedside Cabinet with Two Storage Drawers"><img class="img-1" src="assets/images/products/bedside-cabinet-1.jpg" alt="Solid Wood Bedside Cabinet with Two Storage Drawers" loading="lazy"><img class="img-2" src="assets/images/products/bedside-cabinet-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title !text-[13px]">Solid Wood Bedside Cabinet with Two Storage Drawers</a><p class="mt-1.5 text-[13px] font-bold text-ink">$265.00</p></div>
+          <li class="p-card pg-item">
+            <a href="#" class="p-thumb pg-thumb" aria-label="Classic Wooden Nightstand with Dual Storage Drawers"><img class="img-1" src="assets/images/products/nightstand-1.jpg" alt="Classic Wooden Nightstand with Dual Storage Drawers" loading="lazy"><img class="img-2" src="assets/images/products/nightstand-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="#" class="p-title pg-name">Classic Wooden Nightstand with Dual Storage Drawers</a><p class="pg-price">$99.00</p></div>
           </li>
-          <li class="p-card flex items-center gap-5">
-            <a href="#" class="p-thumb !w-[90px] shrink-0" aria-label="Classic Wooden Nightstand with Dual Storage Drawers"><img class="img-1" src="assets/images/products/nightstand-1.jpg" alt="Classic Wooden Nightstand with Dual Storage Drawers" loading="lazy"><img class="img-2" src="assets/images/products/nightstand-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title !text-[13px]">Classic Wooden Nightstand with Dual Storage Drawers</a><p class="mt-1.5 text-[13px] font-bold text-ink">$99.00</p></div>
+          <li class="p-card pg-item">
+            <a href="#" class="p-thumb pg-thumb" aria-label="Modern Beige Armchair with Wooden Legs"><img class="img-1" src="assets/images/products/beige-armchair-1.jpg" alt="Modern Beige Armchair with Wooden Legs" loading="lazy"><img class="img-2" src="assets/images/products/beige-armchair-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="#" class="p-title pg-name">Modern Beige Armchair with Wooden Legs</a><p class="pg-price">$150.00</p></div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="pg-title">Bedroom</h2>
+        <ul class="pg-list">
+          <li class="p-card pg-item">
+            <a href="#" class="p-thumb pg-thumb" aria-label="Solid Wood Bed Frame with Classic Vintage Design"><img class="img-1" src="assets/images/products/bed-frame-1.jpg" alt="Solid Wood Bed Frame with Classic Vintage Design" loading="lazy"><img class="img-2" src="assets/images/products/bed-frame-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="#" class="p-title pg-name">Solid Wood Bed Frame with Classic Vintage Design</a><p class="pg-price">$300.00</p></div>
+          </li>
+          <li class="p-card pg-item">
+            <a href="#" class="p-thumb pg-thumb" aria-label="Wooden Base Table Lamp with Fabric Shade Design"><img class="img-1" src="assets/images/products/table-lamp-1.jpg" alt="Wooden Base Table Lamp with Fabric Shade Design" loading="lazy"><img class="img-2" src="assets/images/products/table-lamp-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="#" class="p-title pg-name">Wooden Base Table Lamp with Fabric Shade Design</a><p class="pg-price">$35.00</p></div>
+          </li>
+          <li class="p-card pg-item">
+            <a href="#" class="p-thumb pg-thumb" aria-label="Solid Wood Bedside Cabinet with Two Storage Drawers"><img class="img-1" src="assets/images/products/bedside-cabinet-1.jpg" alt="Solid Wood Bedside Cabinet with Two Storage Drawers" loading="lazy"><img class="img-2" src="assets/images/products/bedside-cabinet-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="#" class="p-title pg-name">Solid Wood Bedside Cabinet with Two Storage Drawers</a><p class="pg-price">$265.00</p></div>
+          </li>
+          <li class="p-card pg-item">
+            <a href="#" class="p-thumb pg-thumb" aria-label="Classic Wooden Nightstand with Dual Storage Drawers"><img class="img-1" src="assets/images/products/nightstand-1.jpg" alt="Classic Wooden Nightstand with Dual Storage Drawers" loading="lazy"><img class="img-2" src="assets/images/products/nightstand-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="#" class="p-title pg-name">Classic Wooden Nightstand with Dual Storage Drawers</a><p class="pg-price">$99.00</p></div>
           </li>
         </ul>
       </div>
@@ -971,30 +800,28 @@
 </section>
 
 <!-- =====================================================================
-     12. IMAGE SPLIT
+     12. IMAGE SPLIT — hovered column widens, text + arrow reveal
      ===================================================================== -->
 <section class="sec-pb bg-white">
   <div class="wrap">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5">
-      <a href="#" class="group relative block zoom-img rounded-[10px]" data-anim="fade-up">
-        <img src="assets/images/banners/split-1.jpg" alt="Hanging swing shelf" class="w-full aspect-[1200/854] object-cover" loading="lazy">
-        <span class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent pointer-events-none"></span>
-        <div class="absolute left-0 bottom-0 p-6 md:p-10 max-w-[480px] text-white">
-          <p class="dot-caption text-[12px] tracking-[3px] uppercase mb-1.5">Hanging Shelf</p>
-          <h3 class="text-[20px] md:text-[26px] xl:text-[30px] font-extrabold uppercase leading-tight">Naturally simple and elegant</h3>
-          <p class="mt-[15px] text-white/85 max-w-[400px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div class="split">
+      <a href="#" class="split-col" data-anim="fade-up">
+        <div class="split-img"><img src="assets/images/banners/split-1.jpg" alt="Swing shelf with an open book" loading="lazy"></div>
+        <div class="split-content">
+          <p class="split-cap dot-caption">Rustic Drawers</p>
+          <h3 class="split-title">Crafted for cozy spaces</h3>
+          <div class="split-desc"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
         </div>
-        <span class="notch"><span class="btn-round"><svg class="arrow"><use href="#i-arrow"/></svg></span></span>
+        <span class="notch split-btn"><span class="btn-round btn-round-accent"><svg class="arrow"><use href="#i-arrow"/></svg></span></span>
       </a>
-      <a href="#" class="group relative block zoom-img rounded-[10px]" data-anim="fade-up">
-        <img src="assets/images/banners/split-2.jpg" alt="Rustic drawers" class="w-full aspect-[1200/854] object-cover" loading="lazy">
-        <span class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent pointer-events-none"></span>
-        <div class="absolute left-0 bottom-0 p-6 md:p-10 max-w-[480px] text-white">
-          <p class="dot-caption text-[12px] tracking-[3px] uppercase mb-1.5">Rustic Drawers</p>
-          <h3 class="text-[20px] md:text-[26px] xl:text-[30px] font-extrabold uppercase leading-tight">Crafted for cozy spaces</h3>
-          <p class="mt-[15px] text-white/85 max-w-[400px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <a href="#" class="split-col" data-anim="fade-up">
+        <div class="split-img"><img src="assets/images/banners/split-2.jpg" alt="Stacked rustic wooden drawers" loading="lazy"></div>
+        <div class="split-content">
+          <p class="split-cap dot-caption">Hanging Shelf</p>
+          <h3 class="split-title">Naturally simple and elegant</h3>
+          <div class="split-desc"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
         </div>
-        <span class="notch"><span class="btn-round"><svg class="arrow"><use href="#i-arrow"/></svg></span></span>
+        <span class="notch split-btn"><span class="btn-round btn-round-accent"><svg class="arrow"><use href="#i-arrow"/></svg></span></span>
       </a>
     </div>
   </div>
@@ -1009,22 +836,22 @@
       <p class="sec-sub">Sustainable living</p>
       <h2 class="sec-title">Beyond furniture<br>creating a greener tomorrow</h2>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-[30px]">
-      <div class="group flex gap-5" data-anim="fade-up">
-        <span class="w-[60px] h-[60px] shrink-0 rounded-full bg-soft flex items-center justify-center transition-colors group-hover:bg-accent"><img src="assets/images/icons/leaves.svg" alt="" class="w-[30px] h-[30px] transition-transform duration-500 group-hover:rotate-y-180"></span>
-        <div><h3 class="text-[16px] font-bold text-ink">Eco-Friendly Materials</h3><p class="mt-2.5">We craft our furniture using responsibly sourced, environmentally friendly materials.</p></div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[30px]">
+      <div class="policy-item" data-anim="fade-up">
+        <span class="policy-icon"><img src="assets/images/icons/leaves.svg" alt=""></span>
+        <div><h3 class="policy-title">Eco-Friendly Materials</h3><p class="policy-desc">We craft our furniture using responsibly sourced, environmentally friendly materials.</p></div>
       </div>
-      <div class="group flex gap-5" data-anim="fade-up">
-        <span class="w-[60px] h-[60px] shrink-0 rounded-full bg-soft flex items-center justify-center transition-colors group-hover:bg-accent"><img src="assets/images/icons/pen-slash.svg" alt="" class="w-[30px] h-[30px] transition-transform duration-500 group-hover:rotate-y-180"></span>
-        <div><h3 class="text-[16px] font-bold text-ink">Effortless Assembly</h3><p class="mt-2.5">Thoughtfully designed for quick setup, requiring minimal effort and no extra tools.</p></div>
+      <div class="policy-item" data-anim="fade-up">
+        <span class="policy-icon"><img src="assets/images/icons/pen-slash.svg" alt=""></span>
+        <div><h3 class="policy-title">Effortless Assembly</h3><p class="policy-desc">Thoughtfully designed for quick setup, requiring minimal effort and no extra tools.</p></div>
       </div>
-      <div class="group flex gap-5" data-anim="fade-up">
-        <span class="w-[60px] h-[60px] shrink-0 rounded-full bg-soft flex items-center justify-center transition-colors group-hover:bg-accent"><img src="assets/images/icons/recycle.svg" alt="" class="w-[30px] h-[30px] transition-transform duration-500 group-hover:rotate-y-180"></span>
-        <div><h3 class="text-[16px] font-bold text-ink">Giving Back to Nature</h3><p class="mt-2.5">Every purchase contributes to reforestation efforts, helping restore green spaces.</p></div>
+      <div class="policy-item" data-anim="fade-up">
+        <span class="policy-icon"><img src="assets/images/icons/recycle.svg" alt=""></span>
+        <div><h3 class="policy-title">Giving Back to Nature</h3><p class="policy-desc">Every purchase contributes to reforestation efforts, helping restore green spaces.</p></div>
       </div>
-      <div class="group flex gap-5" data-anim="fade-up">
-        <span class="w-[60px] h-[60px] shrink-0 rounded-full bg-soft flex items-center justify-center transition-colors group-hover:bg-accent"><img src="assets/images/icons/idea.svg" alt="" class="w-[30px] h-[30px] transition-transform duration-500 group-hover:rotate-y-180"></span>
-        <div><h3 class="text-[16px] font-bold text-ink">Sustainable Production</h3><p class="mt-2.5">Dedicated to reducing waste and promoting eco-conscious manufacturing practices.</p></div>
+      <div class="policy-item" data-anim="fade-up">
+        <span class="policy-icon"><img src="assets/images/icons/idea.svg" alt=""></span>
+        <div><h3 class="policy-title">Sustainable Production</h3><p class="policy-desc">Dedicated to reducing waste and promoting eco-conscious manufacturing practices.</p></div>
       </div>
     </div>
   </div>
@@ -1052,82 +879,98 @@
     <div class="swiper blog-swiper" data-anim="fade-up">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <article class="group">
-            <a href="#" class="relative block zoom-img rounded-[10px]"><img src="assets/images/blog/blog-1.jpg" alt="A Guide to Mixing Wood Tones in Your Living Space" class="w-full aspect-[4/3] object-cover" loading="lazy"><span class="absolute left-4 top-4 bg-black text-white text-[10px] font-bold uppercase px-3 py-1.5 rounded-[3px]">News</span></a>
+          <article class="blog-card">
+            <div class="blog-img">
+              <a href="#"><img src="assets/images/blog/blog-1.jpg" alt="A Guide to Mixing Wood Tones in Your Living Space" loading="lazy"></a>
+              <a href="#" class="blog-tag">News</a>
+            </div>
             <div class="pt-[25px]">
-              <p class="flex items-center gap-2 text-[13px] mb-2.5"><svg class="w-4 h-4"><use href="#i-user"/></svg>By <b class="text-ink">Vinova Theme</b><span class="mx-1 text-line">|</span>19 Jun 2025</p>
-              <h3 class="text-[16px] md:text-[18px] font-bold leading-snug text-ink group-hover:text-accent transition-colors"><a href="#">A Guide to Mixing Wood Tones in Your Living Space</a></h3>
-              <a href="#" class="inline-flex items-center gap-2 mt-4 text-[11px] font-bold uppercase text-ink hover:text-accent">Read more <svg class="w-4 h-4 -rotate-45 transition-transform group-hover:rotate-0"><use href="#i-arrow"/></svg></a>
+              <div class="blog-meta"><span>By&nbsp; <b>Vinova Theme</b></span><span>19Jun2025</span></div>
+              <h3 class="blog-title"><a href="#">A Guide to Mixing Wood Tones in Your Living Space</a></h3>
             </div>
           </article>
         </div>
         <div class="swiper-slide">
-          <article class="group">
-            <a href="#" class="relative block zoom-img rounded-[10px]"><img src="assets/images/blog/blog-2.jpg" alt="Revamping Your Living Room with Vintage Decor" class="w-full aspect-[4/3] object-cover" loading="lazy"><span class="absolute left-4 top-4 bg-black text-white text-[10px] font-bold uppercase px-3 py-1.5 rounded-[3px]">News</span></a>
+          <article class="blog-card">
+            <div class="blog-img">
+              <a href="#"><img src="assets/images/blog/blog-2.jpg" alt="Revamping Your Living Room with Vintage Decor" loading="lazy"></a>
+              <a href="#" class="blog-tag">News</a>
+            </div>
             <div class="pt-[25px]">
-              <p class="flex items-center gap-2 text-[13px] mb-2.5"><svg class="w-4 h-4"><use href="#i-user"/></svg>By <b class="text-ink">Vinova Theme</b><span class="mx-1 text-line">|</span>19 Jun 2025</p>
-              <h3 class="text-[16px] md:text-[18px] font-bold leading-snug text-ink group-hover:text-accent transition-colors"><a href="#">Revamping Your Living Room with Vintage Decor</a></h3>
-              <a href="#" class="inline-flex items-center gap-2 mt-4 text-[11px] font-bold uppercase text-ink hover:text-accent">Read more <svg class="w-4 h-4 -rotate-45 transition-transform group-hover:rotate-0"><use href="#i-arrow"/></svg></a>
+              <div class="blog-meta"><span>By&nbsp; <b>Vinova Theme</b></span><span>19Jun2025</span></div>
+              <h3 class="blog-title"><a href="#">Revamping Your Living Room with Vintage Decor</a></h3>
             </div>
           </article>
         </div>
         <div class="swiper-slide">
-          <article class="group">
-            <a href="#" class="relative block zoom-img rounded-[10px]"><img src="assets/images/blog/blog-3.jpg" alt="Simple Ways to Add Character to Minimalist Interiors" class="w-full aspect-[4/3] object-cover" loading="lazy"><span class="absolute left-4 top-4 bg-black text-white text-[10px] font-bold uppercase px-3 py-1.5 rounded-[3px]">News</span></a>
+          <article class="blog-card">
+            <div class="blog-img">
+              <a href="#"><img src="assets/images/blog/blog-3.jpg" alt="Simple Ways to Add Character to Minimalist Interiors" loading="lazy"></a>
+              <a href="#" class="blog-tag">News</a>
+            </div>
             <div class="pt-[25px]">
-              <p class="flex items-center gap-2 text-[13px] mb-2.5"><svg class="w-4 h-4"><use href="#i-user"/></svg>By <b class="text-ink">Vinova Theme</b><span class="mx-1 text-line">|</span>19 Jun 2025</p>
-              <h3 class="text-[16px] md:text-[18px] font-bold leading-snug text-ink group-hover:text-accent transition-colors"><a href="#">Simple Ways to Add Character to Minimalist Interiors</a></h3>
-              <a href="#" class="inline-flex items-center gap-2 mt-4 text-[11px] font-bold uppercase text-ink hover:text-accent">Read more <svg class="w-4 h-4 -rotate-45 transition-transform group-hover:rotate-0"><use href="#i-arrow"/></svg></a>
+              <div class="blog-meta"><span>By&nbsp; <b>Vinova Theme</b></span><span>19Jun2025</span></div>
+              <h3 class="blog-title"><a href="#">Simple Ways to Add Character to Minimalist Interiors</a></h3>
             </div>
           </article>
         </div>
         <div class="swiper-slide">
-          <article class="group">
-            <a href="#" class="relative block zoom-img rounded-[10px]"><img src="assets/images/blog/blog-4.jpg" alt="Top Trends in Home Office Design for 2025" class="w-full aspect-[4/3] object-cover" loading="lazy"><span class="absolute left-4 top-4 bg-black text-white text-[10px] font-bold uppercase px-3 py-1.5 rounded-[3px]">News</span></a>
+          <article class="blog-card">
+            <div class="blog-img">
+              <a href="#"><img src="assets/images/blog/blog-4.jpg" alt="Top Trends in Home Office Design for 2025" loading="lazy"></a>
+              <a href="#" class="blog-tag">News</a>
+            </div>
             <div class="pt-[25px]">
-              <p class="flex items-center gap-2 text-[13px] mb-2.5"><svg class="w-4 h-4"><use href="#i-user"/></svg>By <b class="text-ink">Vinova Theme</b><span class="mx-1 text-line">|</span>19 Jun 2025</p>
-              <h3 class="text-[16px] md:text-[18px] font-bold leading-snug text-ink group-hover:text-accent transition-colors"><a href="#">Top Trends in Home Office Design for 2025</a></h3>
-              <a href="#" class="inline-flex items-center gap-2 mt-4 text-[11px] font-bold uppercase text-ink hover:text-accent">Read more <svg class="w-4 h-4 -rotate-45 transition-transform group-hover:rotate-0"><use href="#i-arrow"/></svg></a>
+              <div class="blog-meta"><span>By&nbsp; <b>Vinova Theme</b></span><span>19Jun2025</span></div>
+              <h3 class="blog-title"><a href="#">Top Trends in Home Office Design for 2025</a></h3>
             </div>
           </article>
         </div>
         <div class="swiper-slide">
-          <article class="group">
-            <a href="#" class="relative block zoom-img rounded-[10px]"><img src="assets/images/blog/blog-5.jpg" alt="A Beginner’s Guide to Japandi Interior Style" class="w-full aspect-[4/3] object-cover" loading="lazy"><span class="absolute left-4 top-4 bg-black text-white text-[10px] font-bold uppercase px-3 py-1.5 rounded-[3px]">News</span></a>
+          <article class="blog-card">
+            <div class="blog-img">
+              <a href="#"><img src="assets/images/blog/blog-5.jpg" alt="A Beginner’s Guide to Japandi Interior Style" loading="lazy"></a>
+              <a href="#" class="blog-tag">News</a>
+            </div>
             <div class="pt-[25px]">
-              <p class="flex items-center gap-2 text-[13px] mb-2.5"><svg class="w-4 h-4"><use href="#i-user"/></svg>By <b class="text-ink">Vinova Theme</b><span class="mx-1 text-line">|</span>19 Jun 2025</p>
-              <h3 class="text-[16px] md:text-[18px] font-bold leading-snug text-ink group-hover:text-accent transition-colors"><a href="#">A Beginner’s Guide to Japandi Interior Style</a></h3>
-              <a href="#" class="inline-flex items-center gap-2 mt-4 text-[11px] font-bold uppercase text-ink hover:text-accent">Read more <svg class="w-4 h-4 -rotate-45 transition-transform group-hover:rotate-0"><use href="#i-arrow"/></svg></a>
+              <div class="blog-meta"><span>By&nbsp; <b>Vinova Theme</b></span><span>19Jun2025</span></div>
+              <h3 class="blog-title"><a href="#">A Beginner’s Guide to Japandi Interior Style</a></h3>
             </div>
           </article>
         </div>
         <div class="swiper-slide">
-          <article class="group">
-            <a href="#" class="relative block zoom-img rounded-[10px]"><img src="assets/images/blog/blog-6.jpg" alt="Designing a Cozy Reading Nook in Small Spaces" class="w-full aspect-[4/3] object-cover" loading="lazy"><span class="absolute left-4 top-4 bg-black text-white text-[10px] font-bold uppercase px-3 py-1.5 rounded-[3px]">News</span></a>
+          <article class="blog-card">
+            <div class="blog-img">
+              <a href="#"><img src="assets/images/blog/blog-6.jpg" alt="Designing a Cozy Reading Nook in Small Spaces" loading="lazy"></a>
+              <a href="#" class="blog-tag">News</a>
+            </div>
             <div class="pt-[25px]">
-              <p class="flex items-center gap-2 text-[13px] mb-2.5"><svg class="w-4 h-4"><use href="#i-user"/></svg>By <b class="text-ink">Vinova Theme</b><span class="mx-1 text-line">|</span>19 Jun 2025</p>
-              <h3 class="text-[16px] md:text-[18px] font-bold leading-snug text-ink group-hover:text-accent transition-colors"><a href="#">Designing a Cozy Reading Nook in Small Spaces</a></h3>
-              <a href="#" class="inline-flex items-center gap-2 mt-4 text-[11px] font-bold uppercase text-ink hover:text-accent">Read more <svg class="w-4 h-4 -rotate-45 transition-transform group-hover:rotate-0"><use href="#i-arrow"/></svg></a>
+              <div class="blog-meta"><span>By&nbsp; <b>Vinova Theme</b></span><span>19Jun2025</span></div>
+              <h3 class="blog-title"><a href="#">Designing a Cozy Reading Nook in Small Spaces</a></h3>
             </div>
           </article>
         </div>
         <div class="swiper-slide">
-          <article class="group">
-            <a href="#" class="relative block zoom-img rounded-[10px]"><img src="assets/images/blog/blog-7.jpg" alt="How to Choose Sustainable Lighting for a Greener Home" class="w-full aspect-[4/3] object-cover" loading="lazy"><span class="absolute left-4 top-4 bg-black text-white text-[10px] font-bold uppercase px-3 py-1.5 rounded-[3px]">News</span></a>
+          <article class="blog-card">
+            <div class="blog-img">
+              <a href="#"><img src="assets/images/blog/blog-7.jpg" alt="How to Choose Sustainable Lighting for a Greener Home" loading="lazy"></a>
+              <a href="#" class="blog-tag">News</a>
+            </div>
             <div class="pt-[25px]">
-              <p class="flex items-center gap-2 text-[13px] mb-2.5"><svg class="w-4 h-4"><use href="#i-user"/></svg>By <b class="text-ink">Vinova Theme</b><span class="mx-1 text-line">|</span>19 Jun 2025</p>
-              <h3 class="text-[16px] md:text-[18px] font-bold leading-snug text-ink group-hover:text-accent transition-colors"><a href="#">How to Choose Sustainable Lighting for a Greener Home</a></h3>
-              <a href="#" class="inline-flex items-center gap-2 mt-4 text-[11px] font-bold uppercase text-ink hover:text-accent">Read more <svg class="w-4 h-4 -rotate-45 transition-transform group-hover:rotate-0"><use href="#i-arrow"/></svg></a>
+              <div class="blog-meta"><span>By&nbsp; <b>Vinova Theme</b></span><span>19Jun2025</span></div>
+              <h3 class="blog-title"><a href="#">How to Choose Sustainable Lighting for a Greener Home</a></h3>
             </div>
           </article>
         </div>
         <div class="swiper-slide">
-          <article class="group">
-            <a href="#" class="relative block zoom-img rounded-[10px]"><img src="assets/images/blog/blog-8.jpg" alt="The Power of Plants: Bringing Nature Indoors" class="w-full aspect-[4/3] object-cover" loading="lazy"><span class="absolute left-4 top-4 bg-black text-white text-[10px] font-bold uppercase px-3 py-1.5 rounded-[3px]">News</span></a>
+          <article class="blog-card">
+            <div class="blog-img">
+              <a href="#"><img src="assets/images/blog/blog-8.jpg" alt="The Power of Plants: Bringing Nature Indoors" loading="lazy"></a>
+              <a href="#" class="blog-tag">News</a>
+            </div>
             <div class="pt-[25px]">
-              <p class="flex items-center gap-2 text-[13px] mb-2.5"><svg class="w-4 h-4"><use href="#i-user"/></svg>By <b class="text-ink">Vinova Theme</b><span class="mx-1 text-line">|</span>19 Jun 2025</p>
-              <h3 class="text-[16px] md:text-[18px] font-bold leading-snug text-ink group-hover:text-accent transition-colors"><a href="#">The Power of Plants: Bringing Nature Indoors</a></h3>
-              <a href="#" class="inline-flex items-center gap-2 mt-4 text-[11px] font-bold uppercase text-ink hover:text-accent">Read more <svg class="w-4 h-4 -rotate-45 transition-transform group-hover:rotate-0"><use href="#i-arrow"/></svg></a>
+              <div class="blog-meta"><span>By&nbsp; <b>Vinova Theme</b></span><span>19Jun2025</span></div>
+              <h3 class="blog-title"><a href="#">The Power of Plants: Bringing Nature Indoors</a></h3>
             </div>
           </article>
         </div>
@@ -1139,36 +982,36 @@
 <!-- =====================================================================
      16. FAQ
      ===================================================================== -->
-<section class="relative bg-soft pt-[60px] md:pt-20 lg:pt-[100px] xl:pt-[120px] pb-[60px] md:pb-[100px] lg:pb-[140px] xl:pb-[220px] overflow-hidden">
+<section class="faq-sec relative bg-soft overflow-hidden">
   <img src="assets/images/banners/faq-bg.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" data-parallax-bg loading="lazy">
   <div class="wrap relative">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-[30px] lg:gap-[60px] items-start" data-anim="fade-up">
-      <div class="max-w-[560px]">
-        <h2 class="sec-title !text-[24px] md:!text-[30px] xl:!text-[36px] !font-extrabold !leading-tight">Frequently<br>asked questions</h2>
-        <p class="mt-5 mb-8">Explore our Frequently Asked Questions to find helpful answers and solutions to common inquiries. We've gathered the information you need to assist you quickly and efficiently.</p>
-        <ul class="space-y-3">
-          <li><a href="#" class="group inline-flex items-center gap-4 text-[13px] font-bold uppercase text-ink"><span class="w-11 h-11 rounded-full bg-black text-white flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-ink"><svg class="w-5 h-5"><use href="#i-help"/></svg></span>View all FAQs</a></li>
-          <li><a href="#" class="group inline-flex items-center gap-4 text-[13px] font-bold uppercase text-ink"><span class="w-11 h-11 rounded-full bg-black text-white flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-ink"><svg class="w-5 h-5"><use href="#i-phone"/></svg></span>Contact us</a></li>
-          <li><a href="#" class="group inline-flex items-center gap-4 text-[13px] font-bold uppercase text-ink"><span class="w-11 h-11 rounded-full bg-black text-white flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-ink"><svg class="w-5 h-5"><use href="#i-pin"/></svg></span>Store locations</a></li>
+    <div class="faq-row" data-anim="fade-up">
+      <div class="faq-intro">
+        <h2 class="faq-title">Frequently asked questions</h2>
+        <p class="max-w-[480px]">Explore our Frequently Asked Questions to find helpful answers and solutions to common inquiries. We've gathered the information you need to assist you quickly and efficiently.</p>
+        <ul class="faq-links">
+          <li><a href="#"><span><svg><use href="#i-comment"/></svg></span>View all FAQs</a></li>
+          <li><a href="#"><span><svg><use href="#i-phone"/></svg></span>Contact us</a></li>
+          <li><a href="#"><span><svg><use href="#i-pin"/></svg></span>Store locations</a></li>
         </ul>
       </div>
 
-      <div class="faq space-y-2.5">
-        <div class="faq-item open bg-white rounded-[5px] px-[25px] py-[21px]">
-          <button class="faq-head w-full flex items-center justify-between gap-4 text-left text-[14px] md:text-[15px] font-bold uppercase text-ink">What shipping methods are available?<svg class="faq-icon w-5 h-5 shrink-0"><use href="#i-plus"/></svg></button>
-          <div class="faq-body"><div><p class="pt-[25px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra cursus eleifend. Maecenas sit amet libero nibh. Donec blandit arcu pharetra, venenatis mi quis, maximus lacus.</p></div></div>
+      <div class="faq">
+        <div class="faq-item open">
+          <button class="faq-head">What shipping methods are available?<svg class="faq-icon"><use href="#i-down"/></svg></button>
+          <div class="faq-body"><div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra cursus eleifend. Maecenas sit amet libero nibh. Donec blandit arcu pharetra, venenatis mi quis, maximus lacus.</p></div></div>
         </div>
-        <div class="faq-item bg-white rounded-[5px] px-[25px] py-[21px]">
-          <button class="faq-head w-full flex items-center justify-between gap-4 text-left text-[14px] md:text-[15px] font-bold uppercase text-ink">How long will it take to get my package?<svg class="faq-icon w-5 h-5 shrink-0"><use href="#i-plus"/></svg></button>
-          <div class="faq-body"><div><p class="pt-[25px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet augue sit amet magna vestibulum pharetra. Vivamus ut est orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p></div></div>
+        <div class="faq-item">
+          <button class="faq-head">How long will it take to get my package?<svg class="faq-icon"><use href="#i-down"/></svg></button>
+          <div class="faq-body"><div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet augue sit amet magna vestibulum pharetra. Vivamus ut est orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p></div></div>
         </div>
-        <div class="faq-item bg-white rounded-[5px] px-[25px] py-[21px]">
-          <button class="faq-head w-full flex items-center justify-between gap-4 text-left text-[14px] md:text-[15px] font-bold uppercase text-ink">Where are your products sent from?<svg class="faq-icon w-5 h-5 shrink-0"><use href="#i-plus"/></svg></button>
-          <div class="faq-body"><div><p class="pt-[25px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet augue sit amet magna vestibulum pharetra. Vivamus ut est orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p></div></div>
+        <div class="faq-item">
+          <button class="faq-head">Where are your products sent from?<svg class="faq-icon"><use href="#i-down"/></svg></button>
+          <div class="faq-body"><div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet augue sit amet magna vestibulum pharetra. Vivamus ut est orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p></div></div>
         </div>
-        <div class="faq-item bg-white rounded-[5px] px-[25px] py-[21px]">
-          <button class="faq-head w-full flex items-center justify-between gap-4 text-left text-[14px] md:text-[15px] font-bold uppercase text-ink">Why can’t I log into my account?<svg class="faq-icon w-5 h-5 shrink-0"><use href="#i-plus"/></svg></button>
-          <div class="faq-body"><div><p class="pt-[25px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet augue sit amet magna vestibulum pharetra. Vivamus ut est orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p></div></div>
+        <div class="faq-item">
+          <button class="faq-head">Why can’t I log into my account?<svg class="faq-icon"><use href="#i-down"/></svg></button>
+          <div class="faq-body"><div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet augue sit amet magna vestibulum pharetra. Vivamus ut est orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p></div></div>
         </div>
       </div>
     </div>
@@ -1179,189 +1022,54 @@
 <!-- =====================================================================
      FOOTER
      ===================================================================== -->
-<footer class="site-footer text-white/70 pb-[60px] lg:pb-0">
-  <div class="wrap pt-[60px] md:pt-20 xl:pt-[100px]">
-    <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] gap-[50px] lg:gap-[30px] pb-[50px] lg:pb-[80px]">
-      <!-- Brand + newsletter -->
-      <div class="max-w-[520px]" data-anim="fade-up">
-        <img src="assets/images/misc/logo-light.png" alt="Minicom" class="w-[130px] mb-6" width="262" height="70" loading="lazy">
-        <p>At Minicom, we bring style, comfort, and quality to your home with carefully curated furniture collections. Designed for modern living, our pieces blend functionality with timeless aesthetics. Experience exceptional craftsmanship and elevate your space with us!</p>
-        <ul class="flex gap-2.5 mt-6">
-          <li><a href="#" class="w-10 h-10 rounded-full bg-white text-ink flex items-center justify-center hover:bg-accent transition-colors" aria-label="Facebook"><svg class="w-4 h-4"><use href="#i-fb"/></svg></a></li>
-          <li><a href="#" class="w-10 h-10 rounded-full bg-white text-ink flex items-center justify-center hover:bg-accent transition-colors" aria-label="X"><svg class="w-4 h-4"><use href="#i-x"/></svg></a></li>
-          <li><a href="#" class="w-10 h-10 rounded-full bg-white text-ink flex items-center justify-center hover:bg-accent transition-colors" aria-label="Instagram"><svg class="w-4 h-4"><use href="#i-ig"/></svg></a></li>
-          <li><a href="#" class="w-10 h-10 rounded-full bg-white text-ink flex items-center justify-center hover:bg-accent transition-colors" aria-label="Pinterest"><svg class="w-4 h-4"><use href="#i-pinterest"/></svg></a></li>
-          <li><a href="#" class="w-10 h-10 rounded-full bg-white text-ink flex items-center justify-center hover:bg-accent transition-colors" aria-label="YouTube"><svg class="w-4 h-4"><use href="#i-yt"/></svg></a></li>
-        </ul>
-
-        <div class="mt-10">
-          <p class="text-[10px] font-medium tracking-[1px] uppercase text-white/50">Subscribe newsletter</p>
-          <h3 class="mt-2 text-[18px] md:text-[20px] font-bold uppercase text-white">Stay updated with the latest trends</h3>
-          <form class="newsletter-form mt-5 flex gap-[5px]" action="#">
-            <input type="email" required placeholder="Your email address" class="flex-1 min-w-0 h-[52px] px-5 bg-transparent border border-white rounded-[3px] text-white placeholder:text-[#a1a1a1] outline-none focus:border-accent" aria-label="Email">
-            <button type="submit" class="btn btn-light !h-[52px]">Submit <svg class="arrow"><use href="#i-arrow"/></svg></button>
-          </form>
-          <p class="form-msg hidden mt-3 text-accent text-[13px]">Thanks for subscribing!</p>
-        </div>
-      </div>
-
-      <!-- Link columns -->
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-[30px] lg:pl-[60px] xl:pl-[120px]" data-anim="fade-up">
-        <div>
-          <h4 class="text-[14px] font-bold uppercase text-white mb-5 md:mb-[30px]">Customer care</h4>
-          <ul class="space-y-3">
-            <li><a href="#" class="footer-link">FAQs</a></li>
-            <li><a href="#" class="footer-link">Terms of Service</a></li>
-            <li><a href="#" class="footer-link">Privacy Policy</a></li>
-            <li><a href="#" class="footer-link">Contact Us</a></li>
-            <li><a href="#" class="footer-link">Gift Card</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-[14px] font-bold uppercase text-white mb-5 md:mb-[30px]">Help &amp; support</h4>
-          <ul class="space-y-3">
-            <li><a href="#" class="footer-link">Shipping Info</a></li>
-            <li><a href="#" class="footer-link">Returns</a></li>
-            <li><a href="#" class="footer-link">How To Order</a></li>
-            <li><a href="#" class="footer-link">How To Track</a></li>
-            <li><a href="#" class="footer-link">Size Guide</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-[14px] font-bold uppercase text-white mb-5 md:mb-[30px]">Company info</h4>
-          <ul class="space-y-3">
-            <li><a href="#" class="footer-link">About Us</a></li>
-            <li><a href="#" class="footer-link">Our Blog</a></li>
-            <li><a href="#" class="footer-link">Careers</a></li>
-            <li><a href="#" class="footer-link">Store Locations</a></li>
-            <li><a href="#" class="footer-link">Testimonial</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="border-t border-white/15 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-[12px] uppercase tracking-[.5px]">
-      <p>Copyright © 2025 <span class="text-white font-bold">Nova-Creative</span>. All rights reserved.</p>
-      <img src="assets/images/misc/payment-footer.png" alt="Accepted payments" class="h-6 w-auto" loading="lazy">
-    </div>
-  </div>
-</footer>
+<div data-include="footer"></div>
 
 <!-- =====================================================================
      OVERLAYS: drawers, search, popups
      ===================================================================== -->
-<div class="overlay fixed inset-0 z-[60] bg-black/50" data-overlay></div>
+<div data-include="overlays"></div>
 
-<!-- Mobile menu drawer -->
-<aside id="mobileMenu" class="drawer drawer-left fixed top-0 left-0 z-[70] h-full w-[320px] max-w-[85vw] bg-white overflow-y-auto" aria-label="Mobile menu">
-  <div class="flex items-center justify-between p-5 border-b border-line">
-    <img src="assets/images/misc/logo-dark.png" alt="Minicom" class="w-[110px]">
-    <button data-drawer-close aria-label="Close menu" class="text-ink"><svg class="w-6 h-6"><use href="#i-close"/></svg></button>
-  </div>
-  <form class="p-5 border-b border-line" action="#">
-    <div class="relative"><input type="search" placeholder="Enter your keywords" class="w-full h-11 border border-line rounded-[3px] pl-4 pr-10 outline-none focus:border-ink"><svg class="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-ink"><use href="#i-search"/></svg></div>
-  </form>
-  <nav class="px-5 py-3 text-ink font-bold uppercase text-[13px]">
-    <a href="index.html" class="block py-3 border-b border-line text-accent">Home</a>
-    <details class="border-b border-line group"><summary class="flex justify-between items-center py-3 cursor-pointer list-none">Collections<svg class="w-4 h-4 transition-transform group-open:rotate-180"><use href="#i-down"/></svg></summary>
-      <ul class="pb-3 pl-3 space-y-2 font-normal normal-case text-[14px] text-body"><li><a href="shop.html">Collection left sidebar</a></li><li><a href="#">Collection right sidebar</a></li><li><a href="#">Collection full width</a></li><li><a href="#">Collection deals</a></li></ul></details>
-    <details class="border-b border-line group"><summary class="flex justify-between items-center py-3 cursor-pointer list-none">Products<svg class="w-4 h-4 transition-transform group-open:rotate-180"><use href="#i-down"/></svg></summary>
-      <ul class="pb-3 pl-3 space-y-2 font-normal normal-case text-[14px] text-body"><li><a href="product.html">Product detail default</a></li><li><a href="#">Product thumb left</a></li><li><a href="#">Product image grid</a></li><li><a href="#">Product video</a></li></ul></details>
-    <details class="border-b border-line group"><summary class="flex justify-between items-center py-3 cursor-pointer list-none">Pages<svg class="w-4 h-4 transition-transform group-open:rotate-180"><use href="#i-down"/></svg></summary>
-      <ul class="pb-3 pl-3 space-y-2 font-normal normal-case text-[14px] text-body"><li><a href="#">About Us</a></li><li><a href="#">Contact Us</a></li><li><a href="#">FAQs Page</a></li><li><a href="#">Store Locations</a></li></ul></details>
-    <a href="#" class="block py-3 border-b border-line">Blog</a>
-  </nav>
-  <div class="px-5 py-5 text-[14px] space-y-2">
-    <p><b class="text-ink">Call Us:</b> +(123)-456-7890</p>
-    <p><b class="text-ink">Email:</b> info@example.com</p>
-  </div>
-</aside>
-
-<!-- Cart drawer -->
-<aside id="cartDrawer" class="drawer drawer-right fixed top-0 right-0 z-[70] h-full w-[400px] max-w-[90vw] bg-white flex flex-col" aria-label="Cart">
-  <div class="flex items-center justify-between p-6 border-b border-line">
-    <h3 class="text-[16px] font-bold uppercase text-ink">My Cart <span class="text-muted">(<span data-cart-count>0</span> items)</span></h3>
-    <button data-drawer-close aria-label="Close cart" class="text-ink"><svg class="w-6 h-6"><use href="#i-close"/></svg></button>
-  </div>
-  <div class="flex-1 flex flex-col items-center justify-center text-center p-8">
-    <svg class="w-16 h-16 text-line mb-4"><use href="#i-bag"/></svg>
-    <p class="text-ink font-bold mb-1" data-cart-empty>Your cart is currently empty.</p>
-    <p class="text-[13px] mb-6">Free shipping on all orders over $200.00</p>
-    <a href="#" class="btn btn-dark" data-drawer-close>Continue shopping</a>
-  </div>
-</aside>
-
-<!-- Search overlay (mobile) -->
-<div id="searchOverlay" class="popup fixed inset-0 z-[80] bg-white flex flex-col">
-  <div class="wrap flex items-center gap-4 h-[80px] border-b border-line">
-    <svg class="w-6 h-6 text-ink"><use href="#i-search"/></svg>
-    <input type="search" placeholder="Enter your keywords" class="flex-1 h-full outline-none text-[18px] text-ink">
-    <button data-popup-close aria-label="Close search" class="text-ink"><svg class="w-6 h-6"><use href="#i-close"/></svg></button>
-  </div>
-  <div class="wrap py-6">
-    <p class="text-[13px] font-bold uppercase text-ink mb-3">Search Trending:</p>
-    <div class="flex flex-wrap gap-2 text-[14px]"><a href="#" class="px-4 py-1.5 bg-soft rounded-full hover:bg-accent">Plant</a><a href="#" class="px-4 py-1.5 bg-soft rounded-full hover:bg-accent">Sofa</a><a href="#" class="px-4 py-1.5 bg-soft rounded-full hover:bg-accent">Basket</a><a href="#" class="px-4 py-1.5 bg-soft rounded-full hover:bg-accent">Chair</a></div>
-  </div>
-</div>
-
-<!-- Newsletter popup: disabled on request. Remove this comment wrapper and re-enable the timer in assets/js/ui.js to bring it back.
-<div id="newsletterPopup" class="popup fixed inset-0 z-[90] bg-black/60 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Newsletter">
-  <div class="popup-box relative w-full max-w-[800px] bg-white rounded-[10px] overflow-hidden grid md:grid-cols-2">
-    <button data-popup-close class="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-white flex items-center justify-center text-ink hover:bg-accent transition-colors" aria-label="Close"><svg class="w-5 h-5"><use href="#i-close"/></svg></button>
-    <img src="assets/images/misc/newsletter.jpg" alt="" class="hidden md:block w-full h-full object-cover" loading="lazy">
-    <div class="p-8 md:p-10 flex flex-col justify-center">
-      <h3 class="text-[20px] md:text-[24px] font-extrabold uppercase text-ink leading-tight">Subscrible &amp; get <span class="text-accent">15% discount</span></h3>
-      <p class="mt-3 mb-6">Sign up for newsletter to receive special offers and exclusive news about products</p>
-      <form class="newsletter-form flex flex-col gap-2.5" action="#">
-        <input type="email" required placeholder="Your email address" class="h-[50px] px-4 border border-line rounded-[3px] outline-none focus:border-ink" aria-label="Email">
-        <button type="submit" class="btn btn-accent w-full">Submit</button>
-      </form>
-      <p class="form-msg hidden mt-3 text-stock text-[13px]">Thanks for subscribing!</p>
-      <label class="mt-5 flex items-center gap-2 text-[13px] cursor-pointer"><input type="checkbox" id="popupDismiss" class="accent-black"> Don't show this popup again</label>
-    </div>
-  </div>
-</div>
--->
-
-<!-- Login popup -->
-<div id="loginPopup" class="popup fixed inset-0 z-[90] bg-black/60 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Login">
-  <div class="popup-box relative w-full max-w-[440px] bg-white rounded-[10px] p-8 md:p-10">
+<!-- Ask a question popup (featured product) -->
+<div id="askPopup" class="popup fixed inset-0 z-[90] bg-black/60 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="askTitle">
+  <div class="popup-box relative w-full max-w-[560px] bg-white rounded-[10px] p-8 md:p-10">
     <button data-popup-close class="absolute top-3 right-3 w-9 h-9 rounded-full flex items-center justify-center text-ink hover:bg-accent transition-colors" aria-label="Close"><svg class="w-5 h-5"><use href="#i-close"/></svg></button>
-    <h3 class="text-[20px] font-bold uppercase text-ink">Login</h3>
-    <p class="mt-1 mb-6 text-[13px]">Insert your account information:</p>
-    <form class="space-y-3" action="#">
-      <input type="email" autocomplete="email" placeholder="Email address" class="w-full h-[50px] px-4 border border-line rounded-[3px] outline-none focus:border-ink" aria-label="Email address">
-      <input type="password" autocomplete="current-password" placeholder="Password" class="w-full h-[50px] px-4 border border-line rounded-[3px] outline-none focus:border-ink" aria-label="Password">
-      <a href="#" class="block text-[13px] text-right hover:text-accent">Forgot your password?</a>
-      <button type="submit" class="btn btn-dark w-full">Login</button>
-      <a href="#" class="btn btn-accent w-full">Create your account</a>
+    <h3 id="askTitle" class="text-[22px] font-extrabold uppercase text-ink text-center">Ask a Question</h3>
+    <p class="text-center mt-1 mb-6">Please enter the details of your request. A member of our support staff will respond as soon as possible.</p>
+    <form class="space-y-2.5" action="#" data-home-form>
+      <input type="text" required placeholder="Your name" autocomplete="name" class="field" aria-label="Your name">
+      <input type="email" required placeholder="Your email" autocomplete="email" class="field" aria-label="Your email">
+      <input type="tel" placeholder="Phone number" autocomplete="tel" class="field" aria-label="Phone number">
+      <textarea required rows="5" placeholder="Your message" class="field !h-auto py-3" aria-label="Your message"></textarea>
+      <button type="submit" class="btn btn-dark w-full">Submit now</button>
+      <p class="form-msg hidden text-stock text-[13px]">Thanks for contacting us. We will get back to you as soon as possible.</p>
     </form>
   </div>
 </div>
 
-<!-- Toast -->
-<div id="toast" class="popup fixed left-1/2 -translate-x-1/2 bottom-24 lg:bottom-8 z-[95] bg-black text-white text-[13px] px-5 py-3 rounded-[5px] flex items-center gap-2 shadow-xl"><svg class="w-4 h-4 text-accent"><use href="#i-check"/></svg><span data-toast-text>Added to cart</span></div>
-
-<!-- Mobile bottom bar -->
-<nav class="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-white border-t border-line grid grid-cols-4 h-[60px] text-[11px] font-medium text-ink" aria-label="Quick links">
-  <a href="index.html" class="flex flex-col items-center justify-center gap-1"><svg class="w-5 h-5"><use href="#i-home"/></svg>Home</a>
-  <a href="shop.html" class="flex flex-col items-center justify-center gap-1"><svg class="w-5 h-5"><use href="#i-grid"/></svg>Shopping</a>
-  <a href="#" class="relative flex flex-col items-center justify-center gap-1"><svg class="w-5 h-5"><use href="#i-heart"/></svg>Wishlist<span class="absolute top-1.5 left-1/2 ml-1.5 min-w-4 h-4 px-1 rounded-full bg-accent text-[9px] font-bold leading-4 text-center" data-wishlist-count>0</span></a>
-  <a href="#" class="flex flex-col items-center justify-center gap-1" data-popup-open="loginPopup"><svg class="w-5 h-5"><use href="#i-user"/></svg>Account</a>
-</nav>
-
-<!-- Back to top -->
-<button id="toTop" class="to-top fixed right-5 bottom-20 lg:bottom-8 z-40 w-11 h-11 rounded-full bg-accent text-ink flex items-center justify-center shadow-lg hover:bg-black hover:text-white transition-colors" aria-label="Back to top"><svg class="w-5 h-5"><use href="#i-up"/></svg></button>
+<!-- Share popup (featured product) -->
+<div id="sharePopup" class="popup fixed inset-0 z-[90] bg-black/60 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="shareTitle">
+  <div class="popup-box relative w-full max-w-[460px] bg-white rounded-[10px] p-[25px]">
+    <button data-popup-close class="absolute top-3 right-3 w-9 h-9 rounded-full flex items-center justify-center text-ink hover:bg-accent transition-colors" aria-label="Close"><svg class="w-5 h-5"><use href="#i-close"/></svg></button>
+    <h3 class="text-[16px] font-bold text-ink mb-5">Copy link</h3>
+    <div class="flex gap-[5px]">
+      <input type="text" readonly data-home-share-url class="field flex-1 min-w-0 !h-[46px] text-[13px]" aria-label="Page link">
+      <button type="button" class="btn btn-accent !h-[46px] !min-w-[85px]" data-home-copy>Copy</button>
+    </div>
+    <h3 id="shareTitle" class="text-[16px] font-bold text-ink mt-4 mb-2.5">Share</h3>
+    <div class="flex gap-2.5">
+      <a href="#" data-home-share="facebook" target="_blank" rel="noopener" class="w-8 h-8 rounded-full border border-[#dbdbdb] text-ink flex items-center justify-center hover:bg-accent hover:border-accent transition-colors" aria-label="Share on Facebook"><svg class="w-3.5 h-3.5"><use href="#i-fb"/></svg></a>
+      <a href="#" data-home-share="x" target="_blank" rel="noopener" class="w-8 h-8 rounded-full border border-[#dbdbdb] text-ink flex items-center justify-center hover:bg-accent hover:border-accent transition-colors" aria-label="Share on X"><svg class="w-3.5 h-3.5"><use href="#i-x"/></svg></a>
+      <a href="#" data-home-share="pinterest" target="_blank" rel="noopener" class="w-8 h-8 rounded-full border border-[#dbdbdb] text-ink flex items-center justify-center hover:bg-accent hover:border-accent transition-colors" aria-label="Share on Pinterest"><svg class="w-3.5 h-3.5"><use href="#i-pinterest"/></svg></a>
+    </div>
+  </div>
+</div>
 
 <!-- Libraries -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-<!-- App -->
-<script src="assets/js/header.js"></script>
-<script src="assets/js/sliders.js"></script>
-<script src="assets/js/ui.js"></script>
-<script src="assets/js/animations.js"></script>
+<!-- App: include.js loads the shared partials, then these scripts in order -->
+<script src="assets/js/include.js" data-scripts="assets/js/header.js assets/js/sliders.js assets/js/ui.js assets/js/animations.js"></script>
 </body>
 </html>

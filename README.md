@@ -23,7 +23,13 @@ There is no build step. Serve the folder with any static server so every asset l
 ## Structure
 
 ```
-index.html              landing page (header, 16 sections, footer, drawers/popups)
+partials/header.html    shared header + desktop menu (one copy for every page)
+partials/footer.html    shared footer
+partials/overlays.html  shared mobile menu, cart drawer, search, login popup, toast,
+                        mobile bottom bar, back-to-top
+partials/icons.svg      shared SVG icon sprite (every icon used on any page)
+assets/js/include.js    loads the partials into each page, then the page scripts
+index.html              landing page (16 sections + page-only popups)
 product.html            product detail page (gallery + 3D, info, tabs, related,
                         recently viewed, sticky add-to-cart, lightbox/ask/share popups)
 shop.html               shop / collection page (category banner, filter sidebar,
@@ -56,16 +62,28 @@ Everything respects `prefers-reduced-motion`. If the GSAP CDN fails to load, the
 
 ## Adding more pages
 
-Copy the shared parts of `index.html` into each new page and change only the `<main>` content:
+The header, footer, overlays and icons live once in `partials/`. Edit them there and every page updates.
 
-- the `<head>`
-- the SVG sprite
-- the `<header>`
-- the `<footer>`
-- the overlays block
-- the script tags
+To make a new page, copy `shop.html` (the smallest page) and change only the `<main>` content. Keep these parts:
 
-When there are several pages, move the header and footer into `partials/` and inject them with a small fetch script.
+- the `<head>` (fonts, Tailwind, Swiper CSS, `custom.css`)
+- the slots `<div data-include="icons">`, `header`, `footer` and `overlays`
+- the include script at the bottom:
+
+```html
+<script src="assets/js/include.js" data-scripts="assets/js/header.js assets/js/sliders.js assets/js/ui.js assets/js/animations.js"></script>
+```
+
+  Add page scripts (for example `assets/js/cart.js`) to `data-scripts`, before `animations.js`.
+
+Set the page state on `<body>`:
+
+| Attribute | Values | Effect |
+|---|---|---|
+| `data-nav` | `home`, `collections`, `products`, `pages`, `blog` | highlights that menu link (desktop + mobile) |
+| `data-header` | `solid` | black header for inner pages (leave it off on the homepage) |
+
+The partials are loaded with `fetch()`, so always open the site through Live Server or XAMPP. Opened from `file://`, the page shows a notice instead of the header and footer.
 
 ## ⚠️ Image licence
 
