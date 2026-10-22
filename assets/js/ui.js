@@ -81,14 +81,6 @@
     deliveryEl.textContent = `${a.getDate()} – ${b.getDate()} ${month}, ${b.getFullYear()}`;
   }
 
-  /* ---------- Swatches ---------- */
-  document.querySelectorAll('.swatch').forEach((sw) =>
-    sw.addEventListener('click', () => {
-      sw.parentElement.querySelectorAll('.swatch').forEach((s) => s.classList.remove('active'));
-      sw.classList.add('active');
-    })
-  );
-
   /* ---------- FAQ accordion (one open at a time) ---------- */
   document.querySelectorAll('.faq-head').forEach((head) =>
     head.addEventListener('click', () => {
@@ -109,36 +101,53 @@
     clearTimeout(toastTimer);
     toastTimer = setTimeout(() => toast.classList.remove('is-open'), 2200);
   }
+  window.MC.toast = showToast;
 
-  /* ---------- Wishlist / cart counters (demo only) ---------- */
+  /* ---------- Swatches, wishlist, cart counters (demo only) ----------
+     Delegated so cards rendered later (shop grid) work too. */
   let wishlist = 0, cart = 0;
-  document.querySelectorAll('[data-wishlist]').forEach((btn) =>
-    btn.addEventListener('click', (e) => {
+  document.addEventListener('click', (e) => {
+    const sw = e.target.closest('.swatch');
+    if (sw) {
+      sw.parentElement.querySelectorAll('.swatch').forEach((s) => s.classList.remove('active'));
+      sw.classList.add('active');
+      return;
+    }
+
+    const wish = e.target.closest('[data-wishlist]');
+    if (wish) {
       e.preventDefault();
-      const added = btn.classList.toggle('!bg-accent');
+      const added = wish.classList.toggle('!bg-accent');
       wishlist += added ? 1 : -1;
       document.querySelectorAll('[data-wishlist-count]').forEach((el) => (el.textContent = wishlist));
       showToast(added ? 'This item has been added to your Wishlist' : 'Removed from Wishlist');
-    })
-  );
-  document.querySelectorAll('[data-add-cart]').forEach((btn) =>
-    btn.addEventListener('click', (e) => {
+      return;
+    }
+
+    const add = e.target.closest('[data-add-cart]');
+    if (add) {
       e.preventDefault();
-      const qtyInput = btn.closest('div')?.querySelector('.qty input');
+      const qtyInput = add.closest('div')?.querySelector('.qty input');
       cart += qtyInput ? parseInt(qtyInput.value, 10) || 1 : 1;
       document.querySelectorAll('[data-cart-count]').forEach((el) => (el.textContent = cart));
       const empty = document.querySelector('[data-cart-empty]');
       if (empty) empty.textContent = `You have ${cart} item${cart > 1 ? 's' : ''} in your cart.`;
       showToast('Added to cart');
-    })
-  );
+    }
+  });
 
   /* ---------- Popups ---------- */
+  // Lock page scroll behind modal dialogs (not the toast)
+  const lockScroll = (on) => (document.body.style.overflow = on ? 'hidden' : '');
   function openPopup(id) {
-    document.getElementById(id)?.classList.add('is-open');
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.classList.add('is-open');
+    if (el.matches('[role="dialog"]')) lockScroll(true);
   }
   function closePopup(el) {
     el.classList.remove('is-open');
+    if (!document.querySelector('.popup.is-open[role="dialog"]')) lockScroll(false);
     if (el.id === 'newsletterPopup' && document.getElementById('popupDismiss')?.checked) {
       try { localStorage.setItem('mc_newsletter_dismissed', '1'); } catch (e) {}
     }
