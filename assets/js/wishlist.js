@@ -58,7 +58,7 @@
   };
   function itemHTML(w) {
     const p = byId[w.id];
-    const url = p.url || 'shop.html';
+    const url = p.url || `product.html?id=${p.id}`;
     const price = p.compare && p.compare > p.price
       ? `<span class="wl-price">${money(p.price)}</span><s class="wl-old">${money(p.compare)}</s>`
       : `<span class="wl-price">${money(p.price)}</span>`;

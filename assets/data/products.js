@@ -14,7 +14,8 @@
      isNew      shows a "New" badge
      added      higher = newer (used by "Newest" sort)
      order      position in the default "Featured" sort
-     url        product page (only the sofa chair has one so far)
+     url        product page; default product.html?id={id}
+     photos     number of photos ({id}-1.jpg … ; default 2)
    ========================================================================== */
 window.MC_SHOP = {
   all: {
@@ -98,7 +99,7 @@ window.MC_SHOP = {
     { id: 'lounge-chair', title: 'Modern Wooden Lounge Chair with Wide Fabric Arms', cat: 'living-room', sub: 'armchairs', price: 155, colors: ['Brown'], materials: ['Wood', 'Fabric'], inStock: true, added: 20, order: 3 },
     { id: 'cactus-pot', title: 'Decorative Cactus Plant Pot for Indoor Display', cat: 'decor', sub: 'plant-pots', price: 37, colors: ['White', 'Coral', 'Teal'], variants: ['White', 'Coral', 'Teal'], materials: ['Ceramic'], inStock: true, isNew: true, added: 22, order: 4 },
     { id: 'tv-stand', title: 'Solid Wood TV Stand with Storage Drawers Design', cat: 'living-room', sub: 'tv-storage', price: 135, colors: ['Brown'], materials: ['Wood'], inStock: true, added: 21, order: 5 },
-    { id: 'beige-armchair', title: 'Modern Beige Armchair with Wooden Legs', cat: 'living-room', sub: 'armchairs', price: 150, colors: ['Beige'], materials: ['Fabric', 'Wood'], inStock: true, added: 15, order: 6 },
+    { id: 'beige-armchair', photos: 5, title: 'Modern Beige Armchair with Wooden Legs', cat: 'living-room', sub: 'armchairs', price: 150, colors: ['Beige'], materials: ['Fabric', 'Wood'], inStock: true, added: 15, order: 6 },
     { id: 'swivel-sofa', title: 'Modern Low Profile Swivel Sofa with Soft Seat', cat: 'living-room', sub: 'sofas', price: 125, colors: ['Grey'], materials: ['Fabric'], inStock: true, added: 19, order: 7 },
     { id: 'bed-frame', title: 'Solid Wood Bed Frame with Classic Vintage Design', cat: 'bedroom', sub: 'beds', price: 300, colors: ['Brown'], materials: ['Wood'], inStock: true, added: 9, order: 8 },
     { id: 'coffee-table', title: 'Round Wooden Coffee Table with Marble Top Design', cat: 'living-room', sub: 'coffee-tables', price: 40, colors: ['Brown'], materials: ['Wood'], inStock: true, added: 17, order: 9 },

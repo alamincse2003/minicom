@@ -15,7 +15,7 @@
 
   function lineHTML(l) {
     const p = l.product;
-    const url = p.url || '#';
+    const url = p.url || `product.html?id=${p.id}`;
     return `
       <div class="cart-line" data-id="${l.id}">
         <div class="cart-c-remove">
@@ -39,7 +39,7 @@
   }
 
   function relatedHTML(p) {
-    const url = p.url || '#';
+    const url = p.url || `product.html?id=${p.id}`;
     const price = p.compare
       ? `<span class="text-sale">${money(p.price)}</span><s class="ml-2.5 text-[#d5d5d5]">${money(p.compare)}</s>`
       : money(p.price);

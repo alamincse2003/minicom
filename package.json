@@ -1,0 +1,14 @@
+{
+  "name": "minicom",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Minicom furniture store: static HTML + Tailwind CSS + GSAP",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/tailwind.css -o ./assets/css/tailwind.css --minify",
+    "watch:css": "tailwindcss -i ./src/tailwind.css -o ./assets/css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.1.11",
+    "tailwindcss": "4.1.11"
+  }
+}

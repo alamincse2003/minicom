@@ -16,22 +16,8 @@
   <!-- Swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css">
 
-  <!-- Tailwind CSS v4 (browser build) -->
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11"></script>
-  <style type="text/tailwindcss">
-    @theme {
-      --font-sans: "DM Sans", sans-serif;
-      --color-accent: #fdc402;
-      --color-ink: #181818;
-      --color-body: #535353;
-      --color-muted: #b7b7b7;
-      --color-soft: #f5f5f5;
-      --color-line: #eaeaea;
-      --color-sale: #e85b40;
-      --color-stock: #0f834d;
-      --breakpoint-3xl: 1500px;
-    }
-  </style>
+  <!-- Tailwind CSS (built: npm run build:css) -->
+  <link rel="stylesheet" href="assets/css/tailwind.css">
 
   <!-- Custom styles -->
   <link rel="stylesheet" href="assets/css/custom.css">
@@ -70,7 +56,7 @@
           <div class="w-[85%] sm:w-1/2 md:w-[44%] lg:w-[47%] 3xl:w-[38%] text-center sm:text-left">
             <p class="cap-line dot-caption text-white text-[10px] md:text-[11px] xl:text-[12px] uppercase tracking-[3px] leading-[1.2] mb-2.5 md:mb-[15px] 2xl:mb-5">Unwind in Elegance</p>
             <h2 class="cap-line hero-title mb-2.5 md:mb-[15px] lg:mb-5 xl:mb-[25px] 2xl:mb-[30px]">Find the Perfect<br>Armchair for You</h2>
-            <div class="cap-line"><a href="#" class="btn btn-accent">Learn More <svg class="arrow"><use href="#i-arrow"/></svg></a></div>
+            <div class="cap-line"><a href="shop.html" class="btn btn-accent">Learn More <svg class="arrow"><use href="#i-arrow"/></svg></a></div>
           </div>
         </div>
       </div>
@@ -83,7 +69,7 @@
           <div class="w-[85%] sm:w-1/2 md:w-[44%] lg:w-[47%] 3xl:w-[38%] text-center sm:text-left">
             <p class="cap-line dot-caption text-white text-[10px] md:text-[11px] xl:text-[12px] uppercase tracking-[3px] leading-[1.2] mb-2.5 md:mb-[15px] 2xl:mb-5">New arrivals</p>
             <h2 class="cap-line hero-title mb-2.5 md:mb-[15px] lg:mb-5 xl:mb-[25px] 2xl:mb-[30px]">Timeless Elegance<br>Scandinavian Furniture</h2>
-            <div class="cap-line"><a href="#" class="btn btn-accent">Learn More <svg class="arrow"><use href="#i-arrow"/></svg></a></div>
+            <div class="cap-line"><a href="shop.html" class="btn btn-accent">Learn More <svg class="arrow"><use href="#i-arrow"/></svg></a></div>
           </div>
         </div>
       </div>
@@ -96,7 +82,7 @@
           <div class="w-[85%] sm:w-1/2 md:w-[44%] lg:w-[47%] 3xl:w-[38%] text-center sm:text-left">
             <p class="cap-line dot-caption text-white text-[10px] md:text-[11px] xl:text-[12px] uppercase tracking-[3px] leading-[1.2] mb-2.5 md:mb-[15px] 2xl:mb-5">Handcrafted Excellence</p>
             <h2 class="cap-line hero-title mb-2.5 md:mb-[15px] lg:mb-5 xl:mb-[25px] 2xl:mb-[30px]">Transform Your Home<br>with a Wooden Sofa</h2>
-            <div class="cap-line"><a href="#" class="btn btn-accent">Learn More <svg class="arrow"><use href="#i-arrow"/></svg></a></div>
+            <div class="cap-line"><a href="shop.html" class="btn btn-accent">Learn More <svg class="arrow"><use href="#i-arrow"/></svg></a></div>
           </div>
         </div>
       </div>
@@ -205,7 +191,7 @@
         <div class="swiper-slide">
           <div class="p-card">
             <div class="p-thumb">
-              <a href="#" aria-label="Decorative Cactus Plant Pot for Indoor Display"><img class="img-1" src="assets/images/products/cactus-pot-1.jpg" alt="Decorative Cactus Plant Pot for Indoor Display" loading="lazy"><img class="img-2" src="assets/images/products/cactus-pot-2.jpg" alt="" loading="lazy"></a>
+              <a href="product.html?id=cactus-pot" aria-label="Decorative Cactus Plant Pot for Indoor Display"><img class="img-1" src="assets/images/products/cactus-pot-1.jpg" alt="Decorative Cactus Plant Pot for Indoor Display" loading="lazy"><img class="img-2" src="assets/images/products/cactus-pot-2.jpg" alt="" loading="lazy"></a>
               <div class="p-actions">
                 <button class="p-act" data-wishlist aria-label="Add to wishlist"><svg class="w-4 h-4"><use href="#i-heart"/></svg><span class="tip">Add To Wishlist</span></button>
                 <button class="p-act" aria-label="Quick view"><svg class="w-4 h-4"><use href="#i-eye"/></svg><span class="tip">Quick View</span></button>
@@ -214,7 +200,7 @@
             </div>
             <div class="p-info">
               <div class="p-stars" aria-label="No reviews yet"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-              <a href="#" class="p-title">Decorative Cactus Plant Pot for Indoor Display</a>
+              <a href="product.html?id=cactus-pot" class="p-title">Decorative Cactus Plant Pot for Indoor Display</a>
               <p class="p-price">$37.00</p>
             </div>
           </div>
@@ -222,7 +208,7 @@
         <div class="swiper-slide">
           <div class="p-card">
             <div class="p-thumb">
-              <a href="#" aria-label="Solid Wood TV Stand with Storage Drawers Design"><img class="img-1" src="assets/images/products/tv-stand-1.jpg" alt="Solid Wood TV Stand with Storage Drawers Design" loading="lazy"><img class="img-2" src="assets/images/products/tv-stand-2.jpg" alt="" loading="lazy"></a>
+              <a href="product.html?id=tv-stand" aria-label="Solid Wood TV Stand with Storage Drawers Design"><img class="img-1" src="assets/images/products/tv-stand-1.jpg" alt="Solid Wood TV Stand with Storage Drawers Design" loading="lazy"><img class="img-2" src="assets/images/products/tv-stand-2.jpg" alt="" loading="lazy"></a>
               <div class="p-actions">
                 <button class="p-act" data-wishlist aria-label="Add to wishlist"><svg class="w-4 h-4"><use href="#i-heart"/></svg><span class="tip">Add To Wishlist</span></button>
                 <button class="p-act" aria-label="Quick view"><svg class="w-4 h-4"><use href="#i-eye"/></svg><span class="tip">Quick View</span></button>
@@ -231,7 +217,7 @@
             </div>
             <div class="p-info">
               <div class="p-stars" aria-label="No reviews yet"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-              <a href="#" class="p-title">Solid Wood TV Stand with Storage Drawers Design</a>
+              <a href="product.html?id=tv-stand" class="p-title">Solid Wood TV Stand with Storage Drawers Design</a>
               <p class="p-price">$135.00</p>
             </div>
           </div>
@@ -239,7 +225,7 @@
         <div class="swiper-slide">
           <div class="p-card">
             <div class="p-thumb">
-              <a href="#" aria-label="Modern Wooden Lounge Chair with Wide Fabric Arms"><img class="img-1" src="assets/images/products/lounge-chair-1.jpg" alt="Modern Wooden Lounge Chair with Wide Fabric Arms" loading="lazy"><img class="img-2" src="assets/images/products/lounge-chair-2.jpg" alt="" loading="lazy"></a>
+              <a href="product.html?id=lounge-chair" aria-label="Modern Wooden Lounge Chair with Wide Fabric Arms"><img class="img-1" src="assets/images/products/lounge-chair-1.jpg" alt="Modern Wooden Lounge Chair with Wide Fabric Arms" loading="lazy"><img class="img-2" src="assets/images/products/lounge-chair-2.jpg" alt="" loading="lazy"></a>
               <div class="p-actions">
                 <button class="p-act" data-wishlist aria-label="Add to wishlist"><svg class="w-4 h-4"><use href="#i-heart"/></svg><span class="tip">Add To Wishlist</span></button>
                 <button class="p-act" aria-label="Quick view"><svg class="w-4 h-4"><use href="#i-eye"/></svg><span class="tip">Quick View</span></button>
@@ -248,7 +234,7 @@
             </div>
             <div class="p-info">
               <div class="p-stars" aria-label="No reviews yet"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-              <a href="#" class="p-title">Modern Wooden Lounge Chair with Wide Fabric Arms</a>
+              <a href="product.html?id=lounge-chair" class="p-title">Modern Wooden Lounge Chair with Wide Fabric Arms</a>
               <p class="p-price">$155.00</p>
             </div>
           </div>
@@ -256,7 +242,7 @@
         <div class="swiper-slide">
           <div class="p-card">
             <div class="p-thumb">
-              <a href="#" aria-label="Modern Low Profile Swivel Sofa with Soft Seat"><img class="img-1" src="assets/images/products/swivel-sofa-1.jpg" alt="Modern Low Profile Swivel Sofa with Soft Seat" loading="lazy"><img class="img-2" src="assets/images/products/swivel-sofa-2.jpg" alt="" loading="lazy"></a>
+              <a href="product.html?id=swivel-sofa" aria-label="Modern Low Profile Swivel Sofa with Soft Seat"><img class="img-1" src="assets/images/products/swivel-sofa-1.jpg" alt="Modern Low Profile Swivel Sofa with Soft Seat" loading="lazy"><img class="img-2" src="assets/images/products/swivel-sofa-2.jpg" alt="" loading="lazy"></a>
               <div class="p-actions">
                 <button class="p-act" data-wishlist aria-label="Add to wishlist"><svg class="w-4 h-4"><use href="#i-heart"/></svg><span class="tip">Add To Wishlist</span></button>
                 <button class="p-act" aria-label="Quick view"><svg class="w-4 h-4"><use href="#i-eye"/></svg><span class="tip">Quick View</span></button>
@@ -265,7 +251,7 @@
             </div>
             <div class="p-info">
               <div class="p-stars" aria-label="No reviews yet"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-              <a href="#" class="p-title">Modern Low Profile Swivel Sofa with Soft Seat</a>
+              <a href="product.html?id=swivel-sofa" class="p-title">Modern Low Profile Swivel Sofa with Soft Seat</a>
               <p class="p-price">$125.00</p>
             </div>
           </div>
@@ -273,7 +259,7 @@
         <div class="swiper-slide">
           <div class="p-card">
             <div class="p-thumb">
-              <a href="#" aria-label="Compact Mini Plant Pot for Desk or Shelf Display"><img class="img-1" src="assets/images/products/compact-pot-1.jpg" alt="Compact Mini Plant Pot for Desk or Shelf Display" loading="lazy"><img class="img-2" src="assets/images/products/compact-pot-2.jpg" alt="" loading="lazy"></a>
+              <a href="product.html?id=compact-pot" aria-label="Compact Mini Plant Pot for Desk or Shelf Display"><img class="img-1" src="assets/images/products/compact-pot-1.jpg" alt="Compact Mini Plant Pot for Desk or Shelf Display" loading="lazy"><img class="img-2" src="assets/images/products/compact-pot-2.jpg" alt="" loading="lazy"></a>
               <div class="p-actions">
                 <button class="p-act" data-wishlist aria-label="Add to wishlist"><svg class="w-4 h-4"><use href="#i-heart"/></svg><span class="tip">Add To Wishlist</span></button>
                 <button class="p-act" aria-label="Quick view"><svg class="w-4 h-4"><use href="#i-eye"/></svg><span class="tip">Quick View</span></button>
@@ -282,7 +268,7 @@
             </div>
             <div class="p-info">
               <div class="p-stars" aria-label="No reviews yet"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-              <a href="#" class="p-title">Compact Mini Plant Pot for Desk or Shelf Display</a>
+              <a href="product.html?id=compact-pot" class="p-title">Compact Mini Plant Pot for Desk or Shelf Display</a>
               <p class="p-price">$37.00</p>
             </div>
           </div>
@@ -290,7 +276,7 @@
         <div class="swiper-slide">
           <div class="p-card">
             <div class="p-thumb">
-              <a href="#" aria-label="Round Wooden Coffee Table with Marble Top Design"><img class="img-1" src="assets/images/products/coffee-table-1.jpg" alt="Round Wooden Coffee Table with Marble Top Design" loading="lazy"><img class="img-2" src="assets/images/products/coffee-table-2.jpg" alt="" loading="lazy"></a>
+              <a href="product.html?id=coffee-table" aria-label="Round Wooden Coffee Table with Marble Top Design"><img class="img-1" src="assets/images/products/coffee-table-1.jpg" alt="Round Wooden Coffee Table with Marble Top Design" loading="lazy"><img class="img-2" src="assets/images/products/coffee-table-2.jpg" alt="" loading="lazy"></a>
               <div class="p-actions">
                 <button class="p-act" data-wishlist aria-label="Add to wishlist"><svg class="w-4 h-4"><use href="#i-heart"/></svg><span class="tip">Add To Wishlist</span></button>
                 <button class="p-act" aria-label="Quick view"><svg class="w-4 h-4"><use href="#i-eye"/></svg><span class="tip">Quick View</span></button>
@@ -299,7 +285,7 @@
             </div>
             <div class="p-info">
               <div class="p-stars" aria-label="No reviews yet"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-              <a href="#" class="p-title">Round Wooden Coffee Table with Marble Top Design</a>
+              <a href="product.html?id=coffee-table" class="p-title">Round Wooden Coffee Table with Marble Top Design</a>
               <p class="p-price">$40.00</p>
             </div>
           </div>
@@ -308,7 +294,7 @@
           <div class="p-card">
             <div class="p-thumb">
               <span class="p-badge">-16%</span>
-              <a href="#" aria-label="Wooden Basket with Clean Towels for Home Decor"><img class="img-1" src="assets/images/products/basket-1.jpg" alt="Wooden Basket with Clean Towels for Home Decor" loading="lazy"><img class="img-2" src="assets/images/products/basket-2.jpg" alt="" loading="lazy"></a>
+              <a href="product.html?id=basket" aria-label="Wooden Basket with Clean Towels for Home Decor"><img class="img-1" src="assets/images/products/basket-1.jpg" alt="Wooden Basket with Clean Towels for Home Decor" loading="lazy"><img class="img-2" src="assets/images/products/basket-2.jpg" alt="" loading="lazy"></a>
               <div class="p-actions">
                 <button class="p-act" data-wishlist aria-label="Add to wishlist"><svg class="w-4 h-4"><use href="#i-heart"/></svg><span class="tip">Add To Wishlist</span></button>
                 <button class="p-act" aria-label="Quick view"><svg class="w-4 h-4"><use href="#i-eye"/></svg><span class="tip">Quick View</span></button>
@@ -317,7 +303,7 @@
             </div>
             <div class="p-info">
               <div class="p-stars" aria-label="No reviews yet"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-              <a href="#" class="p-title">Wooden Basket with Clean Towels for Home Decor</a>
+              <a href="product.html?id=basket" class="p-title">Wooden Basket with Clean Towels for Home Decor</a>
               <p class="p-price"><span class="text-sale">$25.00</span> <del class="ml-1.5 text-muted font-normal">$30.00</del></p>
             </div>
           </div>
@@ -325,7 +311,7 @@
         <div class="swiper-slide">
           <div class="p-card">
             <div class="p-thumb">
-              <a href="#" aria-label="Small Decorative Mini Plant Pot for Home Decor"><img class="img-1" src="assets/images/products/small-pot-1.jpg" alt="Small Decorative Mini Plant Pot for Home Decor" loading="lazy"><img class="img-2" src="assets/images/products/small-pot-2.jpg" alt="" loading="lazy"></a>
+              <a href="product.html?id=small-pot" aria-label="Small Decorative Mini Plant Pot for Home Decor"><img class="img-1" src="assets/images/products/small-pot-1.jpg" alt="Small Decorative Mini Plant Pot for Home Decor" loading="lazy"><img class="img-2" src="assets/images/products/small-pot-2.jpg" alt="" loading="lazy"></a>
               <div class="p-actions">
                 <button class="p-act" data-wishlist aria-label="Add to wishlist"><svg class="w-4 h-4"><use href="#i-heart"/></svg><span class="tip">Add To Wishlist</span></button>
                 <button class="p-act" aria-label="Quick view"><svg class="w-4 h-4"><use href="#i-eye"/></svg><span class="tip">Quick View</span></button>
@@ -334,7 +320,7 @@
             </div>
             <div class="p-info">
               <div class="p-stars" aria-label="No reviews yet"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-              <a href="#" class="p-title">Small Decorative Mini Plant Pot for Home Decor</a>
+              <a href="product.html?id=small-pot" class="p-title">Small Decorative Mini Plant Pot for Home Decor</a>
               <p class="p-price">$37.00</p>
             </div>
           </div>
@@ -342,7 +328,7 @@
         <div class="swiper-slide">
           <div class="p-card">
             <div class="p-thumb">
-              <a href="#" aria-label="Miniature Plant Pot for Stylish Indoor Decoration"><img class="img-1" src="assets/images/products/miniature-pot-1.jpg" alt="Miniature Plant Pot for Stylish Indoor Decoration" loading="lazy"><img class="img-2" src="assets/images/products/miniature-pot-2.jpg" alt="" loading="lazy"></a>
+              <a href="product.html?id=miniature-pot" aria-label="Miniature Plant Pot for Stylish Indoor Decoration"><img class="img-1" src="assets/images/products/miniature-pot-1.jpg" alt="Miniature Plant Pot for Stylish Indoor Decoration" loading="lazy"><img class="img-2" src="assets/images/products/miniature-pot-2.jpg" alt="" loading="lazy"></a>
               <div class="p-actions">
                 <button class="p-act" data-wishlist aria-label="Add to wishlist"><svg class="w-4 h-4"><use href="#i-heart"/></svg><span class="tip">Add To Wishlist</span></button>
                 <button class="p-act" aria-label="Quick view"><svg class="w-4 h-4"><use href="#i-eye"/></svg><span class="tip">Quick View</span></button>
@@ -351,7 +337,7 @@
             </div>
             <div class="p-info">
               <div class="p-stars" aria-label="No reviews yet"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-              <a href="#" class="p-title">Miniature Plant Pot for Stylish Indoor Decoration</a>
+              <a href="product.html?id=miniature-pot" class="p-title">Miniature Plant Pot for Stylish Indoor Decoration</a>
               <p class="p-price">$34.00</p>
             </div>
           </div>
@@ -359,7 +345,7 @@
         <div class="swiper-slide">
           <div class="p-card">
             <div class="p-thumb">
-              <a href="#" aria-label="Solid Wood Plant Stand for Indoor Pot Display"><img class="img-1" src="assets/images/products/plant-stand-1.jpg" alt="Solid Wood Plant Stand for Indoor Pot Display" loading="lazy"><img class="img-2" src="assets/images/products/plant-stand-2.jpg" alt="" loading="lazy"></a>
+              <a href="product.html?id=plant-stand" aria-label="Solid Wood Plant Stand for Indoor Pot Display"><img class="img-1" src="assets/images/products/plant-stand-1.jpg" alt="Solid Wood Plant Stand for Indoor Pot Display" loading="lazy"><img class="img-2" src="assets/images/products/plant-stand-2.jpg" alt="" loading="lazy"></a>
               <div class="p-actions">
                 <button class="p-act" data-wishlist aria-label="Add to wishlist"><svg class="w-4 h-4"><use href="#i-heart"/></svg><span class="tip">Add To Wishlist</span></button>
                 <button class="p-act" aria-label="Quick view"><svg class="w-4 h-4"><use href="#i-eye"/></svg><span class="tip">Quick View</span></button>
@@ -368,7 +354,7 @@
             </div>
             <div class="p-info">
               <div class="p-stars" aria-label="No reviews yet"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-              <a href="#" class="p-title">Solid Wood Plant Stand for Indoor Pot Display</a>
+              <a href="product.html?id=plant-stand" class="p-title">Solid Wood Plant Stand for Indoor Pot Display</a>
               <p class="p-price">$12.00</p>
             </div>
           </div>
@@ -376,7 +362,7 @@
         <div class="swiper-slide">
           <div class="p-card">
             <div class="p-thumb">
-              <a href="#" aria-label="Durable Plastic Fiber Plant Pot for Indoor Decor"><img class="img-1" src="assets/images/products/fiber-pot-1.jpg" alt="Durable Plastic Fiber Plant Pot for Indoor Decor" loading="lazy"><img class="img-2" src="assets/images/products/fiber-pot-2.jpg" alt="" loading="lazy"></a>
+              <a href="product.html?id=fiber-pot" aria-label="Durable Plastic Fiber Plant Pot for Indoor Decor"><img class="img-1" src="assets/images/products/fiber-pot-1.jpg" alt="Durable Plastic Fiber Plant Pot for Indoor Decor" loading="lazy"><img class="img-2" src="assets/images/products/fiber-pot-2.jpg" alt="" loading="lazy"></a>
               <div class="p-actions">
                 <button class="p-act" data-wishlist aria-label="Add to wishlist"><svg class="w-4 h-4"><use href="#i-heart"/></svg><span class="tip">Add To Wishlist</span></button>
                 <button class="p-act" aria-label="Quick view"><svg class="w-4 h-4"><use href="#i-eye"/></svg><span class="tip">Quick View</span></button>
@@ -385,7 +371,7 @@
             </div>
             <div class="p-info">
               <div class="p-stars" aria-label="No reviews yet"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-              <a href="#" class="p-title">Durable Plastic Fiber Plant Pot for Indoor Decor</a>
+              <a href="product.html?id=fiber-pot" class="p-title">Durable Plastic Fiber Plant Pot for Indoor Decor</a>
               <p class="p-price">$78.00</p>
             </div>
           </div>
@@ -532,7 +518,7 @@
       <!-- Product info -->
       <div class="feat-col-info">
         <div class="feat-info" data-anim="fade-right">
-          <a href="#" class="feat-title">Modern Beige Armchair with Wooden Legs</a>
+          <a href="product.html?id=beige-armchair" class="feat-title">Modern Beige Armchair with Wooden Legs</a>
           <p class="feat-price">$150.00</p>
           <p class="feat-desc">Donec dapibus tellus sem, quis aliquam libero pharetra non. Nam vitae fermentum leo. Pellentesque bibendum dui eu mi tempor sodales. Integer gravida odio in sem laoreet tempus. Nunc vehicula nibh mauris, id bibendum metus facilisis iaculis. Phasellus suscipit dictum ...</p>
 
@@ -613,7 +599,7 @@
 <!-- =====================================================================
      9. TESTIMONIALS — inactive slide fades to 30%
      ===================================================================== -->
-<section class="sec-pb bg-white overflow-hidden">
+<section id="testimonials" class="sec-pb bg-white overflow-hidden">
   <div class="wrap">
     <div class="text-center mb-10 lg:mb-[55px]" data-anim="fade-up">
       <p class="sec-sub">5.00 from 1230+ reviews</p>
@@ -715,20 +701,20 @@
         <h2 class="pg-title">Living Room</h2>
         <ul class="pg-list">
           <li class="p-card pg-item">
-            <a href="#" class="p-thumb pg-thumb" aria-label="Modern Beige Armchair with Wooden Legs"><img class="img-1" src="assets/images/products/beige-armchair-1.jpg" alt="Modern Beige Armchair with Wooden Legs" loading="lazy"><img class="img-2" src="assets/images/products/beige-armchair-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title pg-name">Modern Beige Armchair with Wooden Legs</a><p class="pg-price">$150.00</p></div>
+            <a href="product.html?id=beige-armchair" class="p-thumb pg-thumb" aria-label="Modern Beige Armchair with Wooden Legs"><img class="img-1" src="assets/images/products/beige-armchair-1.jpg" alt="Modern Beige Armchair with Wooden Legs" loading="lazy"><img class="img-2" src="assets/images/products/beige-armchair-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="product.html?id=beige-armchair" class="p-title pg-name">Modern Beige Armchair with Wooden Legs</a><p class="pg-price">$150.00</p></div>
           </li>
           <li class="p-card pg-item">
-            <a href="#" class="p-thumb pg-thumb" aria-label="Solid Wood TV Stand with Storage Drawers Design"><img class="img-1" src="assets/images/products/tv-stand-1.jpg" alt="Solid Wood TV Stand with Storage Drawers Design" loading="lazy"><img class="img-2" src="assets/images/products/tv-stand-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title pg-name">Solid Wood TV Stand with Storage Drawers Design</a><p class="pg-price">$135.00</p></div>
+            <a href="product.html?id=tv-stand" class="p-thumb pg-thumb" aria-label="Solid Wood TV Stand with Storage Drawers Design"><img class="img-1" src="assets/images/products/tv-stand-1.jpg" alt="Solid Wood TV Stand with Storage Drawers Design" loading="lazy"><img class="img-2" src="assets/images/products/tv-stand-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="product.html?id=tv-stand" class="p-title pg-name">Solid Wood TV Stand with Storage Drawers Design</a><p class="pg-price">$135.00</p></div>
           </li>
           <li class="p-card pg-item">
-            <a href="#" class="p-thumb pg-thumb" aria-label="Wooden Frame Sofa Chair with Plush Cushion Seat"><span class="p-badge !text-[10px] !px-1.5 !top-1.5 !left-1.5">-3%</span><img class="img-1" src="assets/images/products/frame-sofa-1.jpg" alt="Wooden Frame Sofa Chair with Plush Cushion Seat" loading="lazy"><img class="img-2" src="assets/images/products/frame-sofa-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title pg-name">Wooden Frame Sofa Chair with Plush Cushion Seat</a><p class="pg-price"><span class="text-sale">$270.00</span> <del class="ml-1.5 text-muted font-normal">$280.00</del></p></div>
+            <a href="product.html?id=frame-sofa" class="p-thumb pg-thumb" aria-label="Wooden Frame Sofa Chair with Plush Cushion Seat"><span class="p-badge !text-[10px] !px-1.5 !top-1.5 !left-1.5">-3%</span><img class="img-1" src="assets/images/products/frame-sofa-1.jpg" alt="Wooden Frame Sofa Chair with Plush Cushion Seat" loading="lazy"><img class="img-2" src="assets/images/products/frame-sofa-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="product.html?id=frame-sofa" class="p-title pg-name">Wooden Frame Sofa Chair with Plush Cushion Seat</a><p class="pg-price"><span class="text-sale">$270.00</span> <del class="ml-1.5 text-muted font-normal">$280.00</del></p></div>
           </li>
           <li class="p-card pg-item">
-            <a href="#" class="p-thumb pg-thumb" aria-label="Premium Solid Wood Chair with Comfortable Design"><img class="img-1" src="assets/images/products/wood-chair-1.jpg" alt="Premium Solid Wood Chair with Comfortable Design" loading="lazy"><img class="img-2" src="assets/images/products/wood-chair-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title pg-name">Premium Solid Wood Chair with Comfortable Design</a><p class="pg-price">$79.00</p></div>
+            <a href="product.html?id=wood-chair" class="p-thumb pg-thumb" aria-label="Premium Solid Wood Chair with Comfortable Design"><img class="img-1" src="assets/images/products/wood-chair-1.jpg" alt="Premium Solid Wood Chair with Comfortable Design" loading="lazy"><img class="img-2" src="assets/images/products/wood-chair-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="product.html?id=wood-chair" class="p-title pg-name">Premium Solid Wood Chair with Comfortable Design</a><p class="pg-price">$79.00</p></div>
           </li>
         </ul>
       </div>
@@ -736,20 +722,20 @@
         <h2 class="pg-title">Plant Pots</h2>
         <ul class="pg-list">
           <li class="p-card pg-item">
-            <a href="#" class="p-thumb pg-thumb" aria-label="Compact Mini Plant Pot for Desk or Shelf Display"><img class="img-1" src="assets/images/products/compact-pot-1.jpg" alt="Compact Mini Plant Pot for Desk or Shelf Display" loading="lazy"><img class="img-2" src="assets/images/products/compact-pot-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title pg-name">Compact Mini Plant Pot for Desk or Shelf Display</a><p class="pg-price">$37.00</p></div>
+            <a href="product.html?id=compact-pot" class="p-thumb pg-thumb" aria-label="Compact Mini Plant Pot for Desk or Shelf Display"><img class="img-1" src="assets/images/products/compact-pot-1.jpg" alt="Compact Mini Plant Pot for Desk or Shelf Display" loading="lazy"><img class="img-2" src="assets/images/products/compact-pot-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="product.html?id=compact-pot" class="p-title pg-name">Compact Mini Plant Pot for Desk or Shelf Display</a><p class="pg-price">$37.00</p></div>
           </li>
           <li class="p-card pg-item">
-            <a href="#" class="p-thumb pg-thumb" aria-label="Decorative Cactus Plant Pot for Indoor Display"><img class="img-1" src="assets/images/products/cactus-pot-1.jpg" alt="Decorative Cactus Plant Pot for Indoor Display" loading="lazy"><img class="img-2" src="assets/images/products/cactus-pot-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title pg-name">Decorative Cactus Plant Pot for Indoor Display</a><p class="pg-price">$37.00</p></div>
+            <a href="product.html?id=cactus-pot" class="p-thumb pg-thumb" aria-label="Decorative Cactus Plant Pot for Indoor Display"><img class="img-1" src="assets/images/products/cactus-pot-1.jpg" alt="Decorative Cactus Plant Pot for Indoor Display" loading="lazy"><img class="img-2" src="assets/images/products/cactus-pot-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="product.html?id=cactus-pot" class="p-title pg-name">Decorative Cactus Plant Pot for Indoor Display</a><p class="pg-price">$37.00</p></div>
           </li>
           <li class="p-card pg-item">
-            <a href="#" class="p-thumb pg-thumb" aria-label="Durable Plastic Fiber Plant Pot for Indoor Decor"><img class="img-1" src="assets/images/products/fiber-pot-1.jpg" alt="Durable Plastic Fiber Plant Pot for Indoor Decor" loading="lazy"><img class="img-2" src="assets/images/products/fiber-pot-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title pg-name">Durable Plastic Fiber Plant Pot for Indoor Decor</a><p class="pg-price">$78.00</p></div>
+            <a href="product.html?id=fiber-pot" class="p-thumb pg-thumb" aria-label="Durable Plastic Fiber Plant Pot for Indoor Decor"><img class="img-1" src="assets/images/products/fiber-pot-1.jpg" alt="Durable Plastic Fiber Plant Pot for Indoor Decor" loading="lazy"><img class="img-2" src="assets/images/products/fiber-pot-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="product.html?id=fiber-pot" class="p-title pg-name">Durable Plastic Fiber Plant Pot for Indoor Decor</a><p class="pg-price">$78.00</p></div>
           </li>
           <li class="p-card pg-item">
-            <a href="#" class="p-thumb pg-thumb" aria-label="Mini Ceramic Flower Pot for Desk and Home Decor"><img class="img-1" src="assets/images/products/ceramic-pot-1.jpg" alt="Mini Ceramic Flower Pot for Desk and Home Decor" loading="lazy"><img class="img-2" src="assets/images/products/ceramic-pot-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title pg-name">Mini Ceramic Flower Pot for Desk and Home Decor</a><p class="pg-price">$15.00</p></div>
+            <a href="product.html?id=ceramic-pot" class="p-thumb pg-thumb" aria-label="Mini Ceramic Flower Pot for Desk and Home Decor"><img class="img-1" src="assets/images/products/ceramic-pot-1.jpg" alt="Mini Ceramic Flower Pot for Desk and Home Decor" loading="lazy"><img class="img-2" src="assets/images/products/ceramic-pot-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="product.html?id=ceramic-pot" class="p-title pg-name">Mini Ceramic Flower Pot for Desk and Home Decor</a><p class="pg-price">$15.00</p></div>
           </li>
         </ul>
       </div>
@@ -757,20 +743,20 @@
         <h2 class="pg-title">Tables &amp; Desks</h2>
         <ul class="pg-list">
           <li class="p-card pg-item">
-            <a href="#" class="p-thumb pg-thumb" aria-label="Wooden Office Desk with Drawers Open Storage"><span class="p-badge !text-[10px] !px-1.5 !top-1.5 !left-1.5">-3%</span><img class="img-1" src="assets/images/products/office-desk-1.jpg" alt="Wooden Office Desk with Drawers Open Storage" loading="lazy"><img class="img-2" src="assets/images/products/office-desk-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title pg-name">Wooden Office Desk with Drawers Open Storage</a><p class="pg-price"><span class="text-sale">$140.00</span> <del class="ml-1.5 text-muted font-normal">$145.00</del></p></div>
+            <a href="product.html?id=office-desk" class="p-thumb pg-thumb" aria-label="Wooden Office Desk with Drawers Open Storage"><span class="p-badge !text-[10px] !px-1.5 !top-1.5 !left-1.5">-3%</span><img class="img-1" src="assets/images/products/office-desk-1.jpg" alt="Wooden Office Desk with Drawers Open Storage" loading="lazy"><img class="img-2" src="assets/images/products/office-desk-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="product.html?id=office-desk" class="p-title pg-name">Wooden Office Desk with Drawers Open Storage</a><p class="pg-price"><span class="text-sale">$140.00</span> <del class="ml-1.5 text-muted font-normal">$145.00</del></p></div>
           </li>
           <li class="p-card pg-item">
-            <a href="#" class="p-thumb pg-thumb" aria-label="Premium Solid Wood Chair with Comfortable Design"><img class="img-1" src="assets/images/products/wood-chair-1.jpg" alt="Premium Solid Wood Chair with Comfortable Design" loading="lazy"><img class="img-2" src="assets/images/products/wood-chair-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title pg-name">Premium Solid Wood Chair with Comfortable Design</a><p class="pg-price">$79.00</p></div>
+            <a href="product.html?id=wood-chair" class="p-thumb pg-thumb" aria-label="Premium Solid Wood Chair with Comfortable Design"><img class="img-1" src="assets/images/products/wood-chair-1.jpg" alt="Premium Solid Wood Chair with Comfortable Design" loading="lazy"><img class="img-2" src="assets/images/products/wood-chair-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="product.html?id=wood-chair" class="p-title pg-name">Premium Solid Wood Chair with Comfortable Design</a><p class="pg-price">$79.00</p></div>
           </li>
           <li class="p-card pg-item">
-            <a href="#" class="p-thumb pg-thumb" aria-label="Classic Wooden Nightstand with Dual Storage Drawers"><img class="img-1" src="assets/images/products/nightstand-1.jpg" alt="Classic Wooden Nightstand with Dual Storage Drawers" loading="lazy"><img class="img-2" src="assets/images/products/nightstand-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title pg-name">Classic Wooden Nightstand with Dual Storage Drawers</a><p class="pg-price">$99.00</p></div>
+            <a href="product.html?id=nightstand" class="p-thumb pg-thumb" aria-label="Classic Wooden Nightstand with Dual Storage Drawers"><img class="img-1" src="assets/images/products/nightstand-1.jpg" alt="Classic Wooden Nightstand with Dual Storage Drawers" loading="lazy"><img class="img-2" src="assets/images/products/nightstand-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="product.html?id=nightstand" class="p-title pg-name">Classic Wooden Nightstand with Dual Storage Drawers</a><p class="pg-price">$99.00</p></div>
           </li>
           <li class="p-card pg-item">
-            <a href="#" class="p-thumb pg-thumb" aria-label="Modern Beige Armchair with Wooden Legs"><img class="img-1" src="assets/images/products/beige-armchair-1.jpg" alt="Modern Beige Armchair with Wooden Legs" loading="lazy"><img class="img-2" src="assets/images/products/beige-armchair-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title pg-name">Modern Beige Armchair with Wooden Legs</a><p class="pg-price">$150.00</p></div>
+            <a href="product.html?id=beige-armchair" class="p-thumb pg-thumb" aria-label="Modern Beige Armchair with Wooden Legs"><img class="img-1" src="assets/images/products/beige-armchair-1.jpg" alt="Modern Beige Armchair with Wooden Legs" loading="lazy"><img class="img-2" src="assets/images/products/beige-armchair-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="product.html?id=beige-armchair" class="p-title pg-name">Modern Beige Armchair with Wooden Legs</a><p class="pg-price">$150.00</p></div>
           </li>
         </ul>
       </div>
@@ -778,20 +764,20 @@
         <h2 class="pg-title">Bedroom</h2>
         <ul class="pg-list">
           <li class="p-card pg-item">
-            <a href="#" class="p-thumb pg-thumb" aria-label="Solid Wood Bed Frame with Classic Vintage Design"><img class="img-1" src="assets/images/products/bed-frame-1.jpg" alt="Solid Wood Bed Frame with Classic Vintage Design" loading="lazy"><img class="img-2" src="assets/images/products/bed-frame-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title pg-name">Solid Wood Bed Frame with Classic Vintage Design</a><p class="pg-price">$300.00</p></div>
+            <a href="product.html?id=bed-frame" class="p-thumb pg-thumb" aria-label="Solid Wood Bed Frame with Classic Vintage Design"><img class="img-1" src="assets/images/products/bed-frame-1.jpg" alt="Solid Wood Bed Frame with Classic Vintage Design" loading="lazy"><img class="img-2" src="assets/images/products/bed-frame-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="product.html?id=bed-frame" class="p-title pg-name">Solid Wood Bed Frame with Classic Vintage Design</a><p class="pg-price">$300.00</p></div>
           </li>
           <li class="p-card pg-item">
-            <a href="#" class="p-thumb pg-thumb" aria-label="Wooden Base Table Lamp with Fabric Shade Design"><img class="img-1" src="assets/images/products/table-lamp-1.jpg" alt="Wooden Base Table Lamp with Fabric Shade Design" loading="lazy"><img class="img-2" src="assets/images/products/table-lamp-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title pg-name">Wooden Base Table Lamp with Fabric Shade Design</a><p class="pg-price">$35.00</p></div>
+            <a href="product.html?id=table-lamp" class="p-thumb pg-thumb" aria-label="Wooden Base Table Lamp with Fabric Shade Design"><img class="img-1" src="assets/images/products/table-lamp-1.jpg" alt="Wooden Base Table Lamp with Fabric Shade Design" loading="lazy"><img class="img-2" src="assets/images/products/table-lamp-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="product.html?id=table-lamp" class="p-title pg-name">Wooden Base Table Lamp with Fabric Shade Design</a><p class="pg-price">$35.00</p></div>
           </li>
           <li class="p-card pg-item">
-            <a href="#" class="p-thumb pg-thumb" aria-label="Solid Wood Bedside Cabinet with Two Storage Drawers"><img class="img-1" src="assets/images/products/bedside-cabinet-1.jpg" alt="Solid Wood Bedside Cabinet with Two Storage Drawers" loading="lazy"><img class="img-2" src="assets/images/products/bedside-cabinet-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title pg-name">Solid Wood Bedside Cabinet with Two Storage Drawers</a><p class="pg-price">$265.00</p></div>
+            <a href="product.html?id=bedside-cabinet" class="p-thumb pg-thumb" aria-label="Solid Wood Bedside Cabinet with Two Storage Drawers"><img class="img-1" src="assets/images/products/bedside-cabinet-1.jpg" alt="Solid Wood Bedside Cabinet with Two Storage Drawers" loading="lazy"><img class="img-2" src="assets/images/products/bedside-cabinet-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="product.html?id=bedside-cabinet" class="p-title pg-name">Solid Wood Bedside Cabinet with Two Storage Drawers</a><p class="pg-price">$265.00</p></div>
           </li>
           <li class="p-card pg-item">
-            <a href="#" class="p-thumb pg-thumb" aria-label="Classic Wooden Nightstand with Dual Storage Drawers"><img class="img-1" src="assets/images/products/nightstand-1.jpg" alt="Classic Wooden Nightstand with Dual Storage Drawers" loading="lazy"><img class="img-2" src="assets/images/products/nightstand-2.jpg" alt="" loading="lazy"></a>
-            <div><a href="#" class="p-title pg-name">Classic Wooden Nightstand with Dual Storage Drawers</a><p class="pg-price">$99.00</p></div>
+            <a href="product.html?id=nightstand" class="p-thumb pg-thumb" aria-label="Classic Wooden Nightstand with Dual Storage Drawers"><img class="img-1" src="assets/images/products/nightstand-1.jpg" alt="Classic Wooden Nightstand with Dual Storage Drawers" loading="lazy"><img class="img-2" src="assets/images/products/nightstand-2.jpg" alt="" loading="lazy"></a>
+            <div><a href="product.html?id=nightstand" class="p-title pg-name">Classic Wooden Nightstand with Dual Storage Drawers</a><p class="pg-price">$99.00</p></div>
           </li>
         </ul>
       </div>
@@ -805,7 +791,7 @@
 <section class="sec-pb bg-white">
   <div class="wrap">
     <div class="split">
-      <a href="#" class="split-col" data-anim="fade-up">
+      <a href="shop.html?q=drawers" class="split-col" data-anim="fade-up">
         <div class="split-img"><img src="assets/images/banners/split-1.jpg" alt="Swing shelf with an open book" loading="lazy"></div>
         <div class="split-content">
           <p class="split-cap dot-caption">Rustic Drawers</p>
@@ -814,7 +800,7 @@
         </div>
         <span class="notch split-btn"><span class="btn-round btn-round-accent"><svg class="arrow"><use href="#i-arrow"/></svg></span></span>
       </a>
-      <a href="#" class="split-col" data-anim="fade-up">
+      <a href="shop.html?cat=decor" class="split-col" data-anim="fade-up">
         <div class="split-img"><img src="assets/images/banners/split-2.jpg" alt="Stacked rustic wooden drawers" loading="lazy"></div>
         <div class="split-content">
           <p class="split-cap dot-caption">Hanging Shelf</p>
@@ -992,7 +978,7 @@
         <ul class="faq-links">
           <li><a href="faq.html"><span><svg><use href="#i-comment"/></svg></span>View all FAQs</a></li>
           <li><a href="contact.html"><span><svg><use href="#i-phone"/></svg></span>Contact us</a></li>
-          <li><a href="#"><span><svg><use href="#i-pin"/></svg></span>Store locations</a></li>
+          <li><a href="about.html#stores"><span><svg><use href="#i-pin"/></svg></span>Store locations</a></li>
         </ul>
       </div>
 

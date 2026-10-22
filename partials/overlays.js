@@ -11,17 +11,17 @@ window.MC_PARTIALS.overlays = String.raw`
     <img src="assets/images/misc/logo-dark.png" alt="Minicom" class="w-[110px]">
     <button data-drawer-close aria-label="Close menu" class="text-ink"><svg class="w-6 h-6"><use href="#i-close"/></svg></button>
   </div>
-  <form class="p-5 border-b border-line" action="#">
-    <div class="relative"><input type="search" placeholder="Enter your keywords" class="w-full h-11 border border-line rounded-[3px] pl-4 pr-10 outline-none focus:border-ink"><svg class="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-ink"><use href="#i-search"/></svg></div>
+  <form class="p-5 border-b border-line" action="shop.html" role="search">
+    <div class="relative"><input type="search" name="q" placeholder="Enter your keywords" aria-label="Search products" class="w-full h-11 border border-line rounded-[3px] pl-4 pr-10 outline-none focus:border-ink"><svg class="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-ink"><use href="#i-search"/></svg></div>
   </form>
   <nav class="px-5 py-3 text-ink font-bold uppercase text-[13px]">
     <a href="index.html" data-nav="home" class="block py-3 border-b border-line">Home</a>
     <details class="border-b border-line group"><summary class="flex justify-between items-center py-3 cursor-pointer list-none" data-nav="collections">Collections<svg class="w-4 h-4 transition-transform group-open:rotate-180"><use href="#i-down"/></svg></summary>
-      <ul class="pb-3 pl-3 space-y-2 font-normal normal-case text-[14px] text-body"><li><a href="shop.html">Collection left sidebar</a></li><li><a href="#">Collection right sidebar</a></li><li><a href="#">Collection full width</a></li><li><a href="#">Collection deals</a></li></ul></details>
+      <ul class="pb-3 pl-3 space-y-2 font-normal normal-case text-[14px] text-body"><li><a href="shop.html">Collection left sidebar</a></li><li><a href="shop.html">Collection right sidebar</a></li><li><a href="shop.html">Collection full width</a></li><li><a href="shop.html">Collection deals</a></li></ul></details>
     <details class="border-b border-line group"><summary class="flex justify-between items-center py-3 cursor-pointer list-none" data-nav="products">Products<svg class="w-4 h-4 transition-transform group-open:rotate-180"><use href="#i-down"/></svg></summary>
-      <ul class="pb-3 pl-3 space-y-2 font-normal normal-case text-[14px] text-body"><li><a href="product.html">Product detail default</a></li><li><a href="#">Product thumb left</a></li><li><a href="#">Product image grid</a></li><li><a href="#">Product video</a></li></ul></details>
+      <ul class="pb-3 pl-3 space-y-2 font-normal normal-case text-[14px] text-body"><li><a href="product.html">Product detail default</a></li><li><a href="product.html">Product thumb left</a></li><li><a href="product.html">Product image grid</a></li><li><a href="product.html">Product video</a></li></ul></details>
     <details class="border-b border-line group"><summary class="flex justify-between items-center py-3 cursor-pointer list-none" data-nav="pages">Pages<svg class="w-4 h-4 transition-transform group-open:rotate-180"><use href="#i-down"/></svg></summary>
-      <ul class="pb-3 pl-3 space-y-2 font-normal normal-case text-[14px] text-body"><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="faq.html">FAQs Page</a></li><li><a href="#">Store Locations</a></li></ul></details>
+      <ul class="pb-3 pl-3 space-y-2 font-normal normal-case text-[14px] text-body"><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="faq.html">FAQs Page</a></li><li><a href="about.html#stores">Store Locations</a></li></ul></details>
     <a href="blog.html" data-nav="blog" class="block py-3 border-b border-line">Blog</a>
   </nav>
   <div class="px-5 py-5 text-[14px] space-y-2">
@@ -55,12 +55,12 @@ window.MC_PARTIALS.overlays = String.raw`
 <div id="searchOverlay" class="popup fixed inset-0 z-[80] bg-white flex flex-col">
   <div class="wrap flex items-center gap-4 h-[80px] border-b border-line">
     <svg class="w-6 h-6 text-ink"><use href="#i-search"/></svg>
-    <input type="search" placeholder="Enter your keywords" class="flex-1 h-full outline-none text-[18px] text-ink">
+    <form action="shop.html" role="search" class="flex-1 h-full"><input type="search" name="q" placeholder="Enter your keywords" aria-label="Search products" class="w-full h-full outline-none text-[18px] text-ink"></form>
     <button data-popup-close aria-label="Close search" class="text-ink"><svg class="w-6 h-6"><use href="#i-close"/></svg></button>
   </div>
   <div class="wrap py-6">
     <p class="text-[13px] font-bold uppercase text-ink mb-3">Search Trending:</p>
-    <div class="flex flex-wrap gap-2 text-[14px]"><a href="#" class="px-4 py-1.5 bg-soft rounded-full hover:bg-accent">Plant</a><a href="#" class="px-4 py-1.5 bg-soft rounded-full hover:bg-accent">Sofa</a><a href="#" class="px-4 py-1.5 bg-soft rounded-full hover:bg-accent">Basket</a><a href="#" class="px-4 py-1.5 bg-soft rounded-full hover:bg-accent">Chair</a></div>
+    <div class="flex flex-wrap gap-2 text-[14px]"><a href="shop.html?q=plant" class="px-4 py-1.5 bg-soft rounded-full hover:bg-accent">Plant</a><a href="shop.html?q=sofa" class="px-4 py-1.5 bg-soft rounded-full hover:bg-accent">Sofa</a><a href="shop.html?q=basket" class="px-4 py-1.5 bg-soft rounded-full hover:bg-accent">Basket</a><a href="shop.html?q=chair" class="px-4 py-1.5 bg-soft rounded-full hover:bg-accent">Chair</a></div>
   </div>
 </div>
 
@@ -92,9 +92,9 @@ window.MC_PARTIALS.overlays = String.raw`
     <form class="space-y-3" action="#">
       <input type="email" autocomplete="email" placeholder="Email address" class="w-full h-[50px] px-4 border border-line rounded-[3px] outline-none focus:border-ink" aria-label="Email address">
       <input type="password" autocomplete="current-password" placeholder="Password" class="w-full h-[50px] px-4 border border-line rounded-[3px] outline-none focus:border-ink" aria-label="Password">
-      <a href="#" class="block text-[13px] text-right hover:text-accent">Forgot your password?</a>
+      <a href="account.html#recover" class="block text-[13px] text-right hover:text-accent">Forgot your password?</a>
       <button type="submit" class="btn btn-dark w-full">Login</button>
-      <a href="#" class="btn btn-accent w-full">Create your account</a>
+      <a href="account.html#register" class="btn btn-accent w-full">Create your account</a>
     </form>
   </div>
 </div>

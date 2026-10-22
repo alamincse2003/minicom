@@ -16,22 +16,8 @@
   <!-- Swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css">
 
-  <!-- Tailwind CSS v4 (browser build) -->
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11"></script>
-  <style type="text/tailwindcss">
-    @theme {
-      --font-sans: "DM Sans", sans-serif;
-      --color-accent: #fdc402;
-      --color-ink: #181818;
-      --color-body: #535353;
-      --color-muted: #b7b7b7;
-      --color-soft: #f5f5f5;
-      --color-line: #eaeaea;
-      --color-sale: #e85b40;
-      --color-stock: #0f834d;
-      --breakpoint-3xl: 1500px;
-    }
-  </style>
+  <!-- Tailwind CSS (built: npm run build:css) -->
+  <link rel="stylesheet" href="assets/css/tailwind.css">
 
   <!-- Custom styles -->
   <link rel="stylesheet" href="assets/css/custom.css">
@@ -126,7 +112,7 @@
         </div>
 
         <p class="mt-5 text-[22px] md:text-[24px] font-bold text-ink">$200.00</p>
-        <p class="text-[13px] mt-1"><a href="#" class="underline hover:text-accent">Shipping</a> calculated at checkout.</p>
+        <p class="text-[13px] mt-1"><a href="faq.html" class="underline hover:text-accent">Shipping</a> calculated at checkout.</p>
 
         <p class="mt-5 pb-6 border-b border-line">Donec dapibus tellus sem, quis aliquam libero pharetra non. Nam vitae fermentum leo. Pellentesque bibendum dui eu mi tempor sodales. Integer gravida odio in sem laoreet tempus. Nunc vehicula nibh mauris, id bibendum metus facilisis iaculis.</p>
 
@@ -150,7 +136,7 @@
           <button class="w-[52px] h-[52px] rounded-[3px] border border-line flex items-center justify-center text-ink hover:bg-accent hover:border-accent transition-colors" aria-label="Add to wishlist" data-wishlist data-product="sofa-chair"><svg class="w-5 h-5"><use href="#i-heart"/></svg></button>
         </div>
 
-        <label class="flex items-center gap-2 mt-4 text-[13px] cursor-pointer select-none"><input type="checkbox" id="pdTerms" class="w-4 h-4 accent-black"> I agree with the <a href="#" class="text-ink underline hover:text-accent">Terms &amp; Conditions</a></label>
+        <label class="flex items-center gap-2 mt-4 text-[13px] cursor-pointer select-none"><input type="checkbox" id="pdTerms" class="w-4 h-4 accent-black"> I agree with the <a href="terms.html" class="text-ink underline hover:text-accent">Terms &amp; Conditions</a></label>
         <button id="pdBuyNow" class="btn btn-accent w-full !h-[52px] mt-3" data-add-cart data-buy-now data-product="sofa-chair" disabled>Buy it now</button>
 
         <!-- Links -->
@@ -175,8 +161,8 @@
         <ul class="mt-6 space-y-1.5 text-[14px]">
           <li><b class="text-ink">SKU:</b> a-123</li>
           <li><b class="text-ink">Availability:</b> <span class="text-stock">In stock</span></li>
-          <li><b class="text-ink">Categories:</b> <a href="#" class="hover:text-accent">Living Room</a>, <a href="#" class="hover:text-accent">Sofas &amp; Seating</a></li>
-          <li><b class="text-ink">Tags:</b> <a href="#" class="hover:text-accent">Armchair</a>, <a href="#" class="hover:text-accent">Modern</a>, <a href="#" class="hover:text-accent">Sofa</a></li>
+          <li><b class="text-ink">Categories:</b> <a href="shop.html?cat=living-room" class="hover:text-accent">Living Room</a>, <a href="shop.html?cat=living-room&amp;sub=sofas" class="hover:text-accent">Sofas &amp; Seating</a></li>
+          <li><b class="text-ink">Tags:</b> <a href="shop.html?q=armchair" class="hover:text-accent">Armchair</a>, <a href="shop.html?q=modern" class="hover:text-accent">Modern</a>, <a href="shop.html?q=sofa" class="hover:text-accent">Sofa</a></li>
         </ul>
       </div>
     </div>
@@ -293,7 +279,7 @@
         <div class="swiper-slide">
           <div class="p-card">
             <div class="p-thumb">
-              <a href="#" aria-label="Modern Wooden Lounge Chair with Wide Fabric Arms"><img class="img-1" src="assets/images/products/lounge-chair-1.jpg" alt="Modern Wooden Lounge Chair with Wide Fabric Arms" loading="lazy"><img class="img-2" src="assets/images/products/lounge-chair-2.jpg" alt="" loading="lazy"></a>
+              <a href="product.html?id=lounge-chair" aria-label="Modern Wooden Lounge Chair with Wide Fabric Arms"><img class="img-1" src="assets/images/products/lounge-chair-1.jpg" alt="Modern Wooden Lounge Chair with Wide Fabric Arms" loading="lazy"><img class="img-2" src="assets/images/products/lounge-chair-2.jpg" alt="" loading="lazy"></a>
               <div class="p-actions">
                 <button class="p-act" data-wishlist aria-label="Add to wishlist"><svg class="w-4 h-4"><use href="#i-heart"/></svg><span class="tip">Add To Wishlist</span></button>
                 <button class="p-act" aria-label="Quick view"><svg class="w-4 h-4"><use href="#i-eye"/></svg><span class="tip">Quick View</span></button>
@@ -301,7 +287,7 @@
               <div class="p-add"><button data-add-cart aria-label="Add to cart"><svg class="w-[18px] h-[18px]"><use href="#i-bag"/></svg></button></div>
             </div>
             <div class="pt-[15px]">
-              <a href="#" class="p-title">Modern Wooden Lounge Chair with Wide Fabric Arms</a>
+              <a href="product.html?id=lounge-chair" class="p-title">Modern Wooden Lounge Chair with Wide Fabric Arms</a>
               <p class="mt-1.5 text-[14px] font-bold text-ink">$155.00</p>
             </div>
           </div>
@@ -310,7 +296,7 @@
           <div class="p-card">
             <div class="p-thumb">
               <span class="p-badge">-3%</span>
-              <a href="#" aria-label="Wooden Frame Sofa Chair with Plush Cushion Seat"><img class="img-1" src="assets/images/products/frame-sofa-1.jpg" alt="Wooden Frame Sofa Chair with Plush Cushion Seat" loading="lazy"><img class="img-2" src="assets/images/products/frame-sofa-2.jpg" alt="" loading="lazy"></a>
+              <a href="product.html?id=frame-sofa" aria-label="Wooden Frame Sofa Chair with Plush Cushion Seat"><img class="img-1" src="assets/images/products/frame-sofa-1.jpg" alt="Wooden Frame Sofa Chair with Plush Cushion Seat" loading="lazy"><img class="img-2" src="assets/images/products/frame-sofa-2.jpg" alt="" loading="lazy"></a>
               <div class="p-actions">
                 <button class="p-act" data-wishlist aria-label="Add to wishlist"><svg class="w-4 h-4"><use href="#i-heart"/></svg><span class="tip">Add To Wishlist</span></button>
                 <button class="p-act" aria-label="Quick view"><svg class="w-4 h-4"><use href="#i-eye"/></svg><span class="tip">Quick View</span></button>
@@ -318,7 +304,7 @@
               <div class="p-add"><button data-add-cart aria-label="Add to cart"><svg class="w-[18px] h-[18px]"><use href="#i-bag"/></svg></button></div>
             </div>
             <div class="pt-[15px]">
-              <a href="#" class="p-title">Wooden Frame Sofa Chair with Plush Cushion Seat</a>
+              <a href="product.html?id=frame-sofa" class="p-title">Wooden Frame Sofa Chair with Plush Cushion Seat</a>
               <p class="mt-1.5 text-[14px] font-bold text-ink"><span class="text-sale">$270.00</span> <del class="ml-1.5 text-muted font-normal">$280.00</del></p>
             </div>
           </div>
@@ -326,7 +312,7 @@
         <div class="swiper-slide">
           <div class="p-card">
             <div class="p-thumb">
-              <a href="#" aria-label="Modern Beige Armchair with Wooden Legs"><img class="img-1" src="assets/images/products/beige-armchair-1.jpg" alt="Modern Beige Armchair with Wooden Legs" loading="lazy"><img class="img-2" src="assets/images/products/beige-armchair-2.jpg" alt="" loading="lazy"></a>
+              <a href="product.html?id=beige-armchair" aria-label="Modern Beige Armchair with Wooden Legs"><img class="img-1" src="assets/images/products/beige-armchair-1.jpg" alt="Modern Beige Armchair with Wooden Legs" loading="lazy"><img class="img-2" src="assets/images/products/beige-armchair-2.jpg" alt="" loading="lazy"></a>
               <div class="p-actions">
                 <button class="p-act" data-wishlist aria-label="Add to wishlist"><svg class="w-4 h-4"><use href="#i-heart"/></svg><span class="tip">Add To Wishlist</span></button>
                 <button class="p-act" aria-label="Quick view"><svg class="w-4 h-4"><use href="#i-eye"/></svg><span class="tip">Quick View</span></button>
@@ -334,7 +320,7 @@
               <div class="p-add"><button data-add-cart aria-label="Add to cart"><svg class="w-[18px] h-[18px]"><use href="#i-bag"/></svg></button></div>
             </div>
             <div class="pt-[15px]">
-              <a href="#" class="p-title">Modern Beige Armchair with Wooden Legs</a>
+              <a href="product.html?id=beige-armchair" class="p-title">Modern Beige Armchair with Wooden Legs</a>
               <p class="mt-1.5 text-[14px] font-bold text-ink">$150.00</p>
             </div>
           </div>
@@ -342,7 +328,7 @@
         <div class="swiper-slide">
           <div class="p-card">
             <div class="p-thumb">
-              <a href="#" aria-label="Modern Low Profile Swivel Sofa with Soft Seat"><img class="img-1" src="assets/images/products/swivel-sofa-1.jpg" alt="Modern Low Profile Swivel Sofa with Soft Seat" loading="lazy"><img class="img-2" src="assets/images/products/swivel-sofa-2.jpg" alt="" loading="lazy"></a>
+              <a href="product.html?id=swivel-sofa" aria-label="Modern Low Profile Swivel Sofa with Soft Seat"><img class="img-1" src="assets/images/products/swivel-sofa-1.jpg" alt="Modern Low Profile Swivel Sofa with Soft Seat" loading="lazy"><img class="img-2" src="assets/images/products/swivel-sofa-2.jpg" alt="" loading="lazy"></a>
               <div class="p-actions">
                 <button class="p-act" data-wishlist aria-label="Add to wishlist"><svg class="w-4 h-4"><use href="#i-heart"/></svg><span class="tip">Add To Wishlist</span></button>
                 <button class="p-act" aria-label="Quick view"><svg class="w-4 h-4"><use href="#i-eye"/></svg><span class="tip">Quick View</span></button>
@@ -350,7 +336,7 @@
               <div class="p-add"><button data-add-cart aria-label="Add to cart"><svg class="w-[18px] h-[18px]"><use href="#i-bag"/></svg></button></div>
             </div>
             <div class="pt-[15px]">
-              <a href="#" class="p-title">Modern Low Profile Swivel Sofa with Soft Seat</a>
+              <a href="product.html?id=swivel-sofa" class="p-title">Modern Low Profile Swivel Sofa with Soft Seat</a>
               <p class="mt-1.5 text-[14px] font-bold text-ink">$125.00</p>
             </div>
           </div>
@@ -358,7 +344,7 @@
         <div class="swiper-slide">
           <div class="p-card">
             <div class="p-thumb">
-              <a href="#" aria-label="Premium Solid Wood Chair with Comfortable Design"><img class="img-1" src="assets/images/products/wood-chair-1.jpg" alt="Premium Solid Wood Chair with Comfortable Design" loading="lazy"><img class="img-2" src="assets/images/products/wood-chair-2.jpg" alt="" loading="lazy"></a>
+              <a href="product.html?id=wood-chair" aria-label="Premium Solid Wood Chair with Comfortable Design"><img class="img-1" src="assets/images/products/wood-chair-1.jpg" alt="Premium Solid Wood Chair with Comfortable Design" loading="lazy"><img class="img-2" src="assets/images/products/wood-chair-2.jpg" alt="" loading="lazy"></a>
               <div class="p-actions">
                 <button class="p-act" data-wishlist aria-label="Add to wishlist"><svg class="w-4 h-4"><use href="#i-heart"/></svg><span class="tip">Add To Wishlist</span></button>
                 <button class="p-act" aria-label="Quick view"><svg class="w-4 h-4"><use href="#i-eye"/></svg><span class="tip">Quick View</span></button>
@@ -366,7 +352,7 @@
               <div class="p-add"><button data-add-cart aria-label="Add to cart"><svg class="w-[18px] h-[18px]"><use href="#i-bag"/></svg></button></div>
             </div>
             <div class="pt-[15px]">
-              <a href="#" class="p-title">Premium Solid Wood Chair with Comfortable Design</a>
+              <a href="product.html?id=wood-chair" class="p-title">Premium Solid Wood Chair with Comfortable Design</a>
               <p class="mt-1.5 text-[14px] font-bold text-ink">$79.00</p>
             </div>
           </div>
@@ -374,7 +360,7 @@
         <div class="swiper-slide">
           <div class="p-card">
             <div class="p-thumb">
-              <a href="#" aria-label="Round Wooden Coffee Table with Marble Top Design"><img class="img-1" src="assets/images/products/coffee-table-1.jpg" alt="Round Wooden Coffee Table with Marble Top Design" loading="lazy"><img class="img-2" src="assets/images/products/coffee-table-2.jpg" alt="" loading="lazy"></a>
+              <a href="product.html?id=coffee-table" aria-label="Round Wooden Coffee Table with Marble Top Design"><img class="img-1" src="assets/images/products/coffee-table-1.jpg" alt="Round Wooden Coffee Table with Marble Top Design" loading="lazy"><img class="img-2" src="assets/images/products/coffee-table-2.jpg" alt="" loading="lazy"></a>
               <div class="p-actions">
                 <button class="p-act" data-wishlist aria-label="Add to wishlist"><svg class="w-4 h-4"><use href="#i-heart"/></svg><span class="tip">Add To Wishlist</span></button>
                 <button class="p-act" aria-label="Quick view"><svg class="w-4 h-4"><use href="#i-eye"/></svg><span class="tip">Quick View</span></button>
@@ -382,7 +368,7 @@
               <div class="p-add"><button data-add-cart aria-label="Add to cart"><svg class="w-[18px] h-[18px]"><use href="#i-bag"/></svg></button></div>
             </div>
             <div class="pt-[15px]">
-              <a href="#" class="p-title">Round Wooden Coffee Table with Marble Top Design</a>
+              <a href="product.html?id=coffee-table" class="p-title">Round Wooden Coffee Table with Marble Top Design</a>
               <p class="mt-1.5 text-[14px] font-bold text-ink">$40.00</p>
             </div>
           </div>
@@ -390,7 +376,7 @@
         <div class="swiper-slide">
           <div class="p-card">
             <div class="p-thumb">
-              <a href="#" aria-label="Solid Wood TV Stand with Storage Drawers Design"><img class="img-1" src="assets/images/products/tv-stand-1.jpg" alt="Solid Wood TV Stand with Storage Drawers Design" loading="lazy"><img class="img-2" src="assets/images/products/tv-stand-2.jpg" alt="" loading="lazy"></a>
+              <a href="product.html?id=tv-stand" aria-label="Solid Wood TV Stand with Storage Drawers Design"><img class="img-1" src="assets/images/products/tv-stand-1.jpg" alt="Solid Wood TV Stand with Storage Drawers Design" loading="lazy"><img class="img-2" src="assets/images/products/tv-stand-2.jpg" alt="" loading="lazy"></a>
               <div class="p-actions">
                 <button class="p-act" data-wishlist aria-label="Add to wishlist"><svg class="w-4 h-4"><use href="#i-heart"/></svg><span class="tip">Add To Wishlist</span></button>
                 <button class="p-act" aria-label="Quick view"><svg class="w-4 h-4"><use href="#i-eye"/></svg><span class="tip">Quick View</span></button>
@@ -398,7 +384,7 @@
               <div class="p-add"><button data-add-cart aria-label="Add to cart"><svg class="w-[18px] h-[18px]"><use href="#i-bag"/></svg></button></div>
             </div>
             <div class="pt-[15px]">
-              <a href="#" class="p-title">Solid Wood TV Stand with Storage Drawers Design</a>
+              <a href="product.html?id=tv-stand" class="p-title">Solid Wood TV Stand with Storage Drawers Design</a>
               <p class="mt-1.5 text-[14px] font-bold text-ink">$135.00</p>
             </div>
           </div>
@@ -406,7 +392,7 @@
         <div class="swiper-slide">
           <div class="p-card">
             <div class="p-thumb">
-              <a href="#" aria-label="Wooden Base Table Lamp with Fabric Shade Design"><img class="img-1" src="assets/images/products/table-lamp-1.jpg" alt="Wooden Base Table Lamp with Fabric Shade Design" loading="lazy"><img class="img-2" src="assets/images/products/table-lamp-2.jpg" alt="" loading="lazy"></a>
+              <a href="product.html?id=table-lamp" aria-label="Wooden Base Table Lamp with Fabric Shade Design"><img class="img-1" src="assets/images/products/table-lamp-1.jpg" alt="Wooden Base Table Lamp with Fabric Shade Design" loading="lazy"><img class="img-2" src="assets/images/products/table-lamp-2.jpg" alt="" loading="lazy"></a>
               <div class="p-actions">
                 <button class="p-act" data-wishlist aria-label="Add to wishlist"><svg class="w-4 h-4"><use href="#i-heart"/></svg><span class="tip">Add To Wishlist</span></button>
                 <button class="p-act" aria-label="Quick view"><svg class="w-4 h-4"><use href="#i-eye"/></svg><span class="tip">Quick View</span></button>
@@ -414,7 +400,7 @@
               <div class="p-add"><button data-add-cart aria-label="Add to cart"><svg class="w-[18px] h-[18px]"><use href="#i-bag"/></svg></button></div>
             </div>
             <div class="pt-[15px]">
-              <a href="#" class="p-title">Wooden Base Table Lamp with Fabric Shade Design</a>
+              <a href="product.html?id=table-lamp" class="p-title">Wooden Base Table Lamp with Fabric Shade Design</a>
               <p class="mt-1.5 text-[14px] font-bold text-ink">$35.00</p>
             </div>
           </div>
@@ -445,7 +431,7 @@
         <div class="swiper-slide">
           <div class="p-card">
             <div class="p-thumb">
-              <a href="#" aria-label="Solid Wood TV Stand with Storage Drawers Design"><img class="img-1" src="assets/images/products/tv-stand-1.jpg" alt="Solid Wood TV Stand with Storage Drawers Design" loading="lazy"><img class="img-2" src="assets/images/products/tv-stand-2.jpg" alt="" loading="lazy"></a>
+              <a href="product.html?id=tv-stand" aria-label="Solid Wood TV Stand with Storage Drawers Design"><img class="img-1" src="assets/images/products/tv-stand-1.jpg" alt="Solid Wood TV Stand with Storage Drawers Design" loading="lazy"><img class="img-2" src="assets/images/products/tv-stand-2.jpg" alt="" loading="lazy"></a>
               <div class="p-actions">
                 <button class="p-act" data-wishlist aria-label="Add to wishlist"><svg class="w-4 h-4"><use href="#i-heart"/></svg><span class="tip">Add To Wishlist</span></button>
                 <button class="p-act" aria-label="Quick view"><svg class="w-4 h-4"><use href="#i-eye"/></svg><span class="tip">Quick View</span></button>
@@ -453,7 +439,7 @@
               <div class="p-add"><button data-add-cart aria-label="Add to cart"><svg class="w-[18px] h-[18px]"><use href="#i-bag"/></svg></button></div>
             </div>
             <div class="pt-[15px]">
-              <a href="#" class="p-title">Solid Wood TV Stand with Storage Drawers Design</a>
+              <a href="product.html?id=tv-stand" class="p-title">Solid Wood TV Stand with Storage Drawers Design</a>
               <p class="mt-1.5 text-[14px] font-bold text-ink">$135.00</p>
             </div>
           </div>
@@ -461,7 +447,7 @@
         <div class="swiper-slide">
           <div class="p-card">
             <div class="p-thumb">
-              <a href="#" aria-label="Decorative Cactus Plant Pot for Indoor Display"><img class="img-1" src="assets/images/products/cactus-pot-1.jpg" alt="Decorative Cactus Plant Pot for Indoor Display" loading="lazy"><img class="img-2" src="assets/images/products/cactus-pot-2.jpg" alt="" loading="lazy"></a>
+              <a href="product.html?id=cactus-pot" aria-label="Decorative Cactus Plant Pot for Indoor Display"><img class="img-1" src="assets/images/products/cactus-pot-1.jpg" alt="Decorative Cactus Plant Pot for Indoor Display" loading="lazy"><img class="img-2" src="assets/images/products/cactus-pot-2.jpg" alt="" loading="lazy"></a>
               <div class="p-actions">
                 <button class="p-act" data-wishlist aria-label="Add to wishlist"><svg class="w-4 h-4"><use href="#i-heart"/></svg><span class="tip">Add To Wishlist</span></button>
                 <button class="p-act" aria-label="Quick view"><svg class="w-4 h-4"><use href="#i-eye"/></svg><span class="tip">Quick View</span></button>
@@ -469,7 +455,7 @@
               <div class="p-add"><button data-add-cart aria-label="Add to cart"><svg class="w-[18px] h-[18px]"><use href="#i-bag"/></svg></button></div>
             </div>
             <div class="pt-[15px]">
-              <a href="#" class="p-title">Decorative Cactus Plant Pot for Indoor Display</a>
+              <a href="product.html?id=cactus-pot" class="p-title">Decorative Cactus Plant Pot for Indoor Display</a>
               <p class="mt-1.5 text-[14px] font-bold text-ink">$37.00</p>
             </div>
           </div>
@@ -478,7 +464,7 @@
           <div class="p-card">
             <div class="p-thumb">
               <span class="p-badge">-16%</span>
-              <a href="#" aria-label="Wooden Basket with Clean Towels for Home Decor"><img class="img-1" src="assets/images/products/basket-1.jpg" alt="Wooden Basket with Clean Towels for Home Decor" loading="lazy"><img class="img-2" src="assets/images/products/basket-2.jpg" alt="" loading="lazy"></a>
+              <a href="product.html?id=basket" aria-label="Wooden Basket with Clean Towels for Home Decor"><img class="img-1" src="assets/images/products/basket-1.jpg" alt="Wooden Basket with Clean Towels for Home Decor" loading="lazy"><img class="img-2" src="assets/images/products/basket-2.jpg" alt="" loading="lazy"></a>
               <div class="p-actions">
                 <button class="p-act" data-wishlist aria-label="Add to wishlist"><svg class="w-4 h-4"><use href="#i-heart"/></svg><span class="tip">Add To Wishlist</span></button>
                 <button class="p-act" aria-label="Quick view"><svg class="w-4 h-4"><use href="#i-eye"/></svg><span class="tip">Quick View</span></button>
@@ -486,7 +472,7 @@
               <div class="p-add"><button data-add-cart aria-label="Add to cart"><svg class="w-[18px] h-[18px]"><use href="#i-bag"/></svg></button></div>
             </div>
             <div class="pt-[15px]">
-              <a href="#" class="p-title">Wooden Basket with Clean Towels for Home Decor</a>
+              <a href="product.html?id=basket" class="p-title">Wooden Basket with Clean Towels for Home Decor</a>
               <p class="mt-1.5 text-[14px] font-bold text-ink"><span class="text-sale">$25.00</span> <del class="ml-1.5 text-muted font-normal">$30.00</del></p>
             </div>
           </div>
@@ -494,7 +480,7 @@
         <div class="swiper-slide">
           <div class="p-card">
             <div class="p-thumb">
-              <a href="#" aria-label="Classic Wooden Nightstand with Dual Storage Drawers"><img class="img-1" src="assets/images/products/nightstand-1.jpg" alt="Classic Wooden Nightstand with Dual Storage Drawers" loading="lazy"><img class="img-2" src="assets/images/products/nightstand-2.jpg" alt="" loading="lazy"></a>
+              <a href="product.html?id=nightstand" aria-label="Classic Wooden Nightstand with Dual Storage Drawers"><img class="img-1" src="assets/images/products/nightstand-1.jpg" alt="Classic Wooden Nightstand with Dual Storage Drawers" loading="lazy"><img class="img-2" src="assets/images/products/nightstand-2.jpg" alt="" loading="lazy"></a>
               <div class="p-actions">
                 <button class="p-act" data-wishlist aria-label="Add to wishlist"><svg class="w-4 h-4"><use href="#i-heart"/></svg><span class="tip">Add To Wishlist</span></button>
                 <button class="p-act" aria-label="Quick view"><svg class="w-4 h-4"><use href="#i-eye"/></svg><span class="tip">Quick View</span></button>
@@ -502,7 +488,7 @@
               <div class="p-add"><button data-add-cart aria-label="Add to cart"><svg class="w-[18px] h-[18px]"><use href="#i-bag"/></svg></button></div>
             </div>
             <div class="pt-[15px]">
-              <a href="#" class="p-title">Classic Wooden Nightstand with Dual Storage Drawers</a>
+              <a href="product.html?id=nightstand" class="p-title">Classic Wooden Nightstand with Dual Storage Drawers</a>
               <p class="mt-1.5 text-[14px] font-bold text-ink">$99.00</p>
             </div>
           </div>
@@ -510,7 +496,7 @@
         <div class="swiper-slide">
           <div class="p-card">
             <div class="p-thumb">
-              <a href="#" aria-label="Solid Wood Bed Frame with Classic Vintage Design"><img class="img-1" src="assets/images/products/bed-frame-1.jpg" alt="Solid Wood Bed Frame with Classic Vintage Design" loading="lazy"><img class="img-2" src="assets/images/products/bed-frame-2.jpg" alt="" loading="lazy"></a>
+              <a href="product.html?id=bed-frame" aria-label="Solid Wood Bed Frame with Classic Vintage Design"><img class="img-1" src="assets/images/products/bed-frame-1.jpg" alt="Solid Wood Bed Frame with Classic Vintage Design" loading="lazy"><img class="img-2" src="assets/images/products/bed-frame-2.jpg" alt="" loading="lazy"></a>
               <div class="p-actions">
                 <button class="p-act" data-wishlist aria-label="Add to wishlist"><svg class="w-4 h-4"><use href="#i-heart"/></svg><span class="tip">Add To Wishlist</span></button>
                 <button class="p-act" aria-label="Quick view"><svg class="w-4 h-4"><use href="#i-eye"/></svg><span class="tip">Quick View</span></button>
@@ -518,7 +504,7 @@
               <div class="p-add"><button data-add-cart aria-label="Add to cart"><svg class="w-[18px] h-[18px]"><use href="#i-bag"/></svg></button></div>
             </div>
             <div class="pt-[15px]">
-              <a href="#" class="p-title">Solid Wood Bed Frame with Classic Vintage Design</a>
+              <a href="product.html?id=bed-frame" class="p-title">Solid Wood Bed Frame with Classic Vintage Design</a>
               <p class="mt-1.5 text-[14px] font-bold text-ink">$300.00</p>
             </div>
           </div>
@@ -526,7 +512,7 @@
         <div class="swiper-slide">
           <div class="p-card">
             <div class="p-thumb">
-              <a href="#" aria-label="Wooden Office Desk with Drawers Open Storage"><img class="img-1" src="assets/images/products/office-desk-1.jpg" alt="Wooden Office Desk with Drawers Open Storage" loading="lazy"><img class="img-2" src="assets/images/products/office-desk-2.jpg" alt="" loading="lazy"></a>
+              <a href="product.html?id=office-desk" aria-label="Wooden Office Desk with Drawers Open Storage"><img class="img-1" src="assets/images/products/office-desk-1.jpg" alt="Wooden Office Desk with Drawers Open Storage" loading="lazy"><img class="img-2" src="assets/images/products/office-desk-2.jpg" alt="" loading="lazy"></a>
               <div class="p-actions">
                 <button class="p-act" data-wishlist aria-label="Add to wishlist"><svg class="w-4 h-4"><use href="#i-heart"/></svg><span class="tip">Add To Wishlist</span></button>
                 <button class="p-act" aria-label="Quick view"><svg class="w-4 h-4"><use href="#i-eye"/></svg><span class="tip">Quick View</span></button>
@@ -534,7 +520,7 @@
               <div class="p-add"><button data-add-cart aria-label="Add to cart"><svg class="w-[18px] h-[18px]"><use href="#i-bag"/></svg></button></div>
             </div>
             <div class="pt-[15px]">
-              <a href="#" class="p-title">Wooden Office Desk with Drawers Open Storage</a>
+              <a href="product.html?id=office-desk" class="p-title">Wooden Office Desk with Drawers Open Storage</a>
               <p class="mt-1.5 text-[14px] font-bold text-ink">$140.00</p>
             </div>
           </div>
@@ -629,6 +615,6 @@
 <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
 
 <!-- App: include.js loads the shared partials, then these scripts in order -->
-<script src="assets/js/include.js" data-scripts="assets/data/products.js assets/js/cart.js assets/js/wishlist.js assets/js/header.js assets/js/sliders.js assets/js/ui.js assets/js/product.js assets/js/animations.js"></script>
+<script src="assets/js/include.js" data-scripts="assets/data/products.js assets/js/cart.js assets/js/product-data.js assets/js/wishlist.js assets/js/header.js assets/js/sliders.js assets/js/ui.js assets/js/product.js assets/js/animations.js"></script>
 </body>
 </html>

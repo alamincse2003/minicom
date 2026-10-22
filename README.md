@@ -48,6 +48,11 @@ assets/js/wishlist.js   wishlist store (localStorage), every heart button, heade
 account.html            login / register / reset password, then dashboard (orders, details)
 assets/js/account.js    demo accounts in this browser (hashed passwords), order history from checkout
 404.html                page not found (link it in your server config, e.g. Apache: ErrorDocument 404)
+terms.html, privacy.html, refund-policy.html
+                        policy pages (TEMPLATE text: review with a legal adviser before launch)
+gift-card.html          gift card amounts + how it works (orders via contact form)
+size-guide.html         typical furniture dimensions + measuring tips
+careers.html            perks + open positions (apply by email)
 index.html              landing page (16 sections + page-only popups)
 product.html            product detail page (gallery + 3D, info, tabs, related,
                         recently viewed, sticky add-to-cart, lightbox/ask/share popups)
@@ -61,10 +66,11 @@ assets/js/sliders.js    all Swiper instances (exposes window.MC.hero / MC.steps)
 assets/js/ui.js         marquee cloning, step accordion, FAQ, featured product,
                         wishlist/cart counters, popups, newsletter, back-to-top
 assets/js/animations.js GSAP + ScrollTrigger animations
+assets/js/product-data.js  product.html?id={id}: fills name, price, photos, breadcrumb, buttons from products.js
 assets/js/product.js    product page: gallery, zoom, lightbox, tabs, reviews, share,
                         sticky add-to-cart, recently viewed slider
 assets/js/shop.js       shop page: filters, facet counts, sorting, URL state
-                        (?cat=&sub=&color=&material=&min=&max=&stock=&sale=&sort=),
+                        (?q=&cat=&sub=&color=&material=&min=&max=&stock=&sale=&sort=),
                         grid view toggle, active-filter chips, load more
 assets/images/          demo images (see licence note below)
 assets/models/          demo 3D model (.glb) for the product page
@@ -104,6 +110,11 @@ Set the page state on `<body>`:
 
 Partials are loaded as `<script>` files, so pages work both from a server and when opened by double-click.
 Every page loads `assets/data/products.js` and `assets/js/cart.js` first in `data-scripts`, so add-to-cart works everywhere.
+
+## Settings
+
+- Free-shipping threshold: `FREE_SHIPPING` in `assets/js/cart.js` (currently $200). Cart, drawer and checkout use it.
+- Social links: footer (`partials/footer.js`) and `contact.html` still point to `#`. Add the real addresses there.
 
 ## ⚠️ Image licence
 

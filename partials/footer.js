@@ -40,20 +40,20 @@ window.MC_PARTIALS.footer = String.raw`
             <button type="button" class="ft-menu-title" data-ft-toggle>Customer care<svg><use href="#i-plus"/></svg></button>
             <ul class="ft-links">
               <li><a href="faq.html">FAQs</a></li>
-              <li><a href="#">Terms of Service</a></li>
-              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
               <li><a href="contact.html">Contact Us</a></li>
-              <li><a href="#">Gift Card</a></li>
+              <li><a href="gift-card.html">Gift Card</a></li>
             </ul>
           </div>
           <div class="ft-menu">
             <button type="button" class="ft-menu-title" data-ft-toggle>Help &amp; support<svg><use href="#i-plus"/></svg></button>
             <ul class="ft-links">
-              <li><a href="#">Shipping Info</a></li>
-              <li><a href="#">Returns</a></li>
-              <li><a href="#">How To Order</a></li>
-              <li><a href="#">How To Track</a></li>
-              <li><a href="#">Size Guide</a></li>
+              <li><a href="faq.html">Shipping Info</a></li>
+              <li><a href="faq.html">Returns</a></li>
+              <li><a href="faq.html">How To Order</a></li>
+              <li><a href="faq.html">How To Track</a></li>
+              <li><a href="size-guide.html">Size Guide</a></li>
             </ul>
           </div>
           <div class="ft-menu">
@@ -61,9 +61,9 @@ window.MC_PARTIALS.footer = String.raw`
             <ul class="ft-links">
               <li><a href="about.html">About Us</a></li>
               <li><a href="blog.html">Our Blog</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Store Locations</a></li>
-              <li><a href="#">Testimonial</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="about.html#stores">Store Locations</a></li>
+              <li><a href="index.html#testimonials">Testimonial</a></li>
             </ul>
           </div>
         </div>

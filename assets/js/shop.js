@@ -32,6 +32,7 @@
     stock: params.get('stock') === '1',
     sale: params.get('sale') === '1',
     sort: params.get('sort') || 'featured',
+    q: (params.get('q') || '').trim(),
     shown: PAGE,
   };
   if (!catOf(state.cat)) state.cat = state.sub = '';
@@ -48,13 +49,18 @@
     if (state.stock) p.set('stock', '1');
     if (state.sale) p.set('sale', '1');
     if (state.sort !== 'featured') p.set('sort', state.sort);
+    if (state.q) p.set('q', state.q);
     const qs = p.toString();
     try { history.replaceState(null, '', qs ? '?' + qs : location.pathname); } catch (e) {}
   }
 
   /* ---------- Filtering & sorting ---------- */
   // `skip` leaves one facet out so its own counts show what selecting it would give
+  // Search: every word must appear in the title, category or subcategory
+  const searchText = (p) => `${p.title} ${p.cat} ${p.sub || ''}`.toLowerCase().replace(/-/g, ' ');
+  const matchesQuery = (p) => !state.q || state.q.toLowerCase().split(/\s+/).every((w) => searchText(p).includes(w));
   const matches = (p, skip) =>
+    matchesQuery(p) &&
     (!state.cat || p.cat === state.cat) &&
     (!state.sub || p.sub === state.sub) &&
     (skip === 'color' || !state.colors.length || p.colors.some((c) => state.colors.includes(c))) &&
@@ -92,7 +98,7 @@
           .map((c, n) => `<button class="swatch${n ? '' : ' active'}" style="background:${colors[c]}" title="${c}" aria-label="${c}"></button>`)
           .join('')}</div>`
       : '';
-    const url = p.url || '#';
+    const url = p.url || `product.html?id=${p.id}`;
     return `
       <div class="p-card shop-item" style="--i:${i % PAGE}">
         <div class="p-thumb">
@@ -129,7 +135,7 @@
     const sub = subOf(state.cat, state.sub);
     const info = cat || DATA.all;
     const title = sub ? sub.name : info.name;
-    $('#shopTitle').textContent = title;
+    $('#shopTitle').textContent = state.q ? `Search: “${state.q}”` : title;
     $('#shopIntro').textContent = info.intro;
     const img = $('#shopHeroImg');
     if (img.getAttribute('src') !== info.image) {
@@ -240,6 +246,7 @@
     const chips = [];
     const chip = (label, key, value = '') =>
       chips.push(`<button class="active-chip" data-remove="${key}" data-value="${value}">${label}<svg class="w-3 h-3"><use href="#i-close"/></svg></button>`);
+    if (state.q) chip(`“${state.q.replace(/[&<>"']/g, '')}”`, 'q');
     state.colors.forEach((c) => chip(c, 'color', c));
     state.materials.forEach((m) => chip(m, 'material', m));
     if (state.min > 0 || state.max < PRICE_MAX) chip(`${money(state.min).replace('.00', '')} – ${money(state.max).replace('.00', '')}`, 'price');
@@ -324,11 +331,12 @@
       if (key === 'price') { state.min = 0; state.max = PRICE_MAX; }
       if (key === 'stock') state.stock = false;
       if (key === 'sale') state.sale = false;
+      if (key === 'q') state.q = '';
       update();
       return;
     }
     if (e.target.closest('[data-clear]')) {
-      Object.assign(state, { colors: [], materials: [], min: 0, max: PRICE_MAX, stock: false, sale: false });
+      Object.assign(state, { colors: [], materials: [], min: 0, max: PRICE_MAX, stock: false, sale: false, q: '' });
       update();
       return;
     }

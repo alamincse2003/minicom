@@ -15,7 +15,7 @@
 (function () {
   window.MC = window.MC || {};
   const KEY = 'mc_cart';
-  const FREE_SHIPPING = 1000; // same threshold as the reference cart
+  const FREE_SHIPPING = 200; // site-wide free-shipping threshold (matches the homepage and product pages)
   const products = (window.MC_SHOP && window.MC_SHOP.products) || [];
   const byId = Object.fromEntries(products.map((p) => [p.id, p]));
   const listeners = [];
@@ -144,9 +144,9 @@
       .map(
         (l) => `
         <div class="mini-line">
-          <a href="${l.product.url || '#'}" class="mini-img"><img src="assets/images/products/${l.id}-1.jpg" alt="" loading="lazy"></a>
+          <a href="${l.product.url || 'product.html?id=' + l.id}" class="mini-img"><img src="assets/images/products/${l.id}-1.jpg" alt="" loading="lazy"></a>
           <div class="min-w-0 flex-1">
-            <a href="${l.product.url || '#'}" class="mini-title">${l.product.title}</a>
+            <a href="${l.product.url || 'product.html?id=' + l.id}" class="mini-title">${l.product.title}</a>
             <p class="text-[12px] mt-1"><span class="text-body">${l.qty} ×</span> <b class="text-ink">${money(l.product.price)}</b></p>
           </div>
           <button type="button" class="mini-remove" data-cart-remove="${l.id}" aria-label="Remove ${l.product.title}"><svg><use href="#i-close"/></svg></button>

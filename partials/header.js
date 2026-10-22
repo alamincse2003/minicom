@@ -23,9 +23,9 @@ window.MC_PARTIALS.header = String.raw`
       </button>
 
       <!-- Search -->
-      <form class="search-box hidden lg:flex flex-1 max-w-[760px] mr-[45px]" action="#" role="search">
+      <form class="search-box hidden lg:flex flex-1 max-w-[760px] mr-[45px]" action="shop.html" role="search">
         <div class="relative flex-1">
-          <input type="search" placeholder="Search" class="peer w-full h-[50px] rounded-[3px] bg-white pl-12 pr-4 text-[14px] text-body outline-none focus:ring-2 focus:ring-accent">
+          <input type="search" name="q" placeholder="Search" aria-label="Search products" class="peer w-full h-[50px] rounded-[3px] bg-white pl-12 pr-4 text-[14px] text-body outline-none focus:ring-2 focus:ring-accent">
           <span class="search-placeholder absolute left-12 top-1/2 -translate-y-1/2 text-[14px] text-[#a1a1a1]">Search for <span id="searchWord" class="text-ink">Plant</span></span>
           <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-ink"><use href="#i-search"/></svg>
         </div>
@@ -62,27 +62,27 @@ window.MC_PARTIALS.header = String.raw`
                 <h4 class="text-[13px] font-bold uppercase mb-5">Collection page</h4>
                 <ul class="space-y-3 text-[14px] text-body">
                   <li><a href="shop.html">Collection left sidebar</a></li>
-                  <li><a href="#">Collection right sidebar</a></li>
-                  <li><a href="#">Collection top sidebar</a></li>
-                  <li><a href="#">Collection without sidebar</a></li>
-                  <li><a href="#">Collection deals</a></li>
+                  <li><a href="shop.html">Collection right sidebar</a></li>
+                  <li><a href="shop.html">Collection top sidebar</a></li>
+                  <li><a href="shop.html">Collection without sidebar</a></li>
+                  <li><a href="shop.html">Collection deals</a></li>
                 </ul>
               </div>
               <div>
                 <h4 class="text-[13px] font-bold uppercase mb-5">Collection page</h4>
                 <ul class="space-y-3 text-[14px] text-body">
-                  <li><a href="#">Collection canvas on left</a></li>
-                  <li><a href="#">Collection canvas on top</a></li>
-                  <li><a href="#">Collection canvas on bottom</a></li>
-                  <li><a href="#">Collection full width</a></li>
+                  <li><a href="shop.html">Collection canvas on left</a></li>
+                  <li><a href="shop.html">Collection canvas on top</a></li>
+                  <li><a href="shop.html">Collection canvas on bottom</a></li>
+                  <li><a href="shop.html">Collection full width</a></li>
                 </ul>
               </div>
               <div>
                 <h4 class="text-[13px] font-bold uppercase mb-5">Collection page</h4>
                 <ul class="space-y-3 text-[14px] text-body">
-                  <li><a href="#">Numbered Pagination</a></li>
-                  <li><a href="#">Load More Button</a></li>
-                  <li><a href="#">Infinity Scroll Load More</a></li>
+                  <li><a href="shop.html">Numbered Pagination</a></li>
+                  <li><a href="shop.html">Load More Button</a></li>
+                  <li><a href="shop.html">Infinity Scroll Load More</a></li>
                 </ul>
                 <h4 class="text-[13px] font-bold uppercase mt-8 mb-5">Shop by room</h4>
                 <ul class="space-y-3 text-[14px] text-body">
@@ -91,7 +91,7 @@ window.MC_PARTIALS.header = String.raw`
                   <li><a href="shop.html?cat=living-room">Living Room</a></li>
                 </ul>
               </div>
-              <a href="#" class="zoom-img block rounded-[5px]"><img src="assets/images/misc/menu-img.jpg" alt="New collection" class="w-full h-full max-h-[300px] object-cover" loading="lazy"></a>
+              <a href="shop.html" class="zoom-img block rounded-[5px]"><img src="assets/images/misc/menu-img.jpg" alt="New collection" class="w-full h-full max-h-[300px] object-cover" loading="lazy"></a>
             </div>
           </div>
         </li>
@@ -104,43 +104,43 @@ window.MC_PARTIALS.header = String.raw`
                 <h4 class="text-[13px] font-bold uppercase mb-5">Product detail</h4>
                 <ul class="space-y-3 text-[14px] text-body">
                   <li><a href="product.html">Product detail default</a></li>
-                  <li><a href="#">Product detail thumb left 1</a></li>
-                  <li><a href="#">Product detail thumb left 2</a></li>
-                  <li><a href="#">Product detail thumb right</a></li>
-                  <li><a href="#">Product deals countdown</a></li>
-                  <li><a href="#">Product Detail Tab Accordion v1</a></li>
-                  <li><a href="#">Product Detail Tab Accordion v2</a></li>
+                  <li><a href="product.html">Product detail thumb left 1</a></li>
+                  <li><a href="product.html">Product detail thumb left 2</a></li>
+                  <li><a href="product.html">Product detail thumb right</a></li>
+                  <li><a href="product.html">Product deals countdown</a></li>
+                  <li><a href="product.html">Product Detail Tab Accordion v1</a></li>
+                  <li><a href="product.html">Product Detail Tab Accordion v2</a></li>
                 </ul>
               </div>
               <div>
                 <h4 class="text-[13px] font-bold uppercase mb-5">Product detail</h4>
                 <ul class="space-y-3 text-[14px] text-body">
-                  <li><a href="#">Product detail thumb grid 1</a></li>
-                  <li><a href="#">Product detail thumb grid 2</a></li>
-                  <li><a href="#">Product detail image grid</a></li>
-                  <li><a href="#">Product detail image scroll</a></li>
-                  <li><a href="#">Product detail image slider 1</a></li>
-                  <li><a href="#">Product detail image slider 2</a></li>
+                  <li><a href="product.html">Product detail thumb grid 1</a></li>
+                  <li><a href="product.html">Product detail thumb grid 2</a></li>
+                  <li><a href="product.html">Product detail image grid</a></li>
+                  <li><a href="product.html">Product detail image scroll</a></li>
+                  <li><a href="product.html">Product detail image slider 1</a></li>
+                  <li><a href="product.html">Product detail image slider 2</a></li>
                 </ul>
               </div>
               <div>
                 <h4 class="text-[13px] font-bold uppercase mb-5">Product features</h4>
                 <ul class="space-y-3 text-[14px] text-body">
                   <li><a href="product.html">Product 3D, AR models</a></li>
-                  <li><a href="#">Product Video</a></li>
-                  <li><a href="#">Product Pre-Order</a></li>
-                  <li><a href="#">Product Variant Dropbox Style</a></li>
-                  <li><a href="#">Product Variant Image Swatch</a></li>
-                  <li><a href="#">Product Variant Pattern</a></li>
-                  <li><a href="#">Product Sticky Add To Cart</a></li>
+                  <li><a href="product.html">Product Video</a></li>
+                  <li><a href="product.html">Product Pre-Order</a></li>
+                  <li><a href="product.html">Product Variant Dropbox Style</a></li>
+                  <li><a href="product.html">Product Variant Image Swatch</a></li>
+                  <li><a href="product.html">Product Variant Pattern</a></li>
+                  <li><a href="product.html">Product Sticky Add To Cart</a></li>
                 </ul>
               </div>
               <div>
                 <h4 class="text-[13px] font-bold uppercase mb-5">Featured Product</h4>
                 <ul class="space-y-4">
-                  <li><a href="#" class="flex items-center gap-3"><img src="assets/images/products/compact-pot-1.jpg" alt="" class="w-14 h-[70px] object-cover rounded-[3px]" loading="lazy"><span class="text-[13px] leading-snug">Compact Mini Plant Pot for Desk<br><b class="text-ink">$37.00</b></span></a></li>
-                  <li><a href="#" class="flex items-center gap-3"><img src="assets/images/products/beige-armchair-1.jpg" alt="" class="w-14 h-[70px] object-cover rounded-[3px]" loading="lazy"><span class="text-[13px] leading-snug">Modern Beige Armchair<br><b class="text-ink">$150.00</b></span></a></li>
-                  <li><a href="#" class="flex items-center gap-3"><img src="assets/images/products/swivel-sofa-1.jpg" alt="" class="w-14 h-[70px] object-cover rounded-[3px]" loading="lazy"><span class="text-[13px] leading-snug">Low Profile Swivel Sofa<br><b class="text-ink">$125.00</b></span></a></li>
+                  <li><a href="product.html?id=compact-pot" class="flex items-center gap-3"><img src="assets/images/products/compact-pot-1.jpg" alt="" class="w-14 h-[70px] object-cover rounded-[3px]" loading="lazy"><span class="text-[13px] leading-snug">Compact Mini Plant Pot for Desk<br><b class="text-ink">$37.00</b></span></a></li>
+                  <li><a href="product.html?id=beige-armchair" class="flex items-center gap-3"><img src="assets/images/products/beige-armchair-1.jpg" alt="" class="w-14 h-[70px] object-cover rounded-[3px]" loading="lazy"><span class="text-[13px] leading-snug">Modern Beige Armchair<br><b class="text-ink">$150.00</b></span></a></li>
+                  <li><a href="product.html?id=swivel-sofa" class="flex items-center gap-3"><img src="assets/images/products/swivel-sofa-1.jpg" alt="" class="w-14 h-[70px] object-cover rounded-[3px]" loading="lazy"><span class="text-[13px] leading-snug">Low Profile Swivel Sofa<br><b class="text-ink">$125.00</b></span></a></li>
                 </ul>
               </div>
             </div>
@@ -148,14 +148,14 @@ window.MC_PARTIALS.header = String.raw`
         </li>
 
         <li class="nav-item relative h-full flex items-center group">
-          <a data-nav="pages" href="#" class="flex items-center gap-1">Pages <svg class="w-3 h-3"><use href="#i-down"/></svg></a>
+          <a data-nav="pages" href="about.html" class="flex items-center gap-1">Pages <svg class="w-3 h-3"><use href="#i-down"/></svg></a>
           <ul class="mega !left-0 !right-auto w-[230px] mt-2 bg-white text-body rounded-[5px] shadow-xl py-5 px-6 space-y-3 text-[14px] font-normal normal-case tracking-normal">
             <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact Us</a></li>
             <li><a href="faq.html">FAQs Page</a></li>
-            <li><a href="#">Store Direction Page</a></li>
-            <li><a href="#">Store Locations Page</a></li>
-            <li><a href="#">Testimonials Page</a></li>
+            <li><a href="about.html#stores">Store Direction Page</a></li>
+            <li><a href="about.html#stores">Store Locations Page</a></li>
+            <li><a href="index.html#testimonials">Testimonials Page</a></li>
             <li><a href="404.html">404 Error</a></li>
           </ul>
         </li>
